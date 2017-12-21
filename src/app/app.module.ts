@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
+import {HashLocationStrategy , LocationStrategy} from '@angular/common';
 import { MarkdownModule } from 'angular2-markdown';
 
 import { AppComponent } from './app.component';
@@ -38,7 +39,7 @@ const routes: Routes = [
     LyButtonComponent,
     RadioComponent
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
