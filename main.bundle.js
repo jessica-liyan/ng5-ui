@@ -181,12 +181,13 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_angular2_markdown__ = __webpack_require__("../../../../angular2-markdown/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_component__ = __webpack_require__("../../../../../src/app/components.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__release_button_component__ = __webpack_require__("../../../../../release/button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__release_ly_button_component__ = __webpack_require__("../../../../../release/ly-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__release_radio_component__ = __webpack_require__("../../../../../release/radio.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_markdown__ = __webpack_require__("../../../../angular2-markdown/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_component__ = __webpack_require__("../../../../../src/app/components.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__release_button_component__ = __webpack_require__("../../../../../release/button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__release_ly_button_component__ = __webpack_require__("../../../../../release/ly-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__release_radio_component__ = __webpack_require__("../../../../../release/radio.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -203,16 +204,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
     {
         path: 'components',
-        component: __WEBPACK_IMPORTED_MODULE_6__components_component__["a" /* ComponentsComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_7__components_component__["a" /* ComponentsComponent */],
         children: [{
                 path: 'button',
-                component: __WEBPACK_IMPORTED_MODULE_7__release_button_component__["a" /* ButtonComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_8__release_button_component__["a" /* ButtonComponent */]
             }, {
                 path: 'radio',
-                component: __WEBPACK_IMPORTED_MODULE_9__release_radio_component__["a" /* RadioComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_10__release_radio_component__["a" /* RadioComponent */]
             }]
     }
 ];
@@ -225,17 +227,17 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forRoot(routes),
-                __WEBPACK_IMPORTED_MODULE_4_angular2_markdown__["a" /* MarkdownModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_5_angular2_markdown__["a" /* MarkdownModule */].forRoot(),
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__components_component__["a" /* ComponentsComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__release_button_component__["a" /* ButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__release_ly_button_component__["a" /* LyButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__release_radio_component__["a" /* RadioComponent */]
+                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_component__["a" /* ComponentsComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__release_button_component__["a" /* ButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__release_ly_button_component__["a" /* LyButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__release_radio_component__["a" /* RadioComponent */]
             ],
-            providers: [],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */]]
+            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_4__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* HashLocationStrategy */] }],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
