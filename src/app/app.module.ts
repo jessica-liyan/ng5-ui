@@ -7,11 +7,16 @@ import { MarkdownModule } from 'angular2-markdown';
 
 import { AppComponent } from './app.component';
 import { ComponentsComponent } from './components.component';
-import { ButtonComponent } from '../../release/button.component';
-import { LyButtonComponent } from '../../release/ly-button.component';
-import { RadioComponent } from '../../release/radio.component';
+import { ButtonComponent } from '../../release/button/button.component';
+import { LyButtonComponent } from '../../release/button/ly-button.component';
+import { RadioComponent } from '../../release/radio/radio.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/components',
+    pathMatch: 'full'
+  },
   {
     path: 'components',
     component: ComponentsComponent,
