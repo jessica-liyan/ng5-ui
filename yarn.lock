@@ -296,13 +296,6 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular2-markdown@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/angular2-markdown/-/angular2-markdown-2.2.2.tgz#868d50be5770c2400d41b4ed4c917ed0fa17524a"
-  dependencies:
-    marked "^0.3.6"
-    prismjs "^1.8.4"
-
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
@@ -3482,9 +3475,9 @@ markdown-it-container@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/markdown-it-container/-/markdown-it-container-2.0.0.tgz#0019b43fd02eefece2f1960a2895fba81a404695"
 
-marked@^0.3.6:
-  version "0.3.7"
-  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.7.tgz#80ef3bbf1bd00d1c9cfebe42ba1b8c85da258d0d"
+marked@^0.3.9:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.9.tgz#54ce6a57e720c3ac6098374ec625fcbcc97ff290"
 
 math-expression-evaluator@^1.2.14:
   version "1.2.17"
@@ -3697,6 +3690,13 @@ ncname@1.0.x:
 negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
+
+ngx-md@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/ngx-md/-/ngx-md-3.1.0.tgz#785a50fb7f98bdd2c0abcfa1aa913e30fae6c6a4"
+  dependencies:
+    marked "^0.3.9"
+    prismjs "^1.9.0"
 
 no-case@^2.2.0:
   version "2.3.2"
@@ -4484,7 +4484,7 @@ pretty-error@^2.0.2:
     renderkid "^2.0.1"
     utila "~0.4"
 
-prismjs@^1.8.4:
+prismjs@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.9.0.tgz#fa3e2d9edc3c3887c1f1f3095d41f1f9b4200f0f"
   optionalDependencies:

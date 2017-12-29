@@ -1,0 +1,89 @@
+.ly-button{
+  display: inline-block;
+  padding:12px 20px;
+  border:1px solid #d8dce5;
+  border-radius:4px;
+  background:#fff;
+  font-size:14px;
+  color:#666;
+  box-sizing:border-box;
+  cursor:pointer;
+  line-height:1;
+  transition:0.3s;
+  &:hover{
+    background:#ecf5ff;border-color:#b3d8ff;color:#409EFF;
+  }
+  // 主题
+  &.primary{
+    background:#409EFF;
+    border-color:#409EFF;
+    color:#fff;
+    &:hover{
+      opacity:0.8;
+    }
+  }
+  &.success{
+    background:#67C23A;
+    border-color:#67C23A;
+    color:#fff;
+    &.plain{
+      background:#f0f9eb;
+      border-color:#c2e7b0;
+      color:#67C23A;
+      &:hover{
+        background:#67C23A;
+        border-color:#67C23A;
+        color:#fff;
+      }
+    }
+    &:hover{
+      opacity:0.8;
+    }
+  }
+  &.warning{
+    background:#FA5555;
+    border-color:#FA5555;
+    color:#fff;
+    &.plain{
+      background:#fee;
+      border-color:#fdbbbb;
+      color:#FA5555;
+      &:hover{
+        background:#FA5555;
+        border-color:#FA5555;
+        color:#fff;
+      }
+    }
+    &:hover{
+      opacity:0.8;
+    }
+  }
+  // 扁平
+  &.plain{
+    background:#ecf5ff;
+    border-color:#b3d8ff;
+    color:#409EFF;
+    &:hover{
+      background:#409EFF;
+      border-color:#409EFF;
+      color:#fff;
+    }
+  }
+  // 圆角
+  &.round{
+    border-radius:20px;
+  }
+  // 大小
+  &.large{
+    padding:15px 20px;
+  }
+  &.normal{
+    padding:12px 15px;
+  }
+  &.small{
+    padding:9px 15px;
+  }
+  &.mini{
+    padding:7px 15px;
+  }
+}

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
  
 @Component({
-  selector: 'test',
+  selector: 'compo',
   template: `
     <div class="aside">
       <a class="aside-item" *ngFor="let item of components" [routerLink]="['/components', item.name]" routerLinkActive="active">{{item.name}}</a>
@@ -17,6 +17,8 @@ export class ComponentsComponent{
     name: 'button'
   },{
     name: 'radio'
+  },{
+    name: 'checkbox'
   }]
 
   constructor(){}

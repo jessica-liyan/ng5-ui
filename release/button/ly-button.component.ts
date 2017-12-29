@@ -3,12 +3,25 @@ import { HtmlParser } from '@angular/compiler';
  
 @Component({
   selector: 'ly-button',
+  styleUrls: ['./button.scss'],
   template: `
-    <button>这是测试的按钮</button>
+    <button 
+      [class]="'ly-button ' + (type ? type + ' ' : '') + (size ? size : '') + nativeClass"
+      [class.plain]="plain"
+      [class.round]="round"
+    >
+      <ng-content></ng-content>
+    </button>
   `
 })
 
 export class LyButtonComponent implements OnInit{
+  @Input() type: string;
+  @Input() size: string;
+  @Input() plain: string;
+  @Input() round: string;
+  @Input('class') nativeClass: string;
+
   constructor(){
   }
 

@@ -1,0 +1,40 @@
+<h2>Radio 单选按钮</h2>
+<h3>基础的按钮用法</h3>
+<p>
+  <ly-radio-group [labelGroup]="['男', '女']" [model]="'男'"></ly-radio-group>
+</p>
+<p>
+  <ly-radio-group [labelGroup]="['北京','上海','广州']" [model]="'北京'"></ly-radio-group>
+</p>
+<markdown path="assets/md/radio/radio1.md"></markdown>
+
+<h3>按钮样式</h3>
+<p>
+  <ly-radio-button [labelGroup]="['男', '女']" [model]="'男'"></ly-radio-button>
+</p>
+<p>
+  <ly-radio-button [labelGroup]="['北京','上海','广州']" [model]="'北京'"></ly-radio-button>
+</p>
+<markdown path="assets/md/radio/radio2.md"></markdown>
+
+<h3>双向绑定</h3>
+<p class="tips">使用<i>[(model)]</i>进行双向绑定</p>
+<p>
+  <ly-radio-group [labelGroup]="['javascript','html','css']" [(model)]="type"></ly-radio-group>
+</p>
+<p>
+  <ly-radio-button [labelGroup]="['北京','上海','广州','武汉']" [(model)]="city"></ly-radio-button>
+</p>
+<p>{{type}}---{{city}}</p>
+<markdown path="assets/md/radio/radio3.md"></markdown>
+
+<h3>自定义颜色</h3>
+<p class="tips">使用<i>fill</i>定义按钮激活时的背景色和边框色，用<i>textColor</i>定义按钮激活时的文本颜色</p>
+<p>
+  <ly-radio-group [labelGroup]="['javascript','html','css']" [(model)]="type" fill="#F57069"></ly-radio-group>
+</p>
+<p>
+  <ly-radio-button [labelGroup]="['北京','上海','广州','武汉']" [(model)]="city" fill="#F57069"></ly-radio-button>
+</p>
+<markdown path="assets/md/radio/radio4.md"></markdown>
+

@@ -2,6 +2,7 @@
 body{margin:0;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
 a{text-decoration:none;cursor:pointer;}
 html,body{height:100%;}
+button:focus{outline:none;}
 
 .app{padding-top:60px;padding-left:270px;box-sizing:border-box;height:100%;}
 
@@ -16,5 +17,9 @@ html,body{height:100%;}
 .aside-item.active{color:#4a8bfc;}
 .aside-item.active:before{content:"";display:inline-block;width:2px;height:30px;position:absolute;right:2px;top:50%;margin-top:-15px;background:#4a8bfc;transform:scaleY(1);}
 
-.main{width:100%;height:100%;padding:10px;box-sizing:border-box;}
-
+.main{width:100%;height:100%;padding:10px 20px;box-sizing:border-box;}
+.main h2{font-size:20px;color:#333;font-weight:normal;margin:0;padding-top:20px;}
+.main h3{font-size:16px;color:#666;font-weight:normal;margin:20px 0 0 0;padding:10px 0;}
+.main p{font-size:14px;color:#999;margin:10px 0;}
+.main p.tips{padding:10px 20px;border:1px solid #ddd;background:#f9f9f9;}
+.main p.tips i{display:inline-block;padding:5px 10px;background:#E6EFFB;font-style:normal;color:#666;margin:0 5px;border-radius:4px;}

@@ -1,0 +1,23 @@
+<h2>Checkbox 复选按钮</h2>
+<h3>基础的按钮用法</h3>
+<ly-checkbox [(model)]="checked">记住密码</ly-checkbox>
+<p>{{checked}}</p>
+<p>
+  <ly-checkbox-group [labelGroup]="['北京','上海','广州','武汉']" [(model)]="city"></ly-checkbox-group>
+</p>
+<ly-button (click)="catch()">点击</ly-button>
+<markdown path="assets/md/checkbox/checkbox1.md"></markdown>
+
+<h3>按钮样式</h3>
+<p>
+  <ly-checkbox-button [labelGroup]="['北京','上海','广州','武汉']" [(model)]="city1"></ly-checkbox-button>
+</p>
+<ly-button (click)="catch1()">点击</ly-button>
+<markdown path="assets/md/checkbox/checkbox2.md"></markdown>
+
+<h3>自定义颜色</h3>
+<p class="tips">使用<i>fill</i>定义按钮激活时的背景色和边框色，用<i>textColor</i>定义按钮激活时的文本颜色</p>
+<p>
+  <ly-checkbox-button [labelGroup]="['北京','上海','广州','武汉']" [(model)]="city1" fill="#F57069"></ly-checkbox-button>
+</p>
+<markdown path="assets/md/checkbox/checkbox3.md"></markdown>
