@@ -1,0 +1,29 @@
+.ly-input{
+  display: inline-block;
+  position: relative;
+  input{
+    display:inline-block;
+    margin:0;
+    padding:12px 20px;
+    font-size:14px;
+    color:#333;
+    line-height:1;
+    border:1px solid #d8dce5;
+    height:40px;
+    border-radius:4px;
+    box-sizing:border-box;
+    transition:0.3s;
+    &:focus{
+      border-color:#409EFF;
+    }
+    &::-webkit-input-placeholder{
+      color:#d8dce5;
+    }
+  }
+  img{
+    position:absolute;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+  }
+}

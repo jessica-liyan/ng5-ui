@@ -11,6 +11,7 @@ import { ComponentsComponent } from './components.component';
 import { ButtonComponent } from '../../docs/button/button.component';
 import { RadioComponent } from '../../docs/radio/radio.component';
 import { CheckboxComponent } from '../../docs/checkbox/checkbox.component';
+import { DatepickerComponent } from '../../docs/datepicker/datepicker.component';
 
 import { LyButtonComponent } from '../../release/button/ly-button.component';
 import { LyRadioComponent } from '../../release/radio/ly-radio.component';
@@ -19,6 +20,8 @@ import { LyRadioButtonComponent } from '../../release/radio/ly-radio-button.comp
 import { LyCheckboxComponent } from '../../release/checkbox/ly-checkbox.component';
 import { LyCheckboxGroupComponent } from '../../release/checkbox/ly-checkbox-group.component';
 import { LyCheckboxButtonComponent } from '../../release/checkbox/ly-checkbox-button.component';
+import { LyDatepickerComponent } from '../../release/datepicker/ly-datepicker.component';
+import { LyInputComponent } from '../../release/input/ly-input.component';
 
 const routes: Routes = [
   {
@@ -38,6 +41,9 @@ const routes: Routes = [
     },{
       path: 'checkbox',
       component: CheckboxComponent
+    },{
+      path: 'datepicker',
+      component: DatepickerComponent
     }]
   }
 ];
@@ -61,7 +67,11 @@ const routes: Routes = [
     LyRadioButtonComponent,
     LyCheckboxComponent,
     LyCheckboxGroupComponent,
-    LyCheckboxButtonComponent
+    LyCheckboxButtonComponent,
+    DatepickerComponent,
+    LyInputComponent,
+    LyDatepickerComponent,
+    
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

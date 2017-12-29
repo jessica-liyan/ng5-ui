@@ -19,6 +19,8 @@ export class ComponentsComponent{
     name: 'radio'
   },{
     name: 'checkbox'
+  },{
+    name: 'datepicker'
   }]
 
   constructor(){}

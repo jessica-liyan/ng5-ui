@@ -2,7 +2,12 @@
 body{margin:0;font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
 a{text-decoration:none;cursor:pointer;}
 html,body{height:100%;}
-button:focus{outline:none;}
+button:focus,input:focus{outline:none;}
+table{border-spacing:0;border-collapse:collapse;}
+i,em{font-style:normal;}b{font-weight:normal;}
+.row{display:table;}.col{display:table-cell;}.w{width:100%;}
+.v-m{vertical-align:middle;}
+.t-l{text-align:left;}.t-c{text-align:center;}.t-r{text-align:right;}
 
 .app{padding-top:60px;padding-left:270px;box-sizing:border-box;height:100%;}
 
