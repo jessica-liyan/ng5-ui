@@ -9,7 +9,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
     <div class="date-picker" [class.show]="show">
       <div class="date-picker-header row w">
         <div class="col v-m t-l">
-          <div *ngIf="showDate">
+          <div *ngIf="showDate && !hiddenDay">
             <a class="iconfont icon-home v-m" (click)="yearMinus()"><img src="assets/img/home.png" alt=""></a>
             <a class="iconfont icon-left v-m" (click)="monthMinus()"><img src="assets/img/left.png" alt=""></a>
           </div>
@@ -21,7 +21,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
           </div> 
         </div>
         <div class="col v-m t-c title">
-          <div *ngIf="showDate">
+          <div *ngIf="showDate && !hiddenDay">
             <i class="v-m" (click)="renderYear()">{{chosenYear}}年</i>
             <i class="v-m" (click)="renderMonth()">{{chosenMonth}}月</i>
           </div>
@@ -33,7 +33,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
           </div>
         </div>
         <div class="col v-m t-r">
-          <div *ngIf="showDate">
+          <div *ngIf="showDate && !hiddenDay">
             <a class="iconfont icon-right v-m" (click)="monthPlus()"><img src="assets/img/right.png" alt=""></a>
             <a class="iconfont icon-end v-m" (click)="yearPlus()"><img src="assets/img/end.png" alt=""></a>
           </div>
@@ -46,7 +46,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
         </div>
       </div>
       <div class="date-picker-main">
-        <table class="date-picker-table" *ngIf="showDate">
+        <table class="date-picker-table" *ngIf="showDate && !hiddenDay">
           <tr><th>日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th>六</th></tr>
           <tr *ngFor="let week of dateArr">
             <td 
@@ -84,6 +84,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 export class LyDatepickerComponent implements OnInit{
   @Input() model;
   @Input() hiddenDay;
+  @Input() format;
   @Output() modelChange: EventEmitter<string> = new EventEmitter();
 
   show = false;
@@ -125,19 +126,6 @@ export class LyDatepickerComponent implements OnInit{
     this.showYear = false;
     this.showDate = false;
   }
-
-  ngOnInit(){
-    this.date = this.model && this.model.length ? new Date(this.model) : new Date();
-    this.chosenYear = this.date.getFullYear();
-    this.chosenMonth = this.date.getMonth() + 1;
-    this.chosenDate = this.date.getDate();
-    this.chosen = this.chosenYear + '-' + this.chosenMonth + '-' + this.chosenDate
-    this.model = this.model && this.model.length ? this.model : this.chosen
-    this.minYear = Math.floor(this.chosenYear/10)*10
-    
-    this.renderDate()
-  }
-
   renderDate(){
     this.showDate = true;
     this.showYear = false;
@@ -168,13 +156,66 @@ export class LyDatepickerComponent implements OnInit{
         }
       } 
     }
-    
   }
+
+  ngOnInit(){
+    this.date = this.model && this.model.length ? new Date(this.model) : new Date();
+    this.chosenYear = this.date.getFullYear();
+    this.chosenMonth = this.date.getMonth() + 1;
+    this.chosenDate = this.date.getDate();
+    this.minYear = Math.floor(this.chosenYear/10)*10
+    this.chosen = this.hiddenDay ? this.chosenYear + '-' + this.chosenMonth : this.chosenYear + '-' + this.chosenMonth + '-' + this.chosenDate;
+
+    this.model = this.formatDate(this.chosen, this.format)
+    
+    if(this.hiddenDay){
+      this.renderMonth()
+    }else{
+      this.renderDate()
+    }
+  }
+
+  // 格式化日期
+  formatDate(input,format){
+    const d = new Date(input);
+    if (String(d) === 'Invalid Date'){
+      return '';
+    }
+    if(format == undefined || format == ''){
+      return input;
+    }
+    const makeReg = (value) => new RegExp(`(${value})`);
+    const keys = ['M+', 'd+', 'h+', 'm+', 's+', 'q+', 'S'];
+    const values = [
+        d.getMonth() + 1,
+        d.getDate(),
+        d.getHours(),
+        d.getMinutes(),
+        d.getSeconds(),
+        Math.floor((d.getMonth() + 3) / 3),
+        d.getMilliseconds(),
+    ];
+    if (/(y+)/.test(format)) {
+        format = format.replace(RegExp.$1, (d.getFullYear() + '').substr(4 - RegExp.$1.length));
+    }
+    let len = 0, key, val;
+    while (len < keys.length) {
+        key = keys[len];
+        val = values[len];
+        if (makeReg(key).test(format)) {
+          format = ((format)).replace(RegExp.$1, (RegExp.$1.length === 1) ? val : ('00' + val).substr(('' + val).length));
+        }
+        len++;
+    }
+    return format;
+  }
+  
 
   fetchDate(date){
     this.show = false;
     this.chosenDate = date;
-    this.model = this.chosen = this.chosenYear + '-' + this.chosenMonth + '-' + this.chosenDate
+    this.chosen = this.chosenYear + '-' + this.chosenMonth + '-' + this.chosenDate
+    this.model = this.formatDate(this.chosen, this.format)
     this.modelChange.emit(this.model)
   }
 
@@ -185,7 +226,14 @@ export class LyDatepickerComponent implements OnInit{
 
   fetchMonth(month){
     this.chosenMonth = month
-    this.renderDate()
+    if(!this.hiddenDay){
+      this.renderDate()
+    }else{
+      this.show = false;
+      this.chosen = this.chosenYear + '-' + this.chosenMonth;
+      this.model = this.formatDate(this.chosen, this.format)
+      this.modelChange.emit(this.model)
+    } 
   }
 
   yearMinus(){

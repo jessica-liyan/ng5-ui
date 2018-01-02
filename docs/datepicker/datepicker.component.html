@@ -1,10 +1,20 @@
 <h2>Datepicker 日期选择</h2>
 <h3>基础的按钮用法</h3>
 <ly-datepicker></ly-datepicker>
-<ly-datepicker [(model)]="date"></ly-datepicker>  <i>{{date}}</i>
+<ly-datepicker [(model)]="date"></ly-datepicker>
+<p>{{date}}</p>  
 <markdown path="assets/md/datepicker/datepicker1.md"></markdown>
 
 <h3>以月为单位</h3>
+<p class="tips">使用<i>hiddenDay</i>隐藏日期</p>
 <ly-datepicker [(model)]="date1" [hiddenDay]="true"></ly-datepicker>
+<p>{{date1}}</p> 
+<markdown path="assets/md/datepicker/datepicker2.md"></markdown>
 
-
+<h3>日期格式化</h3>
+<p class="tips">使用<i>format</i>匹配日期格式</p>
+<ly-datepicker [(model)]="date3" [format]="'yyyy年MM月-dd日'"></ly-datepicker>
+<ly-datepicker [(model)]="date4" [hiddenDay]="true" [format]="'yyyy年MM月'"></ly-datepicker>
+<p>{{date3}}</p> 
+<p>{{date4}}</p> 
+<markdown path="assets/md/datepicker/datepicker3.md"></markdown>
