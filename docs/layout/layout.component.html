@@ -1,0 +1,57 @@
+<h2>Layout 基础布局</h2>
+<h3>24栅栏布局</h3>
+<p class="tips">使用<i>gutter</i>确定分栏间隔，使用<i>span</i>栅格占据的列数</p>
+<div lyRow gutter="8">
+  <div lyCol span="12">
+    <div class="content"></div>
+  </div>
+  <div lyCol span="12">
+    <div class="content"></div>
+  </div>
+</div>
+<div lyRow gutter="10">
+  <div lyCol span="6">
+    <div class="content"></div>
+  </div>
+  <div lyCol span="6">
+    <div class="content"></div>
+  </div>
+  <div lyCol span="6">
+    <div class="content"></div>
+  </div>
+  <div lyCol span="6">
+    <div class="content"></div>
+  </div>
+</div>
+<div lyRow gutter="10">
+  <div lyCol span="6">
+    <div class="content"></div>
+  </div>
+  <div lyCol span="12">
+    <div class="content"></div>
+  </div>
+  <div lyCol span="6">
+    <div class="content"></div>
+  </div>
+</div>
+<markdown path="assets/md/layout/layout1.md"></markdown>
+
+<h3>flex布局</h3>
+<p class="tips">使用<i>type="flex"</i>确定flex布局，使用<i>justify</i>调整垂直对齐方式（默认是flex-start），使用<i>align</i>调整水平对齐方式（默认是flex-start）</p>
+<div lyRow gutter="10" type="flex">
+  <div lyCol span="6">
+    <div class="content"></div>
+  </div>
+  <div lyCol span="6">
+    <div class="content"></div>
+  </div>
+</div>
+<div lyRow gutter="10" type="flex" justify="space-between" align="center">
+  <div lyCol span="6">
+    <div class="content"></div>
+  </div>
+  <div lyCol span="6">
+    <div class="content"></div>
+  </div>
+</div>
+<markdown path="assets/md/layout/layout2.md"></markdown>

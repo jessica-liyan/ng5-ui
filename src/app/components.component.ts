@@ -20,7 +20,13 @@ export class ComponentsComponent{
   },{
     name: 'checkbox'
   },{
+    name: 'input'
+  },{
     name: 'datepicker'
+  },{
+    name: 'layout'
+  },{
+    name: 'progress'
   }]
 
   constructor(){}

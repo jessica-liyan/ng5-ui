@@ -12,6 +12,9 @@ import { ButtonComponent } from '../../docs/button/button.component';
 import { RadioComponent } from '../../docs/radio/radio.component';
 import { CheckboxComponent } from '../../docs/checkbox/checkbox.component';
 import { DatepickerComponent } from '../../docs/datepicker/datepicker.component';
+import { InputComponent } from '../../docs/input/input.component';
+import { LayoutComponent } from '../../docs/layout/layout.component';
+import { ProgressComponent } from '../../docs/progress/progress.component';
 
 import { LyButtonComponent } from '../../release/button/ly-button.component';
 import { LyRadioComponent } from '../../release/radio/ly-radio.component';
@@ -22,6 +25,9 @@ import { LyCheckboxGroupComponent } from '../../release/checkbox/ly-checkbox-gro
 import { LyCheckboxButtonComponent } from '../../release/checkbox/ly-checkbox-button.component';
 import { LyDatepickerComponent } from '../../release/datepicker/ly-datepicker.component';
 import { LyInputComponent } from '../../release/input/ly-input.component';
+import { LyRowDirective } from '../../release/layout/ly-row.directive';
+import { LyColDirective } from '../../release/layout/ly-col.directive';
+import { LyProgressComponent } from '../../release/progress/ly-progress.component';
 
 const routes: Routes = [
   {
@@ -42,8 +48,17 @@ const routes: Routes = [
       path: 'checkbox',
       component: CheckboxComponent
     },{
+      path: 'input',
+      component: InputComponent
+    },{
       path: 'datepicker',
       component: DatepickerComponent
+    },{
+      path: 'layout',
+      component: LayoutComponent
+    },{
+      path: 'progress',
+      component: ProgressComponent
     }]
   }
 ];
@@ -71,7 +86,12 @@ const routes: Routes = [
     DatepickerComponent,
     LyInputComponent,
     LyDatepickerComponent,
-    
+    LayoutComponent,
+    InputComponent, 
+    LyRowDirective,
+    LyColDirective,
+    ProgressComponent,
+    LyProgressComponent
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

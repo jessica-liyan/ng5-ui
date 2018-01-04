@@ -1,0 +1,21 @@
+<h2>Input 输入框</h2>
+<h3>基础的按钮用法</h3>
+<ly-input></ly-input>
+<ly-input placeholder="请输入用户名..."></ly-input>
+<markdown path="assets/md/input/input1.md"></markdown>
+
+<h3>带图标</h3>
+<ly-input placeholder="请选择出生日期" icon="assets/img/date.png"></ly-input>
+<markdown path="assets/md/input/input2.md"></markdown>
+
+<h3>双向绑定</h3>
+<ly-input placeholder="请输入用户名" [(model)]="model"></ly-input>
+<p>{{model}}</p>
+<markdown path="assets/md/input/input3.md"></markdown>
+
+<h3>监听事件</h3>
+<p class="tips">使用<i>modelChange</i>监听值改变事件</p>
+<ly-input placeholder="请输入用户名" [(model)]="name" (modelChange)="change($event)"></ly-input>
+<p class="tips">使用<i>focusChange</i>监听聚焦事件</p>
+<ly-input placeholder="请输入用户名" [(model)]="name1" (focusChange)="focus($event)"></ly-input>
+<markdown path="assets/md/input/input4.md"></markdown>
