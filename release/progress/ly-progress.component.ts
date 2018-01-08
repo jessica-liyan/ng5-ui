@@ -1,70 +1,75 @@
-import { Component, Input, OnInit, AfterViewInit, EventEmitter, Output, ElementRef, ViewChild} from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output} from '@angular/core';
  
 @Component({
   selector: 'ly-progress',
   styleUrls: ['./progress.scss'],
   template: `
-  <div *ngIf="!type">
-    <div class="ly-progress" [class.inside]="textInside">
-      <span class="ly-progress-bar" [ngStyle]="style">
-        <i class="ly-progress-label" *ngIf="textInside">{{percent}}</i>
+  <div *ngIf="!type || type !== 'circle'">
+    <div class="ly-progress" [class.inside]="textInside" [ngStyle]="{'height': strokeWidth + 'px',borderRadius: strokeWidth/2 + 'px'}">
+      <span class="ly-progress-bar" [ngStyle]="barStyle">
+        <i class="ly-progress-label" *ngIf="textInside">{{percent}}%</i>
       </span>
     </div>
-    <i class="ly-progress-label" *ngIf="!textInside">{{percent}}</i>
+    <i class="ly-progress-label" *ngIf="!textInside">{{percent}}%</i>
   </div>
-  <svg width="100%" height="100%" *ngIf="type">
-    <path #circle></path>
-    <path #gray></path>
-    <circle cx="60" cy="60" r="50" fill="#FFF" />
-  </svg>
+  <div *ngIf="type == 'circle'" class="ly-progress-circle">
+    <svg viewBox="0 0 100 100">
+      <path [attr.d]="makePath()" stroke="#e5e9f2" [attr.stroke-width]="relativeStrokeWidth" fill="none"></path>
+      <path [attr.d]="makePath()" stroke-linecap="round" fill="none" [ngStyle]="circleStyle"></path>
+    </svg>
+    <div class="ly-progress-label" [ngStyle]="{'color':backgroundColor}">{{percent}}%</div>
+  </div>
+  
   `
 })
 
-export class LyProgressComponent implements OnInit, AfterViewInit{
-  @Input() percent;
+export class LyProgressComponent implements OnInit{
+  @Input() percent; // 0-100
   @Input() backgroundColor;
+  @Input() strokeWidth = 6;
   @Input() textInside;
   @Input() type;
-  style;
+  @Input() width = 126; // type = 'circle'适用
+  relativeStrokeWidth;
+  
+  barStyle;
+  circleStyle;
 
-  constructor(
-    private el: ElementRef
-  ){}
-
-  @ViewChild('circle')
-  circle: ElementRef
-
-  @ViewChild('gray')
-  gray: ElementRef
+  constructor(){}
 
   ngOnInit(){
-    this.style = {
-      width: this.percent,
+    if(this.textInside && this.strokeWidth == 6){
+      this.strokeWidth = 18
+    }
+    console.log(this.strokeWidth)
+
+    this.percent = parseInt(this.percent)
+    this.barStyle = {
+      width: `${this.percent}%`,
+      height: `${this.strokeWidth}px`,
+      borderRadius: `${this.strokeWidth/2}px`,
       backgroundColor: this.backgroundColor
     }
-  }
 
-  ngAfterViewInit(){
-    // 环形进度图
-    if(this.type){
-      this.draw(this.circle.nativeElement, parseInt(this.percent), 60, this.backgroundColor)
-      //this.draw(this.gray.nativeElement, 100, 60, '#ccc')
+    // 环形
+    if(this.type == 'circle'){
+      this.relativeStrokeWidth = (this.strokeWidth/this.width)*100; // 在100*100区域内的相对描边宽度
+
+      const array =  (50 - this.relativeStrokeWidth / 2) * 2 * Math.PI;
+      const offset = (1 - this.percent/100 ) * array
+      this.circleStyle = {
+        stroke: this.backgroundColor || '#409EFF',
+        strokeWidth: this.relativeStrokeWidth,
+        strokeDasharray: `${array}px, ${array}px`,
+        strokeDashoffset: `${offset}px`,
+        transition: '0.6s ease'
+      }
     }
   }
 
-  draw (path,progress,r,bg) {
-    var degrees = progress * (360/100);  
-    var rad = degrees* (Math.PI / 180);
-    var x = -(Math.cos(rad) * r).toFixed(2);
-    var y = -(Math.sin(rad) * r).toFixed(2);
-    var lenghty = Number(degrees > 180);
-    console.log(x,y)
-    var descriptions = ['M', r, r, 'v', -r, 'A', r, r, 0, lenghty, 1, x, y];
-    path.setAttribute('d', descriptions.join(' '));
-    path.setAttribute('fill', bg);
-  }  
+  makePath(){
+    let radius = ~~(50 - Number.parseFloat(this.relativeStrokeWidth)/2)
+    return `M 50 50 m 0 -${radius} a ${radius} ${radius} 0 1 1 0 ${radius*2} a ${radius} ${radius} 0 1 1 0 -${radius*2}`
+  }
 }
 
-// M x y 绝对位置，需要移动到的点的x轴和y轴的坐标 M 60 60 v -60 A 60 60 0 1 1 0 60
-// A rx ry xrotation 1大弧0小弧  1顺0逆 x y
-// M 50 50 m 0 -47 a 47 47 0 1 1 0 94 a 47 47 0 1 1 0 -94

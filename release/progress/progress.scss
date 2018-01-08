@@ -16,10 +16,6 @@
     text-align:right;
     padding:0 10px;
     box-sizing:border-box;
-    .ly-progress-label{
-      font-size:12px;
-      color:#fff;
-    }
   }
   &.inside{
     height:18px;
@@ -27,6 +23,17 @@
     .ly-progress-bar{
       height:18px;
       border-radius:9px;
+      &:before{
+        content:"";
+        display:inline-block;
+        width:0;
+        height:100%;
+        vertical-align:middle;
+      }
+      .ly-progress-label{
+        font-size:12px;
+        color:#fff;
+      }
     }
   }
 }
@@ -34,4 +41,18 @@
   font-size:14px;
   color:#333;
   vertical-align:middle;
+}
+.ly-progress-circle{
+  position: relative;
+  .ly-progress-label{
+    position: absolute;
+    top:50%;
+    left:0;
+    right:0;
+    text-align:center;
+    font-size:14px;
+    color:#409EFF;
+    line-height:1;
+    margin-top:-7px;
+  }
 }
