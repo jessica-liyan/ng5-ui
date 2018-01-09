@@ -27,6 +27,8 @@ export class ComponentsComponent{
     name: 'layout'
   },{
     name: 'progress'
+  },{
+    name: 'upload'
   }]
 
   constructor(){}

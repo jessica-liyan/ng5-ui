@@ -1,0 +1,21 @@
+<h2>Upload 上传</h2>
+<h3>基础用法</h3>
+<ly-upload>
+  <ng-template #trigger>
+    <ly-button type="primary">点击上传</ly-button>
+  </ng-template>
+  <ng-template #tip>
+    <div style="font-size:14px;color:#666;padding:10px 0;">只能上传jpg/png文件，且不超过500kb</div>
+  </ng-template>
+</ly-upload>
+
+<h3>图片列表</h3>
+<p class="tips">使用<i>list-type</i>表示图片列表</p>
+<ly-upload list-type="picture">
+  <ng-template #trigger>
+    <ly-button type="primary">点击上传</ly-button>
+  </ng-template>
+  <ng-template #tip>
+    <div style="font-size:14px;color:#666;padding:10px 0;">只能上传jpg/png文件，且不超过500kb</div>
+  </ng-template>
+</ly-upload>

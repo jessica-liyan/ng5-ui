@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, EventEmitter, Output} from '@angular/core';
+import { Component, Input, OnInit, OnChanges, EventEmitter, Output} from '@angular/core';
  
 @Component({
   selector: 'ly-progress',
@@ -23,7 +23,7 @@ import { Component, Input, OnInit, EventEmitter, Output} from '@angular/core';
   `
 })
 
-export class LyProgressComponent implements OnInit{
+export class LyProgressComponent implements OnInit,OnChanges{
   @Input() percent; // 0-100
   @Input() backgroundColor;
   @Input() strokeWidth = 6;
@@ -41,8 +41,14 @@ export class LyProgressComponent implements OnInit{
     if(this.textInside && this.strokeWidth == 6){
       this.strokeWidth = 18
     }
-    console.log(this.strokeWidth)
+    this.makeProgress()
+  }
 
+  ngOnChanges(){
+    this.makeProgress()
+  }
+
+  makeProgress(){
     this.percent = parseInt(this.percent)
     this.barStyle = {
       width: `${this.percent}%`,

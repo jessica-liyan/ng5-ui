@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule }   from '@angular/forms';
 import {HashLocationStrategy , LocationStrategy} from '@angular/common';
+import { HttpModule, JsonpModule} from '@angular/http';
+import { HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
 import { MarkdownModule } from 'ngx-md';
 
 import { AppComponent } from './app.component';
@@ -15,6 +17,7 @@ import { DatepickerComponent } from '../../docs/datepicker/datepicker.component'
 import { InputComponent } from '../../docs/input/input.component';
 import { LayoutComponent } from '../../docs/layout/layout.component';
 import { ProgressComponent } from '../../docs/progress/progress.component';
+import { UploadComponent } from '../../docs/upload/upload.component';
 
 import { LyButtonComponent } from '../../release/button/ly-button.component';
 import { LyRadioComponent } from '../../release/radio/ly-radio.component';
@@ -28,6 +31,7 @@ import { LyInputComponent } from '../../release/input/ly-input.component';
 import { LyRowDirective } from '../../release/layout/ly-row.directive';
 import { LyColDirective } from '../../release/layout/ly-col.directive';
 import { LyProgressComponent } from '../../release/progress/ly-progress.component';
+import { LyUploadComponent } from '../../release/upload/ly-upload.component';
 
 const routes: Routes = [
   {
@@ -59,6 +63,9 @@ const routes: Routes = [
     },{
       path: 'progress',
       component: ProgressComponent
+    },{
+      path: 'upload',
+      component: UploadComponent
     }]
   }
 ];
@@ -67,6 +74,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpModule,
+    JsonpModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
     RouterModule.forRoot(routes),
     MarkdownModule.forRoot(),
   ],
@@ -91,7 +102,9 @@ const routes: Routes = [
     LyRowDirective,
     LyColDirective,
     ProgressComponent,
-    LyProgressComponent
+    LyProgressComponent,
+    UploadComponent,
+    LyUploadComponent
   ],
   providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
