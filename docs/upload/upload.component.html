@@ -8,9 +8,10 @@
     <div style="font-size:14px;color:#666;padding:10px 0;">只能上传jpg/png文件，且不超过500kb</div>
   </ng-template>
 </ly-upload>
+<markdown path="assets/md/upload/upload1.md"></markdown>
 
 <h3>图片列表</h3>
-<p class="tips">使用<i>list-type</i>表示图片列表</p>
+<p class="tips">使用<i>list-type='picture'</i>表示图片列表</p>
 <ly-upload list-type="picture">
   <ng-template #trigger>
     <ly-button type="primary">点击上传</ly-button>
@@ -19,3 +20,41 @@
     <div style="font-size:14px;color:#666;padding:10px 0;">只能上传jpg/png文件，且不超过500kb</div>
   </ng-template>
 </ly-upload>
+<markdown path="assets/md/upload/upload2.md"></markdown>
+
+<h3>多文件上传</h3>
+<p class="tips">使用<i>multiple</i>表示可以多文件上传</p>
+<ly-upload list-type="picture" multiple="true">
+  <ng-template #trigger>
+    <ly-button type="primary">点击上传</ly-button>
+  </ng-template>
+  <ng-template #tip>
+    <div style="font-size:14px;color:#666;padding:10px 0;">只能上传jpg/png文件，且不超过500kb</div>
+  </ng-template>
+</ly-upload>
+<markdown path="assets/md/upload/upload3.md"></markdown>
+
+<h3>照片墙</h3>
+<p class="tips">使用<i>list-type='card'</i>表示图片列表</p>
+<ly-upload list-type="card" multiple="true">
+  <ng-template #trigger>
+    <img src="assets/img/add.png" alt="">
+  </ng-template>
+</ly-upload>
+<markdown path="assets/md/upload/upload4.md"></markdown>
+
+<h3>双向绑定，事件监听</h3>
+<p class="tips">利用<i>[(fileList)]</i>对上传对象双向绑定，<i>(success)</i>监听上传成功事件，<i>(remove)</i>监听移除事件</p>
+<ly-upload 
+  list-type="card" 
+  multiple="true" 
+  [(fileList)]="fileList"
+  (success)="handleSuccess($event)" 
+  (remove)="handleRemove($event)"
+>
+  <ng-template #trigger>
+    <img src="assets/img/add.png" alt="">
+  </ng-template>
+</ly-upload>
+<markdown path="assets/md/upload/upload5.md"></markdown>
+
