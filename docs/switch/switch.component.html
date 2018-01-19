@@ -1,2 +1,18 @@
-<h2>Cascader 级联选择器</h2>
+<h2>Switch 开关按钮</h2>
 <h3>基础用法</h3>
+<ly-switch></ly-switch>
+<ly-switch width="70" height="24"></ly-switch>
+<ly-switch width="100" height="30" activeColor="#FA5555" inActiveColor="#f5f5f5"></ly-switch>
+<markdown path="assets/md/switch/switch1.md"></markdown>
+
+<h3>双向绑定</h3>
+<ly-switch [(model)]="active"></ly-switch>
+<span>{{active}}</span>
+<ly-switch [(model)]="active1"></ly-switch>
+<span>{{active1}}</span>
+<markdown path="assets/md/switch/switch2.md"></markdown>
+
+<h3>自定义文字</h3>
+<ly-switch [(model)]="active2" activeTxt="男" inActiveTxt="女"></ly-switch>
+<span>{{active2}}</span>
+<markdown path="assets/md/switch/switch3.md"></markdown>

@@ -22,7 +22,6 @@
 <span>{{city}}</span>
 <markdown path="assets/md/select/select3.md"></markdown>
 
-
 <h3>例子：城市多级联动</h3>
 <ly-select placeholder="请选择省" (modelChange)="handle1($event)">
   <ly-option *ngFor="let item of options" [value]="item.value" [label]="item.label"></ly-option>

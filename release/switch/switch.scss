@@ -1,0 +1,27 @@
+.ly-switch{
+  display:inline-block;
+  vertical-align:middle;
+  font-size:0;
+  .ly-switch-label{
+    display:inline-block;
+    font-size:14px;
+    vertical-align:middle;
+    margin:0 5px;
+  }
+  .ly-switch-button{
+    display:inline-block;
+    position: relative;
+    vertical-align:middle;
+    transition:0.3s;
+    cursor: pointer;
+    .circle{
+      display:inline-block;
+      border-radius:50%;
+      background:#fff;
+      position: absolute;
+      top:50%;
+      transition:0.3s;
+      transform:translateY(-50%);
+    }
+  }
+}

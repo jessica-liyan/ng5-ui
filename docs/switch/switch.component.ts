@@ -6,5 +6,7 @@ import { HtmlParser } from '@angular/compiler';
 })
 
 export class SwitchComponent{
-  
+  active = true;
+  active1 = false;
+  active2 = false;
 }
