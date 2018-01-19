@@ -13,21 +13,15 @@ import { HttpClient, HttpHeaders, HttpRequest, HttpParams} from '@angular/common
 
   <ul class="ly-upload-list" [class.picture]="type == 'picture'" [class.card]="type == 'card'">
     <li *ngFor="let file of fileList">
+      <i [class]="'icon-type iconfont icon-' + file.type" *ngIf="!type"></i>
       <img src="{{file.url}}" class="icon v-m" *ngIf="type && file.status == 'success'"/>
-      <i class="iconfont icon-image mr-10" *ngIf="!type && file.type == 'png' || file.type == 'jpg'"></i>
-      <i class="iconfont icon-svg mr-10" *ngIf="!type && file.type == 'svg'"></i>
-      <i class="iconfont icon-word mr-10" *ngIf="!type && file.type == 'docx'"></i>
-      <i class="iconfont icon-excel mr-10" *ngIf="!type && file.type == 'xls'"></i>
-      <i class="iconfont icon-pdf mr-10" *ngIf="!type && file.type == 'pdf'"></i>
-      <i class="iconfont icon-yasuobao mr-10" *ngIf="!type && file.type == 'zip'"></i>
-      <i class="iconfont icon-gif mr-10" *ngIf="!type && file.type == 'gif'"></i>
       <div>
         <span class="v-m" *ngIf="type !== 'card'">{{file.name}}</span>
         <ly-progress *ngIf="type && file.status == 'loading'" [percent]="file.percentage" [type]="type === 'card' ? 'circle' : ''"></ly-progress>
       </div>
-      <span class="tools" *ngIf="type && file.status == 'success'">
-        <img src="assets/img/success.png" class="success v-m"/>
-        <img src="assets/img/del.png" class="del v-m" (click)="delete(file.rename)"/>
+      <span class="tools" *ngIf="file.status == 'success'" [class.corner]="type">
+        <i class="iconfont icon-success"></i>
+        <i class="iconfont icon-delete" (click)="delete(file.rename)"></i>
       </span>
     </li>
   </ul>
@@ -99,7 +93,6 @@ export class LyUploadComponent implements OnInit{
         status: 'loading'
       }
       this.fileList.push(file)
-      console.log(this.fileList)
       this.submit(file, formdata)
     }
   }
@@ -108,7 +101,7 @@ export class LyUploadComponent implements OnInit{
     this.request('http://192.168.3.187/api/public/api/upfile', formdata).subscribe((event) => {
       if(event['body']){
         file.rename = event['body'].data.file
-        file.type = file.rename.split('.')[1],
+        file.type = this.fetchType(file.rename.split('.')[1]),
         file.url = event['body'].data.path + '/' + event['body'].data.file
       }
       if( event['loaded'] && event['total']){
@@ -118,6 +111,31 @@ export class LyUploadComponent implements OnInit{
         }
       }
     })
+  }
+
+  // 获取文件类型
+  fetchType(type){
+    if(type == 'png' || type == 'jpg'){
+      return 'image'
+    }else if(type == 'svg'){
+      return 'svg'
+    }else if(type == 'gif'){
+      return 'gif'
+    }else if(type == 'docx'){
+      return 'word'
+    }else if(type == 'xls'){
+      return 'excel'
+    }else if(type == 'pdf'){
+      return 'pdf'
+    }else if(type == 'xls'){
+      return 'excel'
+    }else if(type == 'zip'){
+      return 'zip'
+    }else if(type == 'html'){
+      return 'html'
+    }else if(type == 'txt'){
+      return 'txt'
+    }
   }
 
   // 更新进度条
@@ -154,3 +172,12 @@ export class LyUploadComponent implements OnInit{
     return this.http.request(req);
   }
 }
+
+
+/*
+      <i class="iconfont icon-svg mr-10" *ngIf="!type && file.type == 'svg'"></i>
+      <i class="iconfont icon-word mr-10" *ngIf="!type && file.type == 'docx'"></i>
+      <i class="iconfont icon-excel mr-10" *ngIf="!type && file.type == 'xls'"></i>
+      <i class="iconfont icon-pdf mr-10" *ngIf="!type && file.type == 'pdf'"></i>
+      <i class="iconfont icon-zip mr-10" *ngIf="!type && file.type == 'zip'"></i>
+      <i class="iconfont icon-gif mr-10" *ngIf="!type && file.type == 'gif'"></i> */

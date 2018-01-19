@@ -1,0 +1,16 @@
+<h2>Alert 消息提示</h2>
+<h3>基础用法</h3>
+<ly-alert>这是要提示的内容</ly-alert>
+<ly-alert type="error">这是要提示的内容</ly-alert>
+<ly-alert type="warning">这是要提示的内容</ly-alert>
+<ly-alert type="success">这是要提示的内容这是要提示的内容这是要提示的内容这是要提示的内容这是要提示的内容</ly-alert>
+<markdown path="assets/md/alert/alert1.md"></markdown>
+
+<h3>模板添加</h3>
+<p class="tips">通过ng-template添加</p>
+<ly-alert>
+  <ng-template #content>
+    <div style="font-size:14px;color:#666;padding:10px 0;">只能上传jpg/png文件，且不超过500kb</div>
+  </ng-template>
+</ly-alert>
+<markdown path="assets/md/alert/alert2.md"></markdown>

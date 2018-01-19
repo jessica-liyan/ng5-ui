@@ -2,6 +2,7 @@
 body{margin:0;font-family:'PingFang SC', tahoma, arial, 'helvetica neue', 'hiragino sans gb', 'microsoft yahei ui', 'microsoft yahei', simsun, sans-serif;}
 a{text-decoration:none;cursor:pointer;}
 html,body{height:100%;}
+ul,li{list-style:none;padding:0;margin:0;}
 button:focus,input:focus{outline:none;}
 table{border-spacing:0;border-collapse:collapse;}
 i,em{font-style:normal;}b{font-weight:normal;}

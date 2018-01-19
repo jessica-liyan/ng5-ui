@@ -20,7 +20,11 @@ export class ComponentsComponent{
   },{
     name: 'checkbox'
   },{
+    name: 'switch'
+  },{
     name: 'input'
+  },{
+    name: 'select'
   },{
     name: 'datepicker'
   },{
@@ -29,6 +33,10 @@ export class ComponentsComponent{
     name: 'progress'
   },{
     name: 'upload'
+  },{
+    name: 'toast'
+  },{
+    name: 'alert'
   }]
 
   constructor(){}

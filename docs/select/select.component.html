@@ -1,0 +1,38 @@
+<h2>Select 下拉框</h2>
+<h3>基础用法</h3>
+<p class="tips">使用<i>(modelChange)</i>监听绑定值的改变</p>
+<ly-select placeholder="请选择" (modelChange)="handleChange($event)">
+  <ly-option *ngFor="let item of foods" [value]="item.value" [label]="item.label"></ly-option>
+</ly-select>
+<markdown path="assets/md/select/select1.md"></markdown>
+
+<h3>默认选中，双向绑定</h3>
+<p class="tips">使用<i>[(model)]</i>进行双向绑定</p>
+<ly-select [(model)]="food" (modelChange)="handleChange1($event)">
+  <ly-option *ngFor="let item of foods" [value]="item.value" [label]="item.label"></ly-option>
+</ly-select>
+<span>{{food}}</span>
+<markdown path="assets/md/select/select2.md"></markdown>
+
+<h3>添加可清除选项</h3>
+<p class="tips">使用<i>clearable</i>设置清除功能</p>
+<ly-select [(model)]="city" (modelChange)="handleChange1($event)" [clearable]="true">
+  <ly-option *ngFor="let item of cities" [value]="item.value" [label]="item.label"></ly-option>
+</ly-select>
+<span>{{city}}</span>
+<markdown path="assets/md/select/select3.md"></markdown>
+
+
+<h3>例子：城市多级联动</h3>
+<ly-select placeholder="请选择省" (modelChange)="handle1($event)">
+  <ly-option *ngFor="let item of options" [value]="item.value" [label]="item.label"></ly-option>
+</ly-select>
+<ly-select placeholder="请选择市" *ngIf="chosen1" (modelChange)="handle2($event)">
+  <ly-option *ngFor="let item of chosen1Child" [value]="item.value" [label]="item.label"></ly-option>
+</ly-select>
+<ly-select placeholder="请选择区" *ngIf="chosen2" (modelChange)="handle3($event)">
+  <ly-option *ngFor="let item of chosen2Child" [value]="item.value" [label]="item.label"></ly-option>
+</ly-select>
+<p>{{chosen1}}-{{chosen2}}-{{chosen3}}</p>
+<markdown path="assets/md/select/select4.md"></markdown>
+

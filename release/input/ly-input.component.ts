@@ -6,6 +6,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
   template: `
   <div class="ly-input" style="{{style}}">
     <input type="text" 
+      class="{{class}}"
       placeholder="{{placeholder}}" 
       [(ngModel)]="model" 
       (ngModelChange)="changeHandle($event)"
@@ -21,6 +22,7 @@ export class LyInputComponent implements OnInit{
   @Input() placeholder;
   @Input() model;
   @Input() style;
+  @Input() class;
   @Output() modelChange: EventEmitter<string> = new EventEmitter();
   @Output() focusChange: EventEmitter<string> = new EventEmitter();
 

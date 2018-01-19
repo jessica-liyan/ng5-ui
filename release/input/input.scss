@@ -1,3 +1,4 @@
+
 .ly-input{
   display: inline-block;
   position: relative;
@@ -13,6 +14,9 @@
     border-radius:4px;
     box-sizing:border-box;
     transition:0.3s;
+    &.pointer{
+      cursor:pointer;
+    }
     &:focus{
       border-color:#409EFF;
     }

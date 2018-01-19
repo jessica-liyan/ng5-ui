@@ -17,43 +17,56 @@
     flex-direction:row;
     align-items: center;
     padding:10px;
-    margin: 10px 0;
     font-size:14px;
     color:#666;
     cursor: pointer;
     box-sizing:border-box;
     position: relative;
+    .icon-type{
+      font-size:20px;
+      color:#999;
+      margin-right:20px;
+    }
     &.chosen{
       border-color:#9AD53F!important;
     }
     .tools{
       position: absolute;
       right:0;
-      top:0;
-      width:30px;
-      height:30px;
-      .del{
+      top:50%;
+      transform:translateY(-50%);
+      text-align:right;
+      .iconfont{
+        font-size:18px;
+      }
+      .icon-success{
+        color:#9AD53F;
+      }
+      .icon-delete{
+        color:#999;
         display:none;
       }
-      &:before{
-        content:"";
-        display:inline-block;
-        width:0;
-        height:0;
-        border-top:30px solid #9AD53F;
-        border-left:30px solid transparent;
-        position: absolute;
-        left:0;
+      &.corner{
+        width:30px;
+        height:30px;
         top:0;
-        transition:0.3s;
-      }
-      img{
-        position: absolute;
-        right:5px;
-        top:5px;
-        z-index:3;
-        &.success{
-          right:2px;top:3px;
+        transform:none;
+        .icon-success{
+          color:#fff;
+          position: relative;
+          z-index:3;
+        }
+        &:before{
+          content:"";
+          display:inline-block;
+          width:0;
+          height:0;
+          border-top:30px solid #9AD53F;
+          border-left:30px solid transparent;
+          position: absolute;
+          left:0;
+          top:0;
+          transition:0.3s;
         }
       }
     }
@@ -61,15 +74,16 @@
       .tools:before{
         display:none;
       }
-      .tools .success{
+      .tools .icon-success{
         display:none;
       }
-      .tools .del{
+      .tools .icon-delete{
         display:block;
       }
     }
   }
   &.picture li{
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius:6px;
     .icon{

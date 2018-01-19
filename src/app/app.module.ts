@@ -6,6 +6,7 @@ import {HashLocationStrategy , LocationStrategy} from '@angular/common';
 import { HttpModule, JsonpModule} from '@angular/http';
 import { HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
 import { MarkdownModule } from 'ngx-md';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ComponentsComponent } from './components.component';
@@ -18,6 +19,10 @@ import { InputComponent } from '../../docs/input/input.component';
 import { LayoutComponent } from '../../docs/layout/layout.component';
 import { ProgressComponent } from '../../docs/progress/progress.component';
 import { UploadComponent } from '../../docs/upload/upload.component';
+import { ToastComponent } from '../../docs/toast/toast.component';
+import { AlertComponent } from '../../docs/alert/alert.component';
+import { SelectComponent } from '../../docs/select/select.component';
+import { SwitchComponent } from '../../docs/switch/switch.component';
 
 import { LyButtonComponent } from '../../release/button/ly-button.component';
 import { LyRadioComponent } from '../../release/radio/ly-radio.component';
@@ -32,6 +37,14 @@ import { LyRowDirective } from '../../release/layout/ly-row.directive';
 import { LyColDirective } from '../../release/layout/ly-col.directive';
 import { LyProgressComponent } from '../../release/progress/ly-progress.component';
 import { LyUploadComponent } from '../../release/upload/ly-upload.component';
+import { LyToastComponent } from '../../release/toast/ly-toast.component';
+import { LyAlertComponent } from '../../release/alert/ly-alert.component';
+import { LySelectComponent } from '../../release/select/ly-select.component';
+import { LyOptionComponent } from '../../release/select/ly-option.component';
+import { LySwitchComponent } from '../../release/switch/ly-switch.component';
+
+import { ToastService } from '../../release/toast/toast.service';
+import { DynamicService } from '../../release/tools/dynamic.service';
 
 const routes: Routes = [
   {
@@ -52,8 +65,14 @@ const routes: Routes = [
       path: 'checkbox',
       component: CheckboxComponent
     },{
+      path: 'switch',
+      component: SwitchComponent
+    },{
       path: 'input',
       component: InputComponent
+    },{
+      path: 'select',
+      component: SelectComponent
     },{
       path: 'datepicker',
       component: DatepickerComponent
@@ -66,6 +85,12 @@ const routes: Routes = [
     },{
       path: 'upload',
       component: UploadComponent
+    },{
+      path: 'toast',
+      component: ToastComponent
+    },{
+      path: 'alert',
+      component: AlertComponent
     }]
   }
 ];
@@ -73,6 +98,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpModule,
     JsonpModule,
@@ -104,9 +130,21 @@ const routes: Routes = [
     ProgressComponent,
     LyProgressComponent,
     UploadComponent,
-    LyUploadComponent
+    LyUploadComponent,
+    ToastComponent,
+    LyToastComponent,
+    AlertComponent,
+    LyAlertComponent,
+    SelectComponent,
+    LySelectComponent,
+    LyOptionComponent,
+    SwitchComponent,
+    LySwitchComponent
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  entryComponents: [
+    LyToastComponent
+  ],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, ToastService, DynamicService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
