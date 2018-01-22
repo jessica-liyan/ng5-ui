@@ -1,0 +1,32 @@
+<h2>Table 表格</h2>
+<h3>基础用法</h3>
+<ly-table [model]="tableData">
+  <ly-table-row [keys]="keys" [width]="width"></ly-table-row>
+</ly-table>
+<markdown path="assets/md/table/table1.md"></markdown>
+
+<h3>内容居中</h3>
+<p class="tips">使用<i>center=“all”</i>所有居中，使用<i>center=“header”</i>仅表头居中</p>
+<ly-table [model]="tableData" center="all">
+  <ly-table-row [keys]="keys" [width]="width"></ly-table-row>
+</ly-table>
+<ly-table [model]="tableData" center="header">
+  <ly-table-row [keys]="keys" [width]="width"></ly-table-row>
+</ly-table>
+<markdown path="assets/md/table/table2.md"></markdown>
+
+<h3>显示纵向边框</h3>
+<ly-table [model]="tableData" center="all" border="true">
+  <ly-table-row [keys]="keys" [width]="width"></ly-table-row>
+</ly-table>
+<markdown path="assets/md/table/table3.md"></markdown>
+
+<h3>表头固定，内容滚动</h3>
+<p class="tips">使用<i>height</i>确定表单整个高度</p>
+<ly-table [model]="tableData" center="all" height="150">
+  <ly-table-row [keys]="keys" [width]="width"></ly-table-row>
+</ly-table>
+<markdown path="assets/md/table/table4.md"></markdown>
+
+
+

@@ -28,11 +28,13 @@ export class ComponentsComponent{
   },{
     name: 'datepicker'
   },{
+    name: 'upload'
+  },{
+    name: 'table'
+  },{
     name: 'layout'
   },{
     name: 'progress'
-  },{
-    name: 'upload'
   },{
     name: 'toast'
   },{

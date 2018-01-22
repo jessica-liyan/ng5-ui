@@ -15,8 +15,8 @@ import { Component, Input, OnInit, EventEmitter, Output, HostBinding, animate, A
 })
 
 export class LySwitchComponent implements OnInit{
-  @Input() width = 60;
-  @Input() height = 30;
+  @Input() width = 40;
+  @Input() height = 20;
   @Input() activeColor = '#409EFF';
   @Input() inActiveColor = '#ccc';
   @Input() model = false;

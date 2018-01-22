@@ -1,0 +1,28 @@
+.ly-table-row{
+  width:100%;
+  border-spacing:0;
+  tr:hover td{
+    background:#ECF5FF;
+  }
+  td,th{
+    font-size:14px;
+    color: #333;
+    padding:10px;
+    border-bottom:1px solid #E6EBF5;
+    text-align:left;
+    transition:0.3s;
+  }
+  th.center{
+    text-align:center;
+  }
+  th.border{
+    border:1px solid #E6EBF5;
+    border-bottom:0;
+  }
+  td.center{
+    text-align:center;
+  }
+  td.border{
+    border:1px solid #E6EBF5;
+  }
+} 

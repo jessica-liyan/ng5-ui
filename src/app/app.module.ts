@@ -23,6 +23,7 @@ import { ToastComponent } from '../../docs/toast/toast.component';
 import { AlertComponent } from '../../docs/alert/alert.component';
 import { SelectComponent } from '../../docs/select/select.component';
 import { SwitchComponent } from '../../docs/switch/switch.component';
+import { TableComponent } from '../../docs/table/table.component';
 
 import { LyButtonComponent } from '../../release/button/ly-button.component';
 import { LyRadioComponent } from '../../release/radio/ly-radio.component';
@@ -42,6 +43,8 @@ import { LyAlertComponent } from '../../release/alert/ly-alert.component';
 import { LySelectComponent } from '../../release/select/ly-select.component';
 import { LyOptionComponent } from '../../release/select/ly-option.component';
 import { LySwitchComponent } from '../../release/switch/ly-switch.component';
+import { LyTableComponent } from '../../release/table/ly-table.component';
+import { LyTableRowComponent } from '../../release/table/ly-table-row.component';
 
 import { ToastService } from '../../release/toast/toast.service';
 import { DynamicService } from '../../release/tools/dynamic.service';
@@ -76,6 +79,9 @@ const routes: Routes = [
     },{
       path: 'datepicker',
       component: DatepickerComponent
+    },{
+      path: 'table',
+      component: TableComponent
     },{
       path: 'layout',
       component: LayoutComponent
@@ -139,7 +145,10 @@ const routes: Routes = [
     LySelectComponent,
     LyOptionComponent,
     SwitchComponent,
-    LySwitchComponent
+    LySwitchComponent,
+    TableComponent,
+    LyTableComponent,
+    LyTableRowComponent
   ],
   entryComponents: [
     LyToastComponent

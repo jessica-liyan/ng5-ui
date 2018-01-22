@@ -29,5 +29,5 @@ i,em{font-style:normal;}b{font-weight:normal;}
 .main h3{font-size:16px;color:#666;font-weight:normal;margin:20px 0 0 0;padding:10px 15px;position:relative;}
 .main h3:before{content:"";display:inline-block;width:3px;height:16px;background:#4a8bfc;position:absolute;left:0;top:50%;margin-top:-8px;}
 .main p{font-size:14px;color:#999;margin:10px 0;}
-.main p.tips{padding:10px 20px;border:1px solid #ddd;background:#f9f9f9;}
-.main p.tips i{display:inline-block;padding:3px 10px;background:#ededed;font-style:normal;color:#666;margin:0 5px;border-radius:4px;}
+.main p.tips{padding:10px 20px;border:solid 1px #eaeefb;background:#F9FAFC;}
+.main p.tips i{display:inline-block;padding:3px 10px;font-style:normal;color:#666;margin:0 5px;border-radius:4px;}
