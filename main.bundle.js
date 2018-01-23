@@ -1,5 +1,40 @@
 webpackJsonp(["main"],{
 
+/***/ "../../../../../docs/alert/alert.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Alert 消息提示</h2>\r\n<h3>基础用法</h3>\r\n<ly-alert>这是要提示的内容</ly-alert>\r\n<ly-alert type=\"error\">这是要提示的内容</ly-alert>\r\n<ly-alert type=\"warning\">这是要提示的内容</ly-alert>\r\n<ly-alert type=\"success\">这是要提示的内容这是要提示的内容这是要提示的内容这是要提示的内容这是要提示的内容</ly-alert>\r\n<markdown path=\"assets/md/alert/alert1.md\"></markdown>\r\n\r\n<h3>模板添加</h3>\r\n<p class=\"tips\">通过ng-template添加</p>\r\n<ly-alert>\r\n  <ng-template #content>\r\n    <div style=\"font-size:14px;color:#666;padding:10px 0;\">只能上传jpg/png文件，且不超过500kb</div>\r\n  </ng-template>\r\n</ly-alert>\r\n<markdown path=\"assets/md/alert/alert2.md\"></markdown>"
+
+/***/ }),
+
+/***/ "../../../../../docs/alert/alert.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var AlertComponent = (function () {
+    function AlertComponent() {
+    }
+    AlertComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            template: __webpack_require__("../../../../../docs/alert/alert.component.html"),
+        })
+    ], AlertComponent);
+    return AlertComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../docs/button/button.component.html":
 /***/ (function(module, exports) {
 
@@ -216,6 +251,65 @@ module.exports = module.exports.toString();
 
 /***/ }),
 
+/***/ "../../../../../docs/menu/menu.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<style>\r\n  .demo{\r\n    padding-left:20px;\r\n  }\r\n</style>\r\n<h2>Menu 导航菜单</h2>\r\n<h3>基础的用法</h3>\r\n<ly-menu [(model)]=\"model\" (modelChange)=\"handleChange($event)\">\r\n  <ly-menu-item index=\"0\">首页</ly-menu-item>\r\n  <ly-menu-item index=\"1\">政策法规</ly-menu-item>\r\n  <ly-menu-item index=\"2\">继续教育</ly-menu-item>\r\n</ly-menu>\r\n<p>{{model}}</p>\r\n<markdown path=\"assets/md/menu/menu1.md\"></markdown>\r\n\r\n<h3>覆盖样式</h3>\r\n<ly-menu [(model)]=\"model1\" class=\"demo\" backgroundColor=\"#545C64\" activeColor=\"#FFD04B\" textColor=\"#fff\">\r\n  <ly-menu-item index=\"0\">首页</ly-menu-item>\r\n  <ly-menu-item index=\"1\">政策法规</ly-menu-item>\r\n  <ly-menu-item index=\"2\">继续教育</ly-menu-item>\r\n</ly-menu>\r\n<p>{{model1}}</p>\r\n<markdown path=\"assets/md/menu/menu2.md\"></markdown>\r\n\r\n<h3>多级菜单</h3>\r\n<ly-menu [(model)]=\"model\" (modelChange)=\"handleChange($event)\">\r\n  <ly-menu-item index=\"0\">首页</ly-menu-item>\r\n  <sub-menu index=\"1\" title=\"政策法规\">\r\n    <ly-menu-item index=\"1-1\">政策</ly-menu-item>\r\n    <ly-menu-item index=\"1-2\">法规</ly-menu-item>\r\n    <ly-menu-item index=\"1-3\">政策法规3</ly-menu-item>\r\n  </sub-menu>\r\n  <ly-menu-item index=\"2\">继续教育</ly-menu-item>\r\n  <sub-menu index=\"3\" title=\"联系方式\">\r\n    <ly-menu-item index=\"3-1\">联系方式1</ly-menu-item>\r\n    <ly-menu-item index=\"3-2\">联系方式2</ly-menu-item>\r\n    <ly-menu-item index=\"3-3\">联系方式3</ly-menu-item>\r\n  </sub-menu>\r\n</ly-menu>\r\n<p>{{model}}</p>\r\n\r\n<ly-menu [(model)]=\"model\" (modelChange)=\"handleChange($event)\" backgroundColor=\"#545C64\" activeColor=\"#FFD04B\" textColor=\"#fff\">\r\n  <ly-menu-item index=\"0\">首页</ly-menu-item>\r\n  <sub-menu index=\"1\" title=\"政策法规\">\r\n    <ly-menu-item index=\"1-1\">政策</ly-menu-item>\r\n    <ly-menu-item index=\"1-2\">法规</ly-menu-item>\r\n    <ly-menu-item index=\"1-3\">政策法规3</ly-menu-item>\r\n  </sub-menu>\r\n  <ly-menu-item index=\"2\">继续教育</ly-menu-item>\r\n  <sub-menu index=\"3\" title=\"联系方式\">\r\n    <ly-menu-item index=\"3-1\">联系方式1</ly-menu-item>\r\n    <ly-menu-item index=\"3-2\">联系方式2</ly-menu-item>\r\n    <ly-menu-item index=\"3-3\">联系方式3</ly-menu-item>\r\n  </sub-menu>\r\n</ly-menu>\r\n<markdown path=\"assets/md/menu/menu3.md\"></markdown>\r\n\r\n<h3>垂直菜单</h3>\r\n<p class=\"tips\">默认是水平菜单<i>mode=\"horizontal\"</i>，垂直菜单设置<i>mode=\"vertical\"</i></p>\r\n<div style=\"display:inline-block;width:200px;\">\r\n  <ly-menu [(model)]=\"model\" mode=\"vertical\">\r\n    <ly-menu-item index=\"0\">首页</ly-menu-item>\r\n    <sub-menu index=\"1\" title=\"政策法规\">\r\n      <ly-menu-item index=\"1-1\">政策</ly-menu-item>\r\n      <ly-menu-item index=\"1-2\">法规</ly-menu-item>\r\n      <ly-menu-item index=\"1-3\">政策法规3</ly-menu-item>\r\n    </sub-menu>\r\n    <ly-menu-item index=\"2\">继续教育</ly-menu-item>\r\n    <sub-menu index=\"3\" title=\"联系方式\">\r\n      <ly-menu-item index=\"3-1\">联系方式1</ly-menu-item>\r\n      <ly-menu-item index=\"3-2\">联系方式2</ly-menu-item>\r\n      <ly-menu-item index=\"3-3\">联系方式3</ly-menu-item>\r\n    </sub-menu>\r\n  </ly-menu>\r\n</div>\r\n\r\n<div style=\"display:inline-block;width:200px;\">\r\n  <ly-menu [(model)]=\"model\" mode=\"vertical\" backgroundColor=\"#545C64\" activeColor=\"#FFD04B\" textColor=\"#fff\">\r\n    <ly-menu-item index=\"0\">首页</ly-menu-item>\r\n    <sub-menu index=\"1\" title=\"政策法规\">\r\n      <ly-menu-item index=\"1-1\">政策</ly-menu-item>\r\n      <ly-menu-item index=\"1-2\">法规</ly-menu-item>\r\n      <ly-menu-item index=\"1-3\">政策法规3</ly-menu-item>\r\n    </sub-menu>\r\n    <ly-menu-item index=\"2\">继续教育</ly-menu-item>\r\n    <sub-menu index=\"3\" title=\"联系方式\">\r\n      <ly-menu-item index=\"3-1\">联系方式1</ly-menu-item>\r\n      <ly-menu-item index=\"3-2\">联系方式2</ly-menu-item>\r\n      <ly-menu-item index=\"3-3\">联系方式3</ly-menu-item>\r\n    </sub-menu>\r\n  </ly-menu>\r\n</div>\r\n<markdown path=\"assets/md/menu/menu4.md\"></markdown>\r\n\r\n\r\n"
+
+/***/ }),
+
+/***/ "../../../../../docs/menu/menu.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MenuComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var MenuComponent = (function () {
+    function MenuComponent() {
+        this.model = 0;
+        this.model1 = 1;
+    }
+    MenuComponent.prototype.handleChange = function (index) {
+        console.log('标签改变了', index);
+    };
+    MenuComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            template: __webpack_require__("../../../../../docs/menu/menu.component.html"),
+            styles: [__webpack_require__("../../../../../docs/menu/menu.scss")]
+        })
+    ], MenuComponent);
+    return MenuComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../docs/menu/menu.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
 /***/ "../../../../../docs/progress/progress.component.html":
 /***/ (function(module, exports) {
 
@@ -254,7 +348,7 @@ var ProgressComponent = (function () {
 /***/ "../../../../../docs/radio/radio.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Radio 单选按钮</h2>\r\n<h3>基础的按钮用法</h3>\r\n<p>\r\n  <ly-radio-group [labelGroup]=\"['男', '女']\" [model]=\"'男'\"></ly-radio-group>\r\n</p>\r\n<p>\r\n  <ly-radio-group [labelGroup]=\"['北京','上海','广州']\" [model]=\"'北京'\"></ly-radio-group>\r\n</p>\r\n<markdown path=\"assets/md/radio/radio1.md\"></markdown>\r\n\r\n<h3>按钮样式</h3>\r\n<p>\r\n  <ly-radio-button [labelGroup]=\"['男', '女']\" [model]=\"'男'\"></ly-radio-button>\r\n</p>\r\n<p>\r\n  <ly-radio-button [labelGroup]=\"['北京','上海','广州']\" [model]=\"'北京'\"></ly-radio-button>\r\n</p>\r\n<markdown path=\"assets/md/radio/radio2.md\"></markdown>\r\n\r\n<h3>双向绑定</h3>\r\n<p class=\"tips\">使用<i>[(model)]</i>进行双向绑定</p>\r\n<p>\r\n  <ly-radio-group [labelGroup]=\"['javascript','html','css']\" [(model)]=\"type\"></ly-radio-group>\r\n</p>\r\n<p>\r\n  <ly-radio-button [labelGroup]=\"['北京','上海','广州','武汉']\" [(model)]=\"city\"></ly-radio-button>\r\n</p>\r\n<p>{{type}}---{{city}}</p>\r\n<markdown path=\"assets/md/radio/radio3.md\"></markdown>\r\n\r\n<h3>自定义颜色</h3>\r\n<p class=\"tips\">使用<i>fill</i>定义按钮激活时的背景色和边框色，用<i>textColor</i>定义按钮激活时的文本颜色</p>\r\n<p>\r\n  <ly-radio-group [labelGroup]=\"['javascript','html','css']\" [(model)]=\"type\" fill=\"#F57069\"></ly-radio-group>\r\n</p>\r\n<p>\r\n  <ly-radio-button [labelGroup]=\"['北京','上海','广州','武汉']\" [(model)]=\"city\" fill=\"#F57069\"></ly-radio-button>\r\n</p>\r\n<markdown path=\"assets/md/radio/radio4.md\"></markdown>\r\n\r\n"
+module.exports = "<h2>Radio 单选按钮</h2>\r\n<h3>基础的按钮用法</h3>\r\n<p>\r\n  <ly-radio-group [labelGroup]=\"['男', '女']\" [model]=\"'男'\"></ly-radio-group>\r\n</p>\r\n<p>\r\n  <ly-radio-group [labelGroup]=\"['北京','上海','广州']\" [model]=\"'北京'\"></ly-radio-group>\r\n</p>\r\n<markdown path=\"assets/md/radio/radio1.md\"></markdown>\r\n\r\n<h3>按钮样式</h3>\r\n<p>\r\n  <ly-radio-button [labelGroup]=\"['男', '女']\" [model]=\"'男'\"></ly-radio-button>\r\n</p>\r\n<p>\r\n  <ly-radio-button [labelGroup]=\"['北京','上海','广州']\" [model]=\"'北京'\"></ly-radio-button>\r\n</p>\r\n<markdown path=\"assets/md/radio/radio2.md\"></markdown>\r\n\r\n<h3>双向绑定</h3>\r\n<p class=\"tips\">使用<i>[(model)]</i>进行双向绑定</p>\r\n<p>\r\n  <ly-radio-group [labelGroup]=\"['javascript','html','css']\" [(model)]=\"type\"></ly-radio-group>\r\n</p>\r\n<p>\r\n  <ly-radio-button [labelGroup]=\"['北京','上海','广州','武汉']\" [(model)]=\"city\"></ly-radio-button>\r\n</p>\r\n<p>{{type}}---{{city}}</p>\r\n<markdown path=\"assets/md/radio/radio3.md\"></markdown>\r\n\r\n<h3>自定义颜色</h3>\r\n<p class=\"tips\">使用<i>fill</i>定义按钮激活时的背景色和边框色，用<i>textColor</i>定义按钮激活时的文本颜色</p>\r\n<p>\r\n  <ly-radio-group [labelGroup]=\"['javascript','html','css']\" [(model)]=\"type\" fill=\"#F57069\"></ly-radio-group>\r\n</p>\r\n<p>\r\n  <ly-radio-button [labelGroup]=\"['北京','上海','广州','武汉']\" [(model)]=\"city\" fill=\"#F57069\"></ly-radio-button>\r\n</p>\r\n<markdown path=\"assets/md/radio/radio4.md\"></markdown>"
 
 /***/ }),
 
@@ -282,6 +376,411 @@ var RadioComponent = (function () {
         })
     ], RadioComponent);
     return RadioComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../docs/select/select.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Select 下拉框</h2>\r\n<h3>基础用法</h3>\r\n<p class=\"tips\">使用<i>(modelChange)</i>监听绑定值的改变</p>\r\n<ly-select placeholder=\"请选择\" (modelChange)=\"handleChange($event)\">\r\n  <ly-option *ngFor=\"let item of foods\" [value]=\"item.value\" [label]=\"item.label\"></ly-option>\r\n</ly-select>\r\n<markdown path=\"assets/md/select/select1.md\"></markdown>\r\n\r\n<h3>默认选中，双向绑定</h3>\r\n<p class=\"tips\">使用<i>[(model)]</i>进行双向绑定</p>\r\n<ly-select [(model)]=\"food\" (modelChange)=\"handleChange1($event)\">\r\n  <ly-option *ngFor=\"let item of foods\" [value]=\"item.value\" [label]=\"item.label\"></ly-option>\r\n</ly-select>\r\n<span>{{food}}</span>\r\n<markdown path=\"assets/md/select/select2.md\"></markdown>\r\n\r\n<h3>添加可清除选项</h3>\r\n<p class=\"tips\">使用<i>clearable</i>设置清除功能</p>\r\n<ly-select [(model)]=\"city\" (modelChange)=\"handleChange1($event)\" [clearable]=\"true\">\r\n  <ly-option *ngFor=\"let item of cities\" [value]=\"item.value\" [label]=\"item.label\"></ly-option>\r\n</ly-select>\r\n<span>{{city}}</span>\r\n<markdown path=\"assets/md/select/select3.md\"></markdown>\r\n\r\n<h3>例子：城市多级联动</h3>\r\n<ly-select placeholder=\"请选择省\" (modelChange)=\"handle1($event)\">\r\n  <ly-option *ngFor=\"let item of options\" [value]=\"item.value\" [label]=\"item.label\"></ly-option>\r\n</ly-select>\r\n<ly-select placeholder=\"请选择市\" *ngIf=\"chosen1\" (modelChange)=\"handle2($event)\">\r\n  <ly-option *ngFor=\"let item of chosen1Child\" [value]=\"item.value\" [label]=\"item.label\"></ly-option>\r\n</ly-select>\r\n<ly-select placeholder=\"请选择区\" *ngIf=\"chosen2\" (modelChange)=\"handle3($event)\">\r\n  <ly-option *ngFor=\"let item of chosen2Child\" [value]=\"item.value\" [label]=\"item.label\"></ly-option>\r\n</ly-select>\r\n<p>{{chosen1}}-{{chosen2}}-{{chosen3}}</p>\r\n<markdown path=\"assets/md/select/select4.md\"></markdown>\r\n\r\n"
+
+/***/ }),
+
+/***/ "../../../../../docs/select/select.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SelectComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var SelectComponent = (function () {
+    function SelectComponent() {
+        this.food = 'fish';
+        this.foods = [{
+                label: '红烧武昌鱼',
+                value: 'wuchang',
+            }, {
+                label: '剁椒鱼头',
+                value: 'fish',
+            }, {
+                label: '碳烤牛蛙',
+                value: 'niuwa',
+            }, {
+                label: '黄豆焖猪蹄',
+                value: 'zhuti',
+            }];
+        this.city = 'bj';
+        this.cities = [{
+                label: '北京',
+                value: 'bj',
+            }, {
+                label: '上海',
+                value: 'sh',
+            }, {
+                label: '广州',
+                value: 'gz',
+            }, {
+                label: '深圳',
+                value: 'sz',
+            }];
+        this.options = [{
+                value: 'hubei',
+                label: '湖北',
+                children: [{
+                        value: 'wuhan',
+                        label: '武汉',
+                        children: [{
+                                value: 'wuchang',
+                                label: '武昌区',
+                            }, {
+                                value: 'hankou',
+                                label: '汉口区',
+                            }, {
+                                value: 'hanyang',
+                                label: '汉阳区',
+                            }]
+                    }, {
+                        value: 'xiangyang',
+                        label: '襄阳',
+                        children: [{
+                                value: 'fancheng',
+                                label: '樊城区',
+                            }, {
+                                value: 'laohekou',
+                                label: '老河口区',
+                            }]
+                    }]
+            }, {
+                value: 'henan',
+                label: '河南',
+                children: [{
+                        value: 'zhengzhou',
+                        label: '郑州',
+                        children: [{
+                                value: 'zz1',
+                                label: '郑州1区',
+                            }, {
+                                value: 'zz2',
+                                label: '郑州2区',
+                            }, {
+                                value: 'zz3',
+                                label: '郑州3区',
+                            }]
+                    }, {
+                        value: 'anyang',
+                        label: '安阳',
+                        children: [{
+                                value: 'ay1',
+                                label: '安阳1区',
+                            }, {
+                                value: 'ay2',
+                                label: '安阳2区',
+                            }]
+                    }]
+            }];
+    }
+    SelectComponent.prototype.handleChange = function (ev) {
+        console.log('改变后的option', ev);
+    };
+    SelectComponent.prototype.handleChange1 = function (ev) {
+        console.log('改变后的option1', ev);
+    };
+    SelectComponent.prototype.handle1 = function (val) {
+        this.chosen1 = val;
+        this.chosen1Child = this.options.find(function (item) { return item.value == val; }).children;
+    };
+    SelectComponent.prototype.handle2 = function (val) {
+        this.chosen2 = val;
+        this.chosen2Child = this.chosen1Child.find(function (item) { return item.value == val; }).children;
+    };
+    SelectComponent.prototype.handle3 = function (val) {
+        this.chosen3 = val;
+    };
+    SelectComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            template: __webpack_require__("../../../../../docs/select/select.component.html")
+        })
+    ], SelectComponent);
+    return SelectComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../docs/switch/switch.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Switch 开关按钮</h2>\r\n<h3>基础用法</h3>\r\n<ly-switch></ly-switch>\r\n<ly-switch width=\"70\" height=\"24\"></ly-switch>\r\n<ly-switch width=\"100\" height=\"30\" activeColor=\"#FA5555\" inActiveColor=\"#f5f5f5\"></ly-switch>\r\n<markdown path=\"assets/md/switch/switch1.md\"></markdown>\r\n\r\n<h3>双向绑定</h3>\r\n<ly-switch [(model)]=\"active\"></ly-switch>\r\n<span>{{active}}</span>\r\n<ly-switch [(model)]=\"active1\"></ly-switch>\r\n<span>{{active1}}</span>\r\n<markdown path=\"assets/md/switch/switch2.md\"></markdown>\r\n\r\n<h3>自定义文字</h3>\r\n<ly-switch [(model)]=\"active2\" activeTxt=\"男\" inActiveTxt=\"女\"></ly-switch>\r\n<span>{{active2}}</span>\r\n<markdown path=\"assets/md/switch/switch3.md\"></markdown>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../docs/switch/switch.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SwitchComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var SwitchComponent = (function () {
+    function SwitchComponent() {
+        this.active = true;
+        this.active1 = false;
+        this.active2 = false;
+    }
+    SwitchComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            template: __webpack_require__("../../../../../docs/switch/switch.component.html")
+        })
+    ], SwitchComponent);
+    return SwitchComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../docs/table/table.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Table 表格</h2>\r\n<h3>基础用法</h3>\r\n<ly-table [model]=\"tableData\">\r\n  <ly-table-row [keys]=\"keys\" [width]=\"width\"></ly-table-row>\r\n</ly-table>\r\n<markdown path=\"assets/md/table/table1.md\"></markdown>\r\n\r\n<h3>内容居中</h3>\r\n<p class=\"tips\">使用<i>center=“all”</i>所有居中，使用<i>center=“header”</i>仅表头居中</p>\r\n<ly-table [model]=\"tableData\" center=\"all\">\r\n  <ly-table-row [keys]=\"keys\" [width]=\"width\"></ly-table-row>\r\n</ly-table>\r\n<ly-table [model]=\"tableData\" center=\"header\">\r\n  <ly-table-row [keys]=\"keys\" [width]=\"width\"></ly-table-row>\r\n</ly-table>\r\n<markdown path=\"assets/md/table/table2.md\"></markdown>\r\n\r\n<h3>显示纵向边框</h3>\r\n<ly-table [model]=\"tableData\" center=\"all\" border=\"true\">\r\n  <ly-table-row [keys]=\"keys\" [width]=\"width\"></ly-table-row>\r\n</ly-table>\r\n<markdown path=\"assets/md/table/table3.md\"></markdown>\r\n\r\n<h3>表头固定，内容滚动</h3>\r\n<p class=\"tips\">使用<i>height</i>确定表单整个高度</p>\r\n<ly-table [model]=\"tableData\" center=\"all\" height=\"150\">\r\n  <ly-table-row [keys]=\"keys\" [width]=\"width\"></ly-table-row>\r\n</ly-table>\r\n<markdown path=\"assets/md/table/table4.md\"></markdown>\r\n\r\n\r\n\r\n"
+
+/***/ }),
+
+/***/ "../../../../../docs/table/table.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TableComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var TableComponent = (function () {
+    function TableComponent() {
+        this.keys = ['姓名', '日期', '地址'];
+        this.width = ['20%', '40%', '40%'];
+        this.tableData = [{
+                name: '张三',
+                date: '2017-08-19',
+                address: '上海市普陀区金沙江路 1518 弄',
+            }, {
+                name: '李亚',
+                date: '2017-08-20',
+                address: '上海市普陀区金沙江路 1518 弄',
+            }, {
+                name: '刘璐',
+                date: '2017-08-21',
+                address: '上海市普陀区金沙江路 1518 弄',
+            }, {
+                name: '张默',
+                date: '2017-08-22',
+                address: '上海市普陀区金沙江路 1510 弄',
+            }];
+    }
+    TableComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            template: __webpack_require__("../../../../../docs/table/table.component.html")
+        })
+    ], TableComponent);
+    return TableComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../docs/toast/toast.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Toast 消息提示</h2>\r\n<h3>基础用法</h3>\r\n<p class=\"tips\">在顶部出现，3秒消失</p>\r\n<ly-button (click)=\"show()\">点击显示消息提示框</ly-button>\r\n<markdown path=\"assets/md/toast/toast1.md\"></markdown>\r\n\r\n<h3>不同状态</h3>\r\n<p class=\"tips\">用来显示「成功、警告、消息、错误」类的操作反馈。</p>\r\n<ly-button (click)=\"success()\" type=\"primary\">成功</ly-button>\r\n<ly-button (click)=\"warn()\" type=\"primary\">警告</ly-button>\r\n<ly-button (click)=\"error()\" type=\"primary\">错误</ly-button>\r\n<markdown path=\"assets/md/toast/toast2.md\"></markdown>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../docs/toast/toast.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToastComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__release_toast_toast_service__ = __webpack_require__("../../../../../release/toast/toast.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ToastComponent = (function () {
+    function ToastComponent(toast) {
+        this.toast = toast;
+    }
+    ToastComponent.prototype.show = function () {
+        this.toast.show('这是一条消息提示show');
+    };
+    ToastComponent.prototype.success = function () {
+        this.toast.show('这是一条成功消息', 'success');
+    };
+    ToastComponent.prototype.warn = function () {
+        this.toast.show('这是一条警示消息', 'warning');
+    };
+    ToastComponent.prototype.error = function () {
+        this.toast.show('这是一条错误消息', 'error');
+    };
+    ToastComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            template: __webpack_require__("../../../../../docs/toast/toast.component.html"),
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__release_toast_toast_service__["a" /* ToastService */]])
+    ], ToastComponent);
+    return ToastComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../docs/upload/upload.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h2>Upload 上传</h2>\r\n<h3>基础用法</h3>\r\n<ly-upload>\r\n  <ng-template #trigger>\r\n    <ly-button type=\"primary\">点击上传</ly-button>\r\n  </ng-template>\r\n  <ng-template #tip>\r\n    <div style=\"font-size:14px;color:#666;padding:10px 0;\">只能上传jpg/png文件，且不超过500kb</div>\r\n  </ng-template>\r\n</ly-upload>\r\n<markdown path=\"assets/md/upload/upload1.md\"></markdown>\r\n\r\n<h3>图片列表</h3>\r\n<p class=\"tips\">使用<i>list-type='picture'</i>表示图片列表</p>\r\n<ly-upload list-type=\"picture\">\r\n  <ng-template #trigger>\r\n    <ly-button type=\"primary\">点击上传</ly-button>\r\n  </ng-template>\r\n  <ng-template #tip>\r\n    <div style=\"font-size:14px;color:#666;padding:10px 0;\">只能上传jpg/png文件，且不超过500kb</div>\r\n  </ng-template>\r\n</ly-upload>\r\n<markdown path=\"assets/md/upload/upload2.md\"></markdown>\r\n\r\n<h3>多文件上传</h3>\r\n<p class=\"tips\">使用<i>multiple</i>表示可以多文件上传</p>\r\n<ly-upload list-type=\"picture\" multiple=\"true\">\r\n  <ng-template #trigger>\r\n    <ly-button type=\"primary\">点击上传</ly-button>\r\n  </ng-template>\r\n  <ng-template #tip>\r\n    <div style=\"font-size:14px;color:#666;padding:10px 0;\">只能上传jpg/png文件，且不超过500kb</div>\r\n  </ng-template>\r\n</ly-upload>\r\n<markdown path=\"assets/md/upload/upload3.md\"></markdown>\r\n\r\n<h3>照片墙</h3>\r\n<p class=\"tips\">使用<i>list-type='card'</i>表示图片列表</p>\r\n<ly-upload list-type=\"card\" multiple=\"true\">\r\n  <ng-template #trigger>\r\n    <img src=\"assets/img/add.png\" alt=\"\">\r\n  </ng-template>\r\n</ly-upload>\r\n<markdown path=\"assets/md/upload/upload4.md\"></markdown>\r\n\r\n<h3>双向绑定，事件监听</h3>\r\n<p class=\"tips\">利用<i>[(fileList)]</i>对上传对象双向绑定，<i>(success)</i>监听上传成功事件，<i>(remove)</i>监听移除事件</p>\r\n<ly-upload \r\n  list-type=\"card\" \r\n  multiple=\"true\" \r\n  [(fileList)]=\"fileList\"\r\n  (success)=\"handleSuccess($event)\" \r\n  (remove)=\"handleRemove($event)\"\r\n>\r\n  <ng-template #trigger>\r\n    <img src=\"assets/img/add.png\" alt=\"\">\r\n  </ng-template>\r\n</ly-upload>\r\n<markdown path=\"assets/md/upload/upload5.md\"></markdown>\r\n\r\n"
+
+/***/ }),
+
+/***/ "../../../../../docs/upload/upload.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return UploadComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var UploadComponent = (function () {
+    function UploadComponent() {
+        this.fileList = [{
+                name: 'left.png',
+                url: 'http://localhost:4200/assets/img/left.png'
+            }, {
+                name: 'right.png',
+                url: 'http://localhost:4200/assets/img/right.png'
+            }];
+    }
+    UploadComponent.prototype.handleSuccess = function (ev) {
+        console.log('handleSuccess', this.fileList);
+    };
+    UploadComponent.prototype.handleRemove = function (ev) {
+        console.log(this.fileList);
+    };
+    UploadComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            template: __webpack_require__("../../../../../docs/upload/upload.component.html"),
+        })
+    ], UploadComponent);
+    return UploadComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/alert/alert.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ly-alert {\n  background: #f5f5f5;\n  padding: 10px 30px;\n  border-radius: 4px;\n  font-size: 14px;\n  color: #333;\n  margin: 10px 0;\n  line-height: 1;\n  position: relative; }\n  .ly-alert .iconfont {\n    position: absolute;\n    left: 10px;\n    top: 10px; }\n  .ly-alert .del {\n    left: auto;\n    right: 10px;\n    cursor: pointer; }\n  .ly-alert.success {\n    background: #F0F9EB;\n    color: #67C23A; }\n  .ly-alert.warning {\n    background: #FDF5E6;\n    color: #EAA71F; }\n  .ly-alert.error {\n    background: #FFEEEE;\n    color: #FA5555; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../release/alert/ly-alert.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LyAlertComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LyAlertComponent = (function () {
+    function LyAlertComponent() {
+    }
+    LyAlertComponent.prototype.ngOnInit = function () { };
+    LyAlertComponent.prototype.remove = function () {
+        this.state = 'out';
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyAlertComponent.prototype, "type", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* ContentChild */])('content'),
+        __metadata("design:type", Object)
+    ], LyAlertComponent.prototype, "content", void 0);
+    LyAlertComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ly-alert',
+            styles: [__webpack_require__("../../../../../release/alert/alert.scss")],
+            animations: [
+                Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* trigger */])('fadeOut', [
+                    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* state */])('out', Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* style */])({
+                        opacity: 0,
+                        padding: 0,
+                        margin: 0,
+                        height: 0
+                    })),
+                    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* transition */])('* => out', [
+                        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* animate */])('0.2s ease')
+                    ])
+                ])
+            ],
+            template: "\n  <div [class]=\"'ly-alert ' + type\" [@fadeOut]=\"state\">\n    <i class=\"iconfont icon-success v-m\" *ngIf=\"type == 'success'\"></i>\n    <i class=\"iconfont icon-warn v-m\" *ngIf=\"type == 'warning'\"></i>\n    <i class=\"iconfont icon-delete v-m\" *ngIf=\"type == 'error'\"></i>\n    <ng-content></ng-content>\n    <i class=\"iconfont icon-delete v-m del\" (click)=\"remove()\"></i>\n\n    <ng-template [ngTemplateOutlet]=\"content\"></ng-template>\n  </div>\n  "
+        })
+    ], LyAlertComponent);
+    return LyAlertComponent;
 }());
 
 
@@ -328,23 +827,23 @@ var LyButtonComponent = (function () {
     LyButtonComponent.prototype.ngOnInit = function () {
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", String)
     ], LyButtonComponent.prototype, "type", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", String)
     ], LyButtonComponent.prototype, "size", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", String)
     ], LyButtonComponent.prototype, "plain", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", String)
     ], LyButtonComponent.prototype, "round", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('class'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('class'),
         __metadata("design:type", String)
     ], LyButtonComponent.prototype, "nativeClass", void 0);
     LyButtonComponent = __decorate([
@@ -398,7 +897,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var LyCheckboxButtonComponent = (function () {
     function LyCheckboxButtonComponent() {
-        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
         this.checkArr = [];
     }
     LyCheckboxButtonComponent.prototype.ngOnInit = function () {
@@ -426,23 +925,23 @@ var LyCheckboxButtonComponent = (function () {
         }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Array)
     ], LyCheckboxButtonComponent.prototype, "labelGroup", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Array)
     ], LyCheckboxButtonComponent.prototype, "model", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
     ], LyCheckboxButtonComponent.prototype, "modelChange", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyCheckboxButtonComponent.prototype, "fill", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyCheckboxButtonComponent.prototype, "textColor", void 0);
     LyCheckboxButtonComponent = __decorate([
@@ -478,7 +977,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var LyCheckboxGroupComponent = (function () {
     function LyCheckboxGroupComponent() {
-        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
         this.checkArr = [];
     }
     LyCheckboxGroupComponent.prototype.ngOnInit = function () {
@@ -500,16 +999,16 @@ var LyCheckboxGroupComponent = (function () {
         }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Array)
     ], LyCheckboxGroupComponent.prototype, "labelGroup", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Array)
     ], LyCheckboxGroupComponent.prototype, "model", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
     ], LyCheckboxGroupComponent.prototype, "modelChange", void 0);
     LyCheckboxGroupComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -544,7 +1043,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var LyCheckboxComponent = (function () {
     function LyCheckboxComponent() {
-        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
     }
     LyCheckboxComponent.prototype.ngOnInit = function () { };
     LyCheckboxComponent.prototype.changeHandle = function () {
@@ -552,12 +1051,12 @@ var LyCheckboxComponent = (function () {
         this.modelChange.emit(this.model);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyCheckboxComponent.prototype, "model", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
     ], LyCheckboxComponent.prototype, "modelChange", void 0);
     LyCheckboxComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -610,7 +1109,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var LyDatepickerComponent = (function () {
     function LyDatepickerComponent() {
-        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
         this.show = false;
         this.showDate = true;
         this.showYear = false;
@@ -790,20 +1289,20 @@ var LyDatepickerComponent = (function () {
         this.renderDate();
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyDatepickerComponent.prototype, "model", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyDatepickerComponent.prototype, "hiddenDay", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyDatepickerComponent.prototype, "format", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
     ], LyDatepickerComponent.prototype, "modelChange", void 0);
     LyDatepickerComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -828,7 +1327,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".ly-input {\n  display: inline-block;\n  position: relative; }\n  .ly-input input {\n    display: inline-block;\n    margin: 0;\n    padding: 12px 20px;\n    font-size: 14px;\n    color: #333;\n    line-height: 1;\n    border: 1px solid #d8dce5;\n    height: 40px;\n    border-radius: 4px;\n    box-sizing: border-box;\n    transition: 0.3s; }\n    .ly-input input:focus {\n      border-color: #409EFF; }\n    .ly-input input::-webkit-input-placeholder {\n      color: #d8dce5; }\n  .ly-input img {\n    position: absolute;\n    right: 10px;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%); }\n", ""]);
+exports.push([module.i, ".ly-input {\n  display: inline-block;\n  position: relative; }\n  .ly-input input {\n    display: inline-block;\n    margin: 0;\n    padding: 12px 20px;\n    font-size: 14px;\n    color: #333;\n    line-height: 1;\n    border: 1px solid #d8dce5;\n    height: 40px;\n    border-radius: 4px;\n    box-sizing: border-box;\n    transition: 0.3s; }\n    .ly-input input.pointer {\n      cursor: pointer; }\n    .ly-input input:focus {\n      border-color: #409EFF; }\n    .ly-input input::-webkit-input-placeholder {\n      color: #d8dce5; }\n  .ly-input img {\n    position: absolute;\n    right: 10px;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%); }\n", ""]);
 
 // exports
 
@@ -856,8 +1355,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var LyInputComponent = (function () {
     function LyInputComponent() {
-        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
-        this.focusChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.focusChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
     }
     LyInputComponent.prototype.ngOnInit = function () { };
     LyInputComponent.prototype.changeHandle = function () {
@@ -867,34 +1366,38 @@ var LyInputComponent = (function () {
         this.focusChange.emit('子组件事件');
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyInputComponent.prototype, "icon", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyInputComponent.prototype, "placeholder", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyInputComponent.prototype, "model", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyInputComponent.prototype, "style", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyInputComponent.prototype, "class", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
     ], LyInputComponent.prototype, "modelChange", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
     ], LyInputComponent.prototype, "focusChange", void 0);
     LyInputComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'ly-input',
             styles: [__webpack_require__("../../../../../release/input/input.scss")],
-            template: "\n  <div class=\"ly-input\" style=\"{{style}}\">\n    <input type=\"text\" \n      placeholder=\"{{placeholder}}\" \n      [(ngModel)]=\"model\" \n      (ngModelChange)=\"changeHandle($event)\"\n      (focus)=\"focusHandle()\"\n    >\n    <img src=\"{{icon}}\" alt=\"\">\n  </div>\n  "
+            template: "\n  <div class=\"ly-input\" style=\"{{style}}\">\n    <input type=\"text\" \n      class=\"{{class}}\"\n      placeholder=\"{{placeholder}}\" \n      [(ngModel)]=\"model\" \n      (ngModelChange)=\"changeHandle($event)\"\n      (focus)=\"focusHandle()\"\n    >\n    <img src=\"{{icon}}\" alt=\"\">\n  </div>\n  "
         })
     ], LyInputComponent);
     return LyInputComponent;
@@ -932,22 +1435,22 @@ var LyColDirective = (function () {
         this.renderer.setElementStyle(this.el.nativeElement, 'padding', padding);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('lyCol'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('lyCol'),
         __metadata("design:type", Object)
     ], LyColDirective.prototype, "lyCol", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyColDirective.prototype, "span", void 0);
     LyColDirective = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */])({
             selector: '[lyCol]',
             host: {
                 '[class.ly-col]': 'true'
             }
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer */]])
     ], LyColDirective);
     return LyColDirective;
 }());
@@ -985,36 +1488,301 @@ var LyRowDirective = (function () {
         }
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])('lyRow'),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('lyRow'),
         __metadata("design:type", Object)
     ], LyRowDirective.prototype, "lyRow", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRowDirective.prototype, "gutter", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRowDirective.prototype, "type", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRowDirective.prototype, "justify", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRowDirective.prototype, "align", void 0);
     LyRowDirective = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["s" /* Directive */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* Directive */])({
             selector: '[lyRow]',
             host: {
                 '[class.ly-row]': 'true'
             }
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["W" /* Renderer */]])
     ], LyRowDirective);
     return LyRowDirective;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/menu/ly-menu-item.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LyMenuItemComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ly_menu_component__ = __webpack_require__("../../../../../release/menu/ly-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sub_menu_component__ = __webpack_require__("../../../../../release/menu/sub-menu.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var LyMenuItemComponent = (function () {
+    function LyMenuItemComponent(menu, submenu) {
+        this.menu = menu;
+        this.submenu = submenu;
+    }
+    LyMenuItemComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var update = function () {
+            _this.model = _this.menu.model;
+        };
+        update();
+        this.menu.updateArr.push(update);
+        this.activeStyle = {
+            backgroundColor: this.menu.backgroundColor,
+            color: this.menu.activeColor,
+            borderBottomColor: this.menu.activeColor
+        };
+    };
+    LyMenuItemComponent.prototype.click = function () {
+        var ref = this.menu || this.submenu;
+        ref.handleSelect(this.index);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyMenuItemComponent.prototype, "index", void 0);
+    LyMenuItemComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ly-menu-item',
+            styles: [__webpack_require__("../../../../../release/menu/menu.scss")],
+            providers: [__WEBPACK_IMPORTED_MODULE_2__sub_menu_component__["a" /* LySubMenuComponent */]],
+            template: "\n  <li class=\"ly-menu-item\" \n    [class.active]=\"model == index\" \n    [ngStyle]=\"model == index && activeStyle\"\n    (click)=\"click()\"\n  > \n    <ng-content></ng-content>\n  </li>\n  "
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ly_menu_component__["a" /* LyMenuComponent */],
+            __WEBPACK_IMPORTED_MODULE_2__sub_menu_component__["a" /* LySubMenuComponent */]])
+    ], LyMenuItemComponent);
+    return LyMenuItemComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/menu/ly-menu.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LyMenuComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LyMenuComponent = (function () {
+    function LyMenuComponent() {
+        this.model = 0;
+        this.backgroundColor = '#fff';
+        this.activeColor = '#4A8BFC';
+        this.textColor = '#333';
+        this.mode = 'horizontal';
+        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.updateArr = []; // 更新item中的model
+        this.updateSub = []; // 更新submenu中的model
+        this.openedMenus = [];
+    }
+    LyMenuComponent.prototype.ngOnInit = function () { };
+    LyMenuComponent.prototype.handleSelect = function (idx) {
+        var _this = this;
+        console.log('选择了', idx, this.model);
+        if (idx.split('-').length == 1) {
+            this.model = idx;
+            this.updateArr.forEach(function (el) { return el(); });
+            this.updateSub.forEach(function (el) { return el(); });
+            this.modelChange.emit(this.model);
+        }
+        else {
+            this.model = idx;
+            this.updateArr.forEach(function (el) { return el(); });
+            this.modelChange.emit(this.model);
+            setTimeout(function () {
+                _this.model = idx.split('-')[0];
+                _this.updateSub.forEach(function (el) { return el(); });
+            }, 100);
+        }
+    };
+    LyMenuComponent.prototype.closeMenu = function (idx) {
+        this.openedMenus.splice(this.openedMenus.indexOf(idx), 1);
+    };
+    LyMenuComponent.prototype.openMenu = function (idx) {
+        this.openedMenus.push(idx);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyMenuComponent.prototype, "model", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyMenuComponent.prototype, "backgroundColor", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyMenuComponent.prototype, "activeColor", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyMenuComponent.prototype, "textColor", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyMenuComponent.prototype, "class", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyMenuComponent.prototype, "mode", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
+    ], LyMenuComponent.prototype, "modelChange", void 0);
+    LyMenuComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ly-menu',
+            styles: [__webpack_require__("../../../../../release/menu/menu.scss")],
+            template: "\n  <ul [class]=\"'ly-menu ' + class\" \n    [ngStyle]=\"{backgroundColor: backgroundColor,color: textColor}\" \n    [class.vertical]=\"mode == 'vertical'\"> \n    <ng-content></ng-content>\n  </ul>\n  "
+        })
+    ], LyMenuComponent);
+    return LyMenuComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/menu/menu.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ly-menu {\n  border-bottom: 1px solid #E6E6E6;\n  font-size: 0;\n  box-sizing: border-box;\n  padding-left: 0; }\n  .ly-menu.vertical {\n    border-bottom: 0; }\n    .ly-menu.vertical /deep/ .ly-menu-item {\n      display: block;\n      border: 0;\n      height: auto; }\n      .ly-menu.vertical /deep/ .ly-menu-item.active {\n        color: #4A8BFC;\n        border: 0; }\n      .ly-menu.vertical /deep/ .ly-menu-item /deep/ .sub-menu {\n        position: relative;\n        top: 0;\n        box-shadow: none;\n        width: 100%;\n        display: none; }\n        .ly-menu.vertical /deep/ .ly-menu-item /deep/ .sub-menu.show {\n          display: block; }\n  .ly-menu /deep/ .ly-menu-item {\n    display: inline-block;\n    vertical-align: middle;\n    height: 50px;\n    line-height: 50px;\n    font-size: 14px;\n    padding: 0 20px;\n    cursor: pointer;\n    transition: 0.3s;\n    border-bottom: 2px solid transparent;\n    position: relative;\n    box-sizing: border-box; }\n    .ly-menu /deep/ .ly-menu-item.active {\n      color: #4A8BFC;\n      border-bottom-color: #4A8BFC; }\n    .ly-menu /deep/ .ly-menu-item /deep/ .sub-menu-tit {\n      position: relative;\n      z-index: 2; }\n      .ly-menu /deep/ .ly-menu-item /deep/ .sub-menu-tit .iconfont {\n        display: inline-block;\n        transition: 0.3s;\n        -webkit-transform-origin: center center;\n                transform-origin: center center; }\n        .ly-menu /deep/ .ly-menu-item /deep/ .sub-menu-tit .iconfont.active {\n          -webkit-transform: rotateZ(-180deg);\n                  transform: rotateZ(-180deg); }\n    .ly-menu /deep/ .ly-menu-item /deep/ .sub-menu {\n      position: absolute;\n      left: 0;\n      width: 120%;\n      top: calc(100% + 12px);\n      box-shadow: 0 2px 4px #ccc;\n      padding: 10px 0;\n      background: #fff;\n      z-index: 5;\n      transition: 0.3s;\n      -webkit-transform: scaleY(0);\n              transform: scaleY(0);\n      -webkit-transform-origin: top center;\n              transform-origin: top center; }\n      .ly-menu /deep/ .ly-menu-item /deep/ .sub-menu.show {\n        -webkit-transform: scaleY(1);\n                transform: scaleY(1); }\n      .ly-menu /deep/ .ly-menu-item /deep/ .sub-menu /deep/ .ly-menu-item {\n        display: block;\n        height: 40px;\n        line-height: 40px; }\n        .ly-menu /deep/ .ly-menu-item /deep/ .sub-menu /deep/ .ly-menu-item:hover {\n          opacity: 0.8; }\n        .ly-menu /deep/ .ly-menu-item /deep/ .sub-menu /deep/ .ly-menu-item.active {\n          color: #4A8BFC;\n          border-bottom-color: transparent !important; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../release/menu/sub-menu.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LySubMenuComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ly_menu_component__ = __webpack_require__("../../../../../release/menu/ly-menu.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LySubMenuComponent = (function () {
+    function LySubMenuComponent(menu) {
+        this.menu = menu;
+        this.model = 0; // 一级标签
+        this.opened = false;
+        this.show = true;
+    }
+    LySubMenuComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var update = function () {
+            _this.model = _this.menu.model;
+        };
+        update();
+        this.menu.updateSub.push(update);
+        this.activeStyle = {
+            backgroundColor: this.menu.backgroundColor,
+            color: this.menu.activeColor,
+            borderBottomColor: this.menu.activeColor
+        };
+        this.activeItemStyle = {
+            backgroundColor: this.menu.backgroundColor,
+            color: this.menu.textColor
+        };
+        this.updateOpened();
+    };
+    LySubMenuComponent.prototype.handleClick = function () {
+        if (this.opened) {
+            this.menu.closeMenu(this.index);
+        }
+        else {
+            this.menu.openMenu(this.index);
+        }
+        this.updateOpened();
+    };
+    // 更新展开折叠状态
+    LySubMenuComponent.prototype.updateOpened = function () {
+        this.opened = this.menu.openedMenus.indexOf(this.index) > -1;
+    };
+    // 选择了下拉列表后的处理
+    LySubMenuComponent.prototype.handleSelect = function (idx) {
+        if (this.menu.mode !== 'vertical') {
+            this.menu.closeMenu(this.index);
+        }
+        this.updateOpened();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySubMenuComponent.prototype, "index", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySubMenuComponent.prototype, "title", void 0);
+    LySubMenuComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'sub-menu',
+            styles: [__webpack_require__("../../../../../release/menu/menu.scss")],
+            template: "\n  <li class=\"ly-menu-item\" \n    [class.active]=\"model == index\"\n    [ngStyle]=\"model == index && activeStyle\"\n    (click)=\"handleClick($event)\"\n  >\n    <div class=\"sub-menu-tit\">\n      <span class=\"v-m\">{{title}}</span>\n      <i class=\"iconfont icon-down v-m\" [class.active]=\"opened\"></i>\n    </div>\n    <ul class=\"sub-menu\" [class.show]=\"opened\" *ngIf=\"show\" [ngStyle]=\"activeItemStyle\"> \n      <ng-content></ng-content>\n    </ul>\n  </li>\n  "
+        })
+        // item点击状态变化
+        ,
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ly_menu_component__["a" /* LyMenuComponent */]])
+    ], LySubMenuComponent);
+    return LySubMenuComponent;
 }());
 
 
@@ -1046,7 +1814,12 @@ var LyProgressComponent = (function () {
         if (this.textInside && this.strokeWidth == 6) {
             this.strokeWidth = 18;
         }
-        console.log(this.strokeWidth);
+        this.makeProgress();
+    };
+    LyProgressComponent.prototype.ngOnChanges = function () {
+        this.makeProgress();
+    };
+    LyProgressComponent.prototype.makeProgress = function () {
         this.percent = parseInt(this.percent);
         this.barStyle = {
             width: this.percent + "%",
@@ -1073,27 +1846,27 @@ var LyProgressComponent = (function () {
         return "M 50 50 m 0 -" + radius + " a " + radius + " " + radius + " 0 1 1 0 " + radius * 2 + " a " + radius + " " + radius + " 0 1 1 0 -" + radius * 2;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyProgressComponent.prototype, "percent", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyProgressComponent.prototype, "backgroundColor", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyProgressComponent.prototype, "strokeWidth", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyProgressComponent.prototype, "textInside", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyProgressComponent.prototype, "type", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyProgressComponent.prototype, "width", void 0);
     LyProgressComponent = __decorate([
@@ -1147,7 +1920,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var LyRadioButtonComponent = (function () {
     function LyRadioButtonComponent() {
-        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
     }
     LyRadioButtonComponent.prototype.ngOnInit = function () {
         this.activeStyle = {
@@ -1162,23 +1935,23 @@ var LyRadioButtonComponent = (function () {
         this.modelChange.emit(item);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRadioButtonComponent.prototype, "model", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRadioButtonComponent.prototype, "labelGroup", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
     ], LyRadioButtonComponent.prototype, "modelChange", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRadioButtonComponent.prototype, "fill", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRadioButtonComponent.prototype, "textColor", void 0);
     LyRadioButtonComponent = __decorate([
@@ -1214,7 +1987,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var LyRadioGroupComponent = (function () {
     function LyRadioGroupComponent() {
-        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
     }
     LyRadioGroupComponent.prototype.ngOnInit = function () {
         this.activeStyle = {
@@ -1226,23 +1999,23 @@ var LyRadioGroupComponent = (function () {
         this.modelChange.emit(label);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRadioGroupComponent.prototype, "model", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRadioGroupComponent.prototype, "labelGroup", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
     ], LyRadioGroupComponent.prototype, "modelChange", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRadioGroupComponent.prototype, "fill", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRadioGroupComponent.prototype, "textColor", void 0);
     LyRadioGroupComponent = __decorate([
@@ -1277,7 +2050,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var LyRadioComponent = (function () {
     function LyRadioComponent() {
-        this.change = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.change = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
     }
     LyRadioComponent.prototype.ngOnInit = function () {
         console.log(this.model, this.label);
@@ -1288,11 +2061,11 @@ var LyRadioComponent = (function () {
         this.change.emit(this.label);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRadioComponent.prototype, "label", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])(),
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
         __metadata("design:type", Object)
     ], LyRadioComponent.prototype, "model", void 0);
     LyRadioComponent = __decorate([
@@ -1323,6 +2096,798 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 // module
 exports.push([module.i, "input[type=\"radio\"] {\n  margin: 0;\n  padding: 0; }\n\n.ly-radio {\n  display: inline-block;\n  font-size: 0;\n  line-height: 1; }\n  .ly-radio .ly-radio-input {\n    display: inline-block;\n    position: relative;\n    vertical-align: middle; }\n    .ly-radio .ly-radio-input .ly-radio-inner {\n      display: inline-block;\n      width: 14px;\n      height: 14px;\n      border: 1px solid #d8dce5;\n      border-radius: 50%;\n      vertical-align: middle;\n      box-sizing: border-box; }\n    .ly-radio .ly-radio-input input {\n      position: absolute;\n      left: 0;\n      top: 0;\n      z-index: 1;\n      opacity: 0; }\n    .ly-radio .ly-radio-input.active .ly-radio-inner {\n      border: 5px solid #409EFF; }\n  .ly-radio .ly-radio-label {\n    display: inline-block;\n    font-size: 14px;\n    color: #2d2f33;\n    vertical-align: middle;\n    cursor: pointer;\n    padding-left: 10px;\n    padding-right: 20px; }\n\n.ly-radio-button {\n  display: inline-block;\n  position: relative; }\n  .ly-radio-button input {\n    position: absolute;\n    left: 0;\n    top: 0;\n    opacity: 0; }\n  .ly-radio-button .ly-radio-inner {\n    display: inline-block;\n    padding: 10px 20px;\n    border: 1px solid #d8dce5;\n    border-left: 0;\n    line-height: 1;\n    font-size: 14px;\n    color: #2d2f33;\n    transition: 0.3s;\n    cursor: pointer; }\n    .ly-radio-button .ly-radio-inner:hover {\n      color: #409EFF; }\n  .ly-radio-button:first-child .ly-radio-inner {\n    border-left: 1px solid #d8dce5;\n    border-radius: 4px 0 0 4px; }\n  .ly-radio-button:last-child .ly-radio-inner {\n    border-radius: 0 4px 4px 0; }\n  .ly-radio-button.active .ly-radio-inner {\n    background: #409EFF;\n    border-color: #409EFF;\n    color: #fff;\n    box-shadow: -1px 0 0 0 #409EFF; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../release/select/ly-option.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LyOptionComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ly_select_component__ = __webpack_require__("../../../../../release/select/ly-select.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LyOptionComponent = (function () {
+    function LyOptionComponent(// 注入即可获取父级的对象
+        root) {
+        this.root = root;
+        this.isactive = false;
+    }
+    // update方法：从父级再传进来model判断是否激活，如果激活态把选中值传入父级
+    // 把四个标签的update方法都传入父级储存起来，父级的model改变的时候，就调用所有的update方法更新
+    LyOptionComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        var update = function () {
+            _this.isactive = _this.root.model == _this.value;
+            _this.isactive && _this.root.changeLabel(_this.label, _this.value);
+        };
+        update();
+        this.root.triggerUpdate.push(update);
+    };
+    LyOptionComponent.prototype.handleClick = function (e) {
+        this.root.changeLabel(this.label, this.value);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyOptionComponent.prototype, "label", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyOptionComponent.prototype, "value", void 0);
+    LyOptionComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ly-option',
+            styles: [__webpack_require__("../../../../../release/select/select.scss")],
+            template: "\n    <li class=\"ly-option\" \n      [class.active]=\"isactive\"\n      (click)=\"handleClick($event)\" \n      [value]=\"value\"\n    >{{label}}</li>\n  "
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ly_select_component__["a" /* LySelectComponent */]])
+    ], LyOptionComponent);
+    return LyOptionComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/select/ly-select.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LySelectComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LySelectComponent = (function () {
+    function LySelectComponent(el, renderer) {
+        this.el = el;
+        this.renderer = renderer;
+        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.show = false;
+        this.triggerUpdate = [];
+    }
+    LySelectComponent.prototype.ngOnInit = function () { };
+    LySelectComponent.prototype.clear = function () {
+        this.model = '';
+        this.chosenLabel = '';
+        this.modelChange.emit(this.model);
+    };
+    LySelectComponent.prototype.handleClick = function () {
+        this.show = !this.show;
+    };
+    LySelectComponent.prototype.changeLabel = function (label, value) {
+        this.model = value;
+        this.chosenLabel = label;
+        this.modelChange.emit(this.model);
+        this.show = false;
+    };
+    LySelectComponent.prototype.ngOnChanges = function (x) {
+        this.triggerUpdate.forEach(function (sub) { return sub(); });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySelectComponent.prototype, "model", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySelectComponent.prototype, "placeholder", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySelectComponent.prototype, "clearable", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
+    ], LySelectComponent.prototype, "modelChange", void 0);
+    LySelectComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ly-select',
+            styles: [__webpack_require__("../../../../../release/select/select.scss")],
+            template: "\n  <div class=\"ly-select\">\n    <ly-input class=\"pointer\" (click)=\"handleClick()\" [model]=\"chosenLabel\" [placeholder]=\"placeholder\"></ly-input>\n    <ul class=\"ly-select-options\" [class.show]=\"show\">\n      <ng-content></ng-content>\n    </ul>\n    <div class=\"icon\" [class.hasClear]=\"clearable\">\n      <i class=\"iconfont icon-down down\" [class.active]=\"show\"></i>\n      <i class=\"iconfont icon-delete clear\" *ngIf=\"!show && clearable\" (click)=\"clear()\"></i>\n    </div>\n  </div>\n  "
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["X" /* Renderer2 */]])
+    ], LySelectComponent);
+    return LySelectComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/select/select.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ly-select {\n  display: inline-block;\n  vertical-align: middle;\n  position: relative; }\n  .ly-select .icon {\n    position: absolute;\n    right: 10px;\n    top: 0;\n    bottom: 0;\n    font-size: 0;\n    z-index: 9;\n    text-align: center; }\n    .ly-select .icon .iconfont {\n      display: inline-block;\n      font-size: 16px;\n      color: #999;\n      vertical-align: middle;\n      cursor: pointer; }\n    .ly-select .icon .clear {\n      display: none; }\n    .ly-select .icon .down {\n      transition: 0.3s;\n      -webkit-transform-origin: center center;\n              transform-origin: center center; }\n      .ly-select .icon .down.active {\n        -webkit-transform: rotateZ(-180deg);\n                transform: rotateZ(-180deg); }\n    .ly-select .icon.hasClear:hover .down {\n      display: none; }\n    .ly-select .icon.hasClear:hover .clear {\n      display: inline-block; }\n    .ly-select .icon:before {\n      content: \"\";\n      display: inline-block;\n      width: 0;\n      height: 100%;\n      vertical-align: middle; }\n  .ly-select .ly-select-options {\n    position: absolute;\n    top: calc(100% + 5px);\n    left: 0;\n    right: 0;\n    z-index: 10;\n    background: #fff;\n    border-radius: 4px;\n    border: 1px solid #d8dce5;\n    box-shadow: 0 2px 4px #d8dce5;\n    padding: 10px 0;\n    -webkit-transform: scaleY(0);\n            transform: scaleY(0);\n    transition: 0.3s;\n    -webkit-transform-origin: top center;\n            transform-origin: top center; }\n    .ly-select .ly-select-options.show {\n      -webkit-transform: scaleY(1);\n              transform: scaleY(1); }\n\n.ly-option {\n  font-size: 14px;\n  color: #333;\n  padding: 8px 20px;\n  text-align: left;\n  cursor: pointer; }\n  .ly-option:hover {\n    background: #F5F7FA; }\n  .ly-option.active {\n    color: #4A8BFC; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../release/switch/ly-switch.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LySwitchComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LySwitchComponent = (function () {
+    function LySwitchComponent() {
+        this.width = 40;
+        this.height = 20;
+        this.activeColor = '#409EFF';
+        this.inActiveColor = '#ccc';
+        this.model = false;
+        this.modelChange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.style = {};
+        this.circleStyle = {};
+        this.labelLeftStyle = {};
+        this.labelRightStyle = {};
+    }
+    LySwitchComponent.prototype.toggle = function () {
+        this.model = !this.model;
+        this.modelChange.emit(this.model);
+        this.handleChange();
+    };
+    LySwitchComponent.prototype.ngOnInit = function () {
+        this.handleChange();
+    };
+    LySwitchComponent.prototype.handleChange = function () {
+        this.style = {
+            width: this.width + 'px',
+            height: this.height + 'px',
+            borderRadius: this.height / 2 + 'px',
+            backgroundColor: this.model ? this.activeColor : this.inActiveColor
+        };
+        this.circleStyle = {
+            width: this.height - 4 + 'px',
+            height: this.height - 4 + 'px',
+            left: this.model ? this.width - (this.height - 4) - 2 + 'px' : 2 + 'px'
+        };
+        this.labelLeftStyle = {
+            color: this.model ? this.inActiveColor : this.activeColor
+        };
+        this.labelRightStyle = {
+            color: this.model ? this.activeColor : this.inActiveColor
+        };
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySwitchComponent.prototype, "width", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySwitchComponent.prototype, "height", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySwitchComponent.prototype, "activeColor", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySwitchComponent.prototype, "inActiveColor", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySwitchComponent.prototype, "model", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySwitchComponent.prototype, "activeTxt", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LySwitchComponent.prototype, "inActiveTxt", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
+    ], LySwitchComponent.prototype, "modelChange", void 0);
+    LySwitchComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ly-switch',
+            styles: [__webpack_require__("../../../../../release/switch/switch.scss")],
+            template: "\n  <div class=\"ly-switch\">\n    <b *ngIf=\"inActiveTxt\" class=\"ly-switch-label\" [ngStyle]=\"labelLeftStyle\">{{inActiveTxt}}</b>\n    <span class=\"ly-switch-button\" (click)=\"toggle()\" [class.active]=\"model\" [ngStyle]=\"style\">\n      <i class=\"circle\" [ngStyle]=\"circleStyle\"></i>\n    </span>\n    <b *ngIf=\"activeTxt\" class=\"ly-switch-label\" [ngStyle]=\"labelRightStyle\">{{activeTxt}}</b>\n  </div>\n  "
+        })
+    ], LySwitchComponent);
+    return LySwitchComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/switch/switch.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ly-switch {\n  display: inline-block;\n  vertical-align: middle;\n  font-size: 0; }\n  .ly-switch .ly-switch-label {\n    display: inline-block;\n    font-size: 14px;\n    vertical-align: middle;\n    margin: 0 5px; }\n  .ly-switch .ly-switch-button {\n    display: inline-block;\n    position: relative;\n    vertical-align: middle;\n    transition: 0.3s;\n    cursor: pointer; }\n    .ly-switch .ly-switch-button .circle {\n      display: inline-block;\n      border-radius: 50%;\n      background: #fff;\n      position: absolute;\n      top: 50%;\n      transition: 0.3s;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%); }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../release/table/ly-table-row.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LyTableRowComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ly_table_component__ = __webpack_require__("../../../../../release/table/ly-table.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LyTableRowComponent = (function () {
+    function LyTableRowComponent(table) {
+        this.table = table;
+        this.model = [];
+        this.modelKeys = []; // 数组中的字段名
+        this.center = '';
+    }
+    LyTableRowComponent.prototype.ngOnInit = function () {
+        this.model = this.table.model;
+        this.modelKeys = Object.keys(this.model[0]);
+        this.center = this.table.center;
+        this.border = this.table.border;
+        this.bodyStyle = {
+            height: this.table.height - 40 + 'px',
+            overflow: 'auto'
+        };
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyTableRowComponent.prototype, "keys", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyTableRowComponent.prototype, "width", void 0);
+    LyTableRowComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ly-table-row',
+            styles: [__webpack_require__("../../../../../release/table/table.scss")],
+            template: "\n  <div>\n    <table class=\"ly-table-row\">\n      <colgroup>\n        <col *ngFor=\"let wid of width\" width=\"{{wid}}\"/>\n      </colgroup>\n      <tr>\n        <th *ngFor=\"let key of keys\" [class.center]=\"center == 'all' || center == 'header'\" [class.border]=\"border\">{{key}}</th>\n      </tr>\n    </table>\n  </div>\n  <div [ngStyle]=\"bodyStyle\">\n    <table class=\"ly-table-row\">\n      <colgroup>\n        <col *ngFor=\"let wid of width\" width=\"{{wid}}\"/>\n      </colgroup>\n      <tr *ngFor=\"let row of model\">\n        <td \n          *ngFor=\"let key of modelKeys\" \n          [class.center]=\"center == 'all'\" \n          [class.border]=\"border\"\n        >{{row[key]}}</td>\n      </tr>\n    </table>\n  </div>\n  "
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ly_table_component__["a" /* LyTableComponent */]])
+    ], LyTableRowComponent);
+    return LyTableRowComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/table/ly-table.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LyTableComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var LyTableComponent = (function () {
+    function LyTableComponent() {
+    }
+    LyTableComponent.prototype.ngOnInit = function () { };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyTableComponent.prototype, "model", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyTableComponent.prototype, "height", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyTableComponent.prototype, "center", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyTableComponent.prototype, "border", void 0);
+    LyTableComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ly-table',
+            styles: [__webpack_require__("../../../../../release/table/table.scss")],
+            template: "\n  <div class=\"ly-table\" [ngStyle]=\"{height: this.height + 'px'}\">\n    <ng-content></ng-content>\n  </div>\n  "
+        })
+    ], LyTableComponent);
+    return LyTableComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/table/table.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ly-table-row {\n  width: 100%;\n  border-spacing: 0; }\n  .ly-table-row tr:hover td {\n    background: #ECF5FF; }\n  .ly-table-row td, .ly-table-row th {\n    font-size: 14px;\n    color: #333;\n    padding: 10px;\n    border-bottom: 1px solid #E6EBF5;\n    text-align: left;\n    transition: 0.3s; }\n  .ly-table-row th.center {\n    text-align: center; }\n  .ly-table-row th.border {\n    border: 1px solid #E6EBF5;\n    border-bottom: 0; }\n  .ly-table-row td.center {\n    text-align: center; }\n  .ly-table-row td.border {\n    border: 1px solid #E6EBF5; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../release/toast/ly-toast.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LyToastComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var LyToastComponent = (function () {
+    function LyToastComponent() {
+        this.state = 'in';
+    }
+    LyToastComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.state = 'out';
+        }, 3000);
+    };
+    LyToastComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ly-toast',
+            styles: [__webpack_require__("../../../../../release/toast/toast.scss")],
+            animations: [
+                Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_25" /* trigger */])('flyInOut', [
+                    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* state */])('in', Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* style */])({ opacity: 1, transform: 'translateY(0)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_22" /* state */])('out', Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* style */])({ opacity: 0, transform: 'translateY(-100%)' })),
+                    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_24" /* transition */])('void => *', [
+                        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_23" /* style */])({
+                            transform: 'translateY(-100%)'
+                        }),
+                        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* animate */])('0.2s ease')
+                    ])
+                ])
+            ],
+            template: "\n  <div [class]=\"'ly-toast ' + type\" [@flyInOut]=\"state\">\n    <i class=\"iconfont icon-success v-m\" *ngIf=\"type == 'success'\"></i>\n    <i class=\"iconfont icon-warn v-m\" *ngIf=\"type == 'warning'\"></i>\n    <i class=\"iconfont icon-delete v-m\" *ngIf=\"type == 'error'\"></i>\n    <span class=\"v-m\">{{info}}</span>\n  </div>\n  "
+        })
+    ], LyToastComponent);
+    return LyToastComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/toast/toast.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ly-toast {\n  position: fixed;\n  top: 100px;\n  left: 50%;\n  -webkit-transform: translateX(-50%);\n          transform: translateX(-50%);\n  background: #f5f5f5;\n  padding: 10px 20px;\n  border-radius: 4px;\n  line-height: 1;\n  z-index: 99;\n  transition: 0.3s;\n  font-size: 14px;\n  color: #333; }\n  .ly-toast.success {\n    background: #F0F9EB;\n    color: #67C23A; }\n  .ly-toast.warning {\n    background: #FDF5E6;\n    color: #EAA71F; }\n  .ly-toast.error {\n    background: #FFEEEE;\n    color: #FA5555; }\n", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../release/toast/toast.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToastService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tools_dynamic_service__ = __webpack_require__("../../../../../release/tools/dynamic.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ly_toast_component__ = __webpack_require__("../../../../../release/toast/ly-toast.component.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var ToastService = (function () {
+    function ToastService(dynamic) {
+        this.dynamic = dynamic;
+        this.component = [];
+    }
+    ToastService.prototype.show = function (txt, type) {
+        if (type === void 0) { type = ''; }
+        // com.instance = LyToastComponent
+        // com.instance['info'] = txt 将信息传入到LyToastComponent实例中
+        var com = this.dynamic.generate(__WEBPACK_IMPORTED_MODULE_2__ly_toast_component__["a" /* LyToastComponent */]);
+        com.instance['info'] = txt;
+        com.instance['type'] = type;
+        console.log('com', com, txt);
+    };
+    ToastService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])()
+        // 服务：将提示框的组件动态添加到body的最后
+        ,
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__tools_dynamic_service__["a" /* DynamicService */]])
+    ], ToastService);
+    return ToastService;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/tools/dynamic.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DynamicService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var DynamicService = (function () {
+    function DynamicService(resolver, injector, app) {
+        this.resolver = resolver;
+        this.injector = injector;
+        this.app = app;
+    }
+    // 参数是动态组件
+    DynamicService.prototype.generate = function (container) {
+        var id = this.makeID();
+        var factory = this.resolver.resolveComponentFactory(container);
+        var newNode = document.createElement('div');
+        newNode.id = id;
+        document.body.appendChild(newNode);
+        var ref = factory.create(this.injector, [], newNode);
+        ref.instance['id'] = id;
+        this.app.attachView(ref.hostView);
+        // 3s秒钟后自动销毁添加的dom(先用300完成动画)
+        setTimeout(function () {
+            newNode.remove();
+        }, 3300);
+        return ref;
+    };
+    DynamicService.prototype.makeID = function () {
+        return Math.random().toString(16).substr(2, 8);
+    };
+    DynamicService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* ComponentFactoryResolver */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Injector */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["g" /* ApplicationRef */]])
+    ], DynamicService);
+    return DynamicService;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/upload/ly-upload.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LyUploadComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LyUploadComponent = (function () {
+    function LyUploadComponent(http) {
+        this.http = http;
+        this.fileList = [];
+        this.success = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+        this.remove = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */]();
+    }
+    LyUploadComponent_1 = LyUploadComponent;
+    LyUploadComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (this.fileList) {
+            this.fileList.forEach(function (el, idx) {
+                _this.fileList[idx] = {
+                    name: el.name,
+                    size: 0,
+                    raw: null,
+                    rename: '',
+                    percentage: 0,
+                    url: el.url,
+                    status: 'success'
+                };
+            });
+        }
+    };
+    LyUploadComponent.prototype.handleClick = function () {
+        this.input.nativeElement.click();
+    };
+    LyUploadComponent.prototype.fileListChange = function (e) {
+        var files = e.target.files;
+        this.submitMulti(files);
+        this.success.emit(this.fileList);
+    };
+    // 多个文件提交服务器
+    LyUploadComponent.prototype.submitMulti = function (fileArr) {
+        var formdata = new FormData();
+        for (var i = 0; i < fileArr.length; i++) {
+            formdata.append('file', fileArr[i]);
+            var file = {
+                name: fileArr[i].name,
+                size: fileArr[i].size || 0,
+                type: '',
+                raw: null,
+                rename: '',
+                percentage: 0,
+                url: '',
+                status: 'loading'
+            };
+            this.fileList.push(file);
+            this.submit(file, formdata);
+        }
+    };
+    // 单个文件提交服务器
+    LyUploadComponent.prototype.submit = function (file, formdata) {
+        var _this = this;
+        this.request('http://192.168.3.187/api/public/api/upfile', formdata).subscribe(function (event) {
+            if (event['body']) {
+                file.rename = event['body'].data.file;
+                file.type = _this.fetchType(file.rename.split('.')[1]),
+                    file.url = event['body'].data.path + '/' + event['body'].data.file;
+            }
+            if (event['loaded'] && event['total']) {
+                file.percentage = LyUploadComponent_1.updatePercentage(event);
+                if (file.percentage == 100) {
+                    file.status = 'success';
+                }
+            }
+        });
+    };
+    // 获取文件类型
+    LyUploadComponent.prototype.fetchType = function (type) {
+        if (type == 'png' || type == 'jpg') {
+            return 'image';
+        }
+        else if (type == 'svg') {
+            return 'svg';
+        }
+        else if (type == 'gif') {
+            return 'gif';
+        }
+        else if (type == 'docx') {
+            return 'word';
+        }
+        else if (type == 'xls') {
+            return 'excel';
+        }
+        else if (type == 'pdf') {
+            return 'pdf';
+        }
+        else if (type == 'xls') {
+            return 'excel';
+        }
+        else if (type == 'zip') {
+            return 'zip';
+        }
+        else if (type == 'html') {
+            return 'html';
+        }
+        else if (type == 'txt') {
+            return 'txt';
+        }
+    };
+    // 更新进度条
+    LyUploadComponent.updatePercentage = function (res) {
+        var loaded = res.loaded, total = res.total;
+        if (loaded == undefined || !total) {
+            return 0;
+        }
+        else {
+            return Math.round(loaded / total * 100);
+        }
+    };
+    // 单个删除，批量删除
+    LyUploadComponent.prototype.delete = function (name) {
+        var _this = this;
+        this.http.get('http://192.168.3.187/api/public/api/delete', {
+            params: {
+                url: name
+            }
+        }).subscribe(function (res) {
+            if (res['status'] == 1) {
+                name.split(',').forEach(function (el) {
+                    var idx = _this.fileList.findIndex(function (item) { return item.rename == el; });
+                    _this.fileList.splice(idx, 1);
+                });
+                _this.remove.emit(_this.fileList);
+            }
+        });
+    };
+    LyUploadComponent.prototype.request = function (path, file) {
+        var req = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["d" /* HttpRequest */]('POST', path, file, {
+            reportProgress: true
+        });
+        return this.http.request(req);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* ContentChild */])('trigger'),
+        __metadata("design:type", Object)
+    ], LyUploadComponent.prototype, "trigger", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* ContentChild */])('tip'),
+        __metadata("design:type", Object)
+    ], LyUploadComponent.prototype, "tip", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])('list-type'),
+        __metadata("design:type", Object)
+    ], LyUploadComponent.prototype, "type", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyUploadComponent.prototype, "multiple", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["E" /* Input */])(),
+        __metadata("design:type", Object)
+    ], LyUploadComponent.prototype, "fileList", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
+    ], LyUploadComponent.prototype, "success", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Q" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* EventEmitter */])
+    ], LyUploadComponent.prototype, "remove", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_10" /* ViewChild */])('input'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], LyUploadComponent.prototype, "input", void 0);
+    LyUploadComponent = LyUploadComponent_1 = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ly-upload',
+            styles: [__webpack_require__("../../../../../release/upload/upload.scss")],
+            template: "\n  <div class=\"ly-upload\" (click)=\"handleClick()\" *ngIf=\"type !== 'card'\">\n    <ng-template [ngTemplateOutlet]=\"trigger\"></ng-template>\n    <input type=\"file\" name=\"upFile\" #input (change)=\"fileListChange($event)\" [multiple]=\"multiple\">\n  </div>\n  <ng-template [ngTemplateOutlet]=\"tip\"></ng-template>\n\n  <ul class=\"ly-upload-list\" [class.picture]=\"type == 'picture'\" [class.card]=\"type == 'card'\">\n    <li *ngFor=\"let file of fileList\">\n      <i [class]=\"'icon-type iconfont icon-' + file.type\" *ngIf=\"!type\"></i>\n      <img src=\"{{file.url}}\" class=\"icon v-m\" *ngIf=\"type && file.status == 'success'\"/>\n      <div>\n        <span class=\"v-m\" *ngIf=\"type !== 'card'\">{{file.name}}</span>\n        <ly-progress *ngIf=\"type && file.status == 'loading'\" [percent]=\"file.percentage\" [type]=\"type === 'card' ? 'circle' : ''\"></ly-progress>\n      </div>\n      <span class=\"tools\" *ngIf=\"file.status == 'success'\" [class.corner]=\"type\">\n        <i class=\"iconfont icon-success\"></i>\n        <i class=\"iconfont icon-delete\" (click)=\"delete(file.rename)\"></i>\n      </span>\n    </li>\n  </ul>\n\n  <div class=\"ly-upload\" (click)=\"handleClick()\" *ngIf=\"type == 'card'\">\n    <div class=\"ly-upload-card\">\n      <ng-template [ngTemplateOutlet]=\"trigger\"></ng-template>\n    </div>\n    <input type=\"file\" name=\"upFile\" #input (change)=\"fileListChange($event)\" [multiple]=\"multiple\">\n  </div>\n  "
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
+    ], LyUploadComponent);
+    return LyUploadComponent;
+    var LyUploadComponent_1;
+}());
+
+/*
+      <i class="iconfont icon-svg mr-10" *ngIf="!type && file.type == 'svg'"></i>
+      <i class="iconfont icon-word mr-10" *ngIf="!type && file.type == 'docx'"></i>
+      <i class="iconfont icon-excel mr-10" *ngIf="!type && file.type == 'xls'"></i>
+      <i class="iconfont icon-pdf mr-10" *ngIf="!type && file.type == 'pdf'"></i>
+      <i class="iconfont icon-zip mr-10" *ngIf="!type && file.type == 'zip'"></i>
+      <i class="iconfont icon-gif mr-10" *ngIf="!type && file.type == 'gif'"></i> */ 
+
+
+/***/ }),
+
+/***/ "../../../../../release/upload/upload.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".ly-upload {\n  display: inline-block;\n  position: relative;\n  line-height: 1;\n  overflow: hidden;\n  vertical-align: middle; }\n  .ly-upload input {\n    display: none; }\n\n.ly-upload-list {\n  list-style: none;\n  padding: 0;\n  margin: 0; }\n  .ly-upload-list li {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: horizontal;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: row;\n            flex-direction: row;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    padding: 10px;\n    font-size: 14px;\n    color: #666;\n    cursor: pointer;\n    box-sizing: border-box;\n    position: relative; }\n    .ly-upload-list li .icon-type {\n      font-size: 20px;\n      color: #999;\n      margin-right: 20px; }\n    .ly-upload-list li.chosen {\n      border-color: #9AD53F !important; }\n    .ly-upload-list li .tools {\n      position: absolute;\n      right: 0;\n      top: 50%;\n      -webkit-transform: translateY(-50%);\n              transform: translateY(-50%);\n      text-align: right; }\n      .ly-upload-list li .tools .iconfont {\n        font-size: 18px; }\n      .ly-upload-list li .tools .icon-success {\n        color: #9AD53F; }\n      .ly-upload-list li .tools .icon-delete {\n        color: #999;\n        display: none; }\n      .ly-upload-list li .tools.corner {\n        width: 30px;\n        height: 30px;\n        top: 0;\n        -webkit-transform: none;\n                transform: none; }\n        .ly-upload-list li .tools.corner .icon-success {\n          color: #fff;\n          position: relative;\n          z-index: 3; }\n        .ly-upload-list li .tools.corner:before {\n          content: \"\";\n          display: inline-block;\n          width: 0;\n          height: 0;\n          border-top: 30px solid #9AD53F;\n          border-left: 30px solid transparent;\n          position: absolute;\n          left: 0;\n          top: 0;\n          transition: 0.3s; }\n    .ly-upload-list li:hover .tools:before {\n      display: none; }\n    .ly-upload-list li:hover .tools .icon-success {\n      display: none; }\n    .ly-upload-list li:hover .tools .icon-delete {\n      display: block; }\n  .ly-upload-list.picture li {\n    margin: 10px 0;\n    border: 1px solid #ccc;\n    border-radius: 6px; }\n    .ly-upload-list.picture li .icon {\n      width: 60px;\n      height: 60px;\n      padding-right: 30px; }\n  .ly-upload-list.card {\n    display: inline;\n    font-size: 0;\n    vertical-align: middle; }\n    .ly-upload-list.card li {\n      display: inline-block;\n      vertical-align: middle;\n      width: 120px;\n      height: 120px;\n      border: 1px dashed #ccc;\n      border-radius: 4px;\n      margin: 10px; }\n      .ly-upload-list.card li .icon {\n        width: 100%;\n        height: 100%; }\n\n.ly-upload-card {\n  width: 120px;\n  height: 120px;\n  border: 1px dashed #ccc;\n  border-radius: 4px;\n  margin: 10px;\n  text-align: center;\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n      -ms-flex-pack: center;\n          justify-content: center; }\n", ""]);
 
 // exports
 
@@ -1415,34 +2980,80 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_ngx_md__ = __webpack_require__("../../../../ngx-md/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_component__ = __webpack_require__("../../../../../src/app/components.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__docs_button_button_component__ = __webpack_require__("../../../../../docs/button/button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__docs_radio_radio_component__ = __webpack_require__("../../../../../docs/radio/radio.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__docs_checkbox_checkbox_component__ = __webpack_require__("../../../../../docs/checkbox/checkbox.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__docs_datepicker_datepicker_component__ = __webpack_require__("../../../../../docs/datepicker/datepicker.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__docs_input_input_component__ = __webpack_require__("../../../../../docs/input/input.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__docs_layout_layout_component__ = __webpack_require__("../../../../../docs/layout/layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__docs_progress_progress_component__ = __webpack_require__("../../../../../docs/progress/progress.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__release_button_ly_button_component__ = __webpack_require__("../../../../../release/button/ly-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__release_radio_ly_radio_component__ = __webpack_require__("../../../../../release/radio/ly-radio.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__release_radio_ly_radio_group_component__ = __webpack_require__("../../../../../release/radio/ly-radio-group.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__release_radio_ly_radio_button_component__ = __webpack_require__("../../../../../release/radio/ly-radio-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__release_checkbox_ly_checkbox_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__release_checkbox_ly_checkbox_group_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox-group.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__release_checkbox_ly_checkbox_button_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__release_datepicker_ly_datepicker_component__ = __webpack_require__("../../../../../release/datepicker/ly-datepicker.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__release_input_ly_input_component__ = __webpack_require__("../../../../../release/input/ly-input.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__release_layout_ly_row_directive__ = __webpack_require__("../../../../../release/layout/ly-row.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__release_layout_ly_col_directive__ = __webpack_require__("../../../../../release/layout/ly-col.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__release_progress_ly_progress_component__ = __webpack_require__("../../../../../release/progress/ly-progress.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ngx_md__ = __webpack_require__("../../../../ngx-md/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_component__ = __webpack_require__("../../../../../src/app/components.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__release_button_ly_button_component__ = __webpack_require__("../../../../../release/button/ly-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__release_radio_ly_radio_component__ = __webpack_require__("../../../../../release/radio/ly-radio.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__release_radio_ly_radio_group_component__ = __webpack_require__("../../../../../release/radio/ly-radio-group.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__release_radio_ly_radio_button_component__ = __webpack_require__("../../../../../release/radio/ly-radio-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__release_checkbox_ly_checkbox_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__release_checkbox_ly_checkbox_group_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox-group.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__release_checkbox_ly_checkbox_button_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__release_datepicker_ly_datepicker_component__ = __webpack_require__("../../../../../release/datepicker/ly-datepicker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__release_input_ly_input_component__ = __webpack_require__("../../../../../release/input/ly-input.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__release_layout_ly_row_directive__ = __webpack_require__("../../../../../release/layout/ly-row.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__release_layout_ly_col_directive__ = __webpack_require__("../../../../../release/layout/ly-col.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__release_progress_ly_progress_component__ = __webpack_require__("../../../../../release/progress/ly-progress.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__release_upload_ly_upload_component__ = __webpack_require__("../../../../../release/upload/ly-upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__release_toast_ly_toast_component__ = __webpack_require__("../../../../../release/toast/ly-toast.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__release_alert_ly_alert_component__ = __webpack_require__("../../../../../release/alert/ly-alert.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__release_select_ly_select_component__ = __webpack_require__("../../../../../release/select/ly-select.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__release_select_ly_option_component__ = __webpack_require__("../../../../../release/select/ly-option.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__release_switch_ly_switch_component__ = __webpack_require__("../../../../../release/switch/ly-switch.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__release_table_ly_table_component__ = __webpack_require__("../../../../../release/table/ly-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__release_table_ly_table_row_component__ = __webpack_require__("../../../../../release/table/ly-table-row.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__release_menu_ly_menu_component__ = __webpack_require__("../../../../../release/menu/ly-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__release_menu_sub_menu_component__ = __webpack_require__("../../../../../release/menu/sub-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__release_menu_ly_menu_item_component__ = __webpack_require__("../../../../../release/menu/ly-menu-item.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__docs_button_button_component__ = __webpack_require__("../../../../../docs/button/button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__docs_radio_radio_component__ = __webpack_require__("../../../../../docs/radio/radio.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__docs_checkbox_checkbox_component__ = __webpack_require__("../../../../../docs/checkbox/checkbox.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__docs_datepicker_datepicker_component__ = __webpack_require__("../../../../../docs/datepicker/datepicker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__docs_input_input_component__ = __webpack_require__("../../../../../docs/input/input.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__docs_layout_layout_component__ = __webpack_require__("../../../../../docs/layout/layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__docs_progress_progress_component__ = __webpack_require__("../../../../../docs/progress/progress.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__docs_upload_upload_component__ = __webpack_require__("../../../../../docs/upload/upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__docs_toast_toast_component__ = __webpack_require__("../../../../../docs/toast/toast.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__docs_alert_alert_component__ = __webpack_require__("../../../../../docs/alert/alert.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__docs_select_select_component__ = __webpack_require__("../../../../../docs/select/select.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__docs_switch_switch_component__ = __webpack_require__("../../../../../docs/switch/switch.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__docs_table_table_component__ = __webpack_require__("../../../../../docs/table/table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__docs_menu_menu_component__ = __webpack_require__("../../../../../docs/menu/menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__release_toast_toast_service__ = __webpack_require__("../../../../../release/toast/toast.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__release_tools_dynamic_service__ = __webpack_require__("../../../../../release/tools/dynamic.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1478,28 +3089,49 @@ var routes = [
     },
     {
         path: 'components',
-        component: __WEBPACK_IMPORTED_MODULE_7__components_component__["a" /* ComponentsComponent */],
+        component: __WEBPACK_IMPORTED_MODULE_10__components_component__["a" /* ComponentsComponent */],
         children: [{
                 path: 'button',
-                component: __WEBPACK_IMPORTED_MODULE_8__docs_button_button_component__["a" /* ButtonComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_34__docs_button_button_component__["a" /* ButtonComponent */]
             }, {
                 path: 'radio',
-                component: __WEBPACK_IMPORTED_MODULE_9__docs_radio_radio_component__["a" /* RadioComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_35__docs_radio_radio_component__["a" /* RadioComponent */]
             }, {
                 path: 'checkbox',
-                component: __WEBPACK_IMPORTED_MODULE_10__docs_checkbox_checkbox_component__["a" /* CheckboxComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_36__docs_checkbox_checkbox_component__["a" /* CheckboxComponent */]
+            }, {
+                path: 'switch',
+                component: __WEBPACK_IMPORTED_MODULE_45__docs_switch_switch_component__["a" /* SwitchComponent */]
             }, {
                 path: 'input',
-                component: __WEBPACK_IMPORTED_MODULE_12__docs_input_input_component__["a" /* InputComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_38__docs_input_input_component__["a" /* InputComponent */]
+            }, {
+                path: 'select',
+                component: __WEBPACK_IMPORTED_MODULE_44__docs_select_select_component__["a" /* SelectComponent */]
             }, {
                 path: 'datepicker',
-                component: __WEBPACK_IMPORTED_MODULE_11__docs_datepicker_datepicker_component__["a" /* DatepickerComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_37__docs_datepicker_datepicker_component__["a" /* DatepickerComponent */]
+            }, {
+                path: 'table',
+                component: __WEBPACK_IMPORTED_MODULE_46__docs_table_table_component__["a" /* TableComponent */]
             }, {
                 path: 'layout',
-                component: __WEBPACK_IMPORTED_MODULE_13__docs_layout_layout_component__["a" /* LayoutComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_39__docs_layout_layout_component__["a" /* LayoutComponent */]
             }, {
                 path: 'progress',
-                component: __WEBPACK_IMPORTED_MODULE_14__docs_progress_progress_component__["a" /* ProgressComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_40__docs_progress_progress_component__["a" /* ProgressComponent */]
+            }, {
+                path: 'upload',
+                component: __WEBPACK_IMPORTED_MODULE_41__docs_upload_upload_component__["a" /* UploadComponent */]
+            }, {
+                path: 'toast',
+                component: __WEBPACK_IMPORTED_MODULE_42__docs_toast_toast_component__["a" /* ToastComponent */]
+            }, {
+                path: 'alert',
+                component: __WEBPACK_IMPORTED_MODULE_43__docs_alert_alert_component__["a" /* AlertComponent */]
+            }, {
+                path: 'menu',
+                component: __WEBPACK_IMPORTED_MODULE_47__docs_menu_menu_component__["a" /* MenuComponent */]
             }]
     }
 ];
@@ -1507,38 +3139,64 @@ var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_8__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_5__angular_http__["b" /* JsonpModule */],
+                __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["c" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["b" /* HttpClientJsonpModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* RouterModule */].forRoot(routes),
-                __WEBPACK_IMPORTED_MODULE_5_ngx_md__["a" /* MarkdownModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_7_ngx_md__["a" /* MarkdownModule */].forRoot(),
             ],
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_component__["a" /* ComponentsComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__docs_button_button_component__["a" /* ButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__docs_radio_radio_component__["a" /* RadioComponent */],
-                __WEBPACK_IMPORTED_MODULE_10__docs_checkbox_checkbox_component__["a" /* CheckboxComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__release_button_ly_button_component__["a" /* LyButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__release_radio_ly_radio_component__["a" /* LyRadioComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__release_radio_ly_radio_group_component__["a" /* LyRadioGroupComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__release_radio_ly_radio_button_component__["a" /* LyRadioButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__release_checkbox_ly_checkbox_component__["a" /* LyCheckboxComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__release_checkbox_ly_checkbox_group_component__["a" /* LyCheckboxGroupComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__release_checkbox_ly_checkbox_button_component__["a" /* LyCheckboxButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__docs_datepicker_datepicker_component__["a" /* DatepickerComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__release_input_ly_input_component__["a" /* LyInputComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__release_datepicker_ly_datepicker_component__["a" /* LyDatepickerComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__docs_layout_layout_component__["a" /* LayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__docs_input_input_component__["a" /* InputComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__release_layout_ly_row_directive__["a" /* LyRowDirective */],
-                __WEBPACK_IMPORTED_MODULE_25__release_layout_ly_col_directive__["a" /* LyColDirective */],
-                __WEBPACK_IMPORTED_MODULE_14__docs_progress_progress_component__["a" /* ProgressComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__release_progress_ly_progress_component__["a" /* LyProgressComponent */]
+                __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_component__["a" /* ComponentsComponent */],
+                __WEBPACK_IMPORTED_MODULE_34__docs_button_button_component__["a" /* ButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__docs_radio_radio_component__["a" /* RadioComponent */],
+                __WEBPACK_IMPORTED_MODULE_36__docs_checkbox_checkbox_component__["a" /* CheckboxComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__release_button_ly_button_component__["a" /* LyButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__release_radio_ly_radio_component__["a" /* LyRadioComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__release_radio_ly_radio_group_component__["a" /* LyRadioGroupComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__release_radio_ly_radio_button_component__["a" /* LyRadioButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__release_checkbox_ly_checkbox_component__["a" /* LyCheckboxComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__release_checkbox_ly_checkbox_group_component__["a" /* LyCheckboxGroupComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__release_checkbox_ly_checkbox_button_component__["a" /* LyCheckboxButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_37__docs_datepicker_datepicker_component__["a" /* DatepickerComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__release_input_ly_input_component__["a" /* LyInputComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__release_datepicker_ly_datepicker_component__["a" /* LyDatepickerComponent */],
+                __WEBPACK_IMPORTED_MODULE_39__docs_layout_layout_component__["a" /* LayoutComponent */],
+                __WEBPACK_IMPORTED_MODULE_38__docs_input_input_component__["a" /* InputComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__release_layout_ly_row_directive__["a" /* LyRowDirective */],
+                __WEBPACK_IMPORTED_MODULE_21__release_layout_ly_col_directive__["a" /* LyColDirective */],
+                __WEBPACK_IMPORTED_MODULE_40__docs_progress_progress_component__["a" /* ProgressComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__release_progress_ly_progress_component__["a" /* LyProgressComponent */],
+                __WEBPACK_IMPORTED_MODULE_41__docs_upload_upload_component__["a" /* UploadComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__release_upload_ly_upload_component__["a" /* LyUploadComponent */],
+                __WEBPACK_IMPORTED_MODULE_42__docs_toast_toast_component__["a" /* ToastComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__release_toast_ly_toast_component__["a" /* LyToastComponent */],
+                __WEBPACK_IMPORTED_MODULE_43__docs_alert_alert_component__["a" /* AlertComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__release_alert_ly_alert_component__["a" /* LyAlertComponent */],
+                __WEBPACK_IMPORTED_MODULE_44__docs_select_select_component__["a" /* SelectComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__release_select_ly_select_component__["a" /* LySelectComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__release_select_ly_option_component__["a" /* LyOptionComponent */],
+                __WEBPACK_IMPORTED_MODULE_45__docs_switch_switch_component__["a" /* SwitchComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__release_switch_ly_switch_component__["a" /* LySwitchComponent */],
+                __WEBPACK_IMPORTED_MODULE_46__docs_table_table_component__["a" /* TableComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__release_table_ly_table_component__["a" /* LyTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__release_table_ly_table_row_component__["a" /* LyTableRowComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__release_menu_ly_menu_component__["a" /* LyMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__release_menu_ly_menu_item_component__["a" /* LyMenuItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__release_menu_sub_menu_component__["a" /* LySubMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_47__docs_menu_menu_component__["a" /* MenuComponent */],
             ],
-            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_4__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* HashLocationStrategy */] }],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* AppComponent */]]
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_24__release_toast_ly_toast_component__["a" /* LyToastComponent */]
+            ],
+            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_4__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* HashLocationStrategy */] }, __WEBPACK_IMPORTED_MODULE_48__release_toast_toast_service__["a" /* ToastService */], __WEBPACK_IMPORTED_MODULE_49__release_tools_dynamic_service__["a" /* DynamicService */]],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -1573,13 +3231,27 @@ var ComponentsComponent = (function () {
             }, {
                 name: 'checkbox'
             }, {
+                name: 'switch'
+            }, {
                 name: 'input'
             }, {
+                name: 'select'
+            }, {
                 name: 'datepicker'
+            }, {
+                name: 'upload'
+            }, {
+                name: 'table'
             }, {
                 name: 'layout'
             }, {
                 name: 'progress'
+            }, {
+                name: 'toast'
+            }, {
+                name: 'alert'
+            }, {
+                name: 'menu'
             }];
     }
     ComponentsComponent = __decorate([
@@ -1626,7 +3298,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
