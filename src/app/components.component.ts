@@ -39,6 +39,8 @@ export class ComponentsComponent{
     name: 'toast'
   },{
     name: 'alert'
+  },{
+    name: 'menu'
   }]
 
   constructor(){}

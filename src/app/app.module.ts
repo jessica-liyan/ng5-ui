@@ -11,20 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ComponentsComponent } from './components.component';
 
-import { ButtonComponent } from '../../docs/button/button.component';
-import { RadioComponent } from '../../docs/radio/radio.component';
-import { CheckboxComponent } from '../../docs/checkbox/checkbox.component';
-import { DatepickerComponent } from '../../docs/datepicker/datepicker.component';
-import { InputComponent } from '../../docs/input/input.component';
-import { LayoutComponent } from '../../docs/layout/layout.component';
-import { ProgressComponent } from '../../docs/progress/progress.component';
-import { UploadComponent } from '../../docs/upload/upload.component';
-import { ToastComponent } from '../../docs/toast/toast.component';
-import { AlertComponent } from '../../docs/alert/alert.component';
-import { SelectComponent } from '../../docs/select/select.component';
-import { SwitchComponent } from '../../docs/switch/switch.component';
-import { TableComponent } from '../../docs/table/table.component';
-
 import { LyButtonComponent } from '../../release/button/ly-button.component';
 import { LyRadioComponent } from '../../release/radio/ly-radio.component';
 import { LyRadioGroupComponent } from '../../release/radio/ly-radio-group.component';
@@ -45,6 +31,24 @@ import { LyOptionComponent } from '../../release/select/ly-option.component';
 import { LySwitchComponent } from '../../release/switch/ly-switch.component';
 import { LyTableComponent } from '../../release/table/ly-table.component';
 import { LyTableRowComponent } from '../../release/table/ly-table-row.component';
+import { LyMenuComponent } from '../../release/menu/ly-menu.component';
+import { LySubMenuComponent } from '../../release/menu/sub-menu.component';
+import { LyMenuItemComponent } from '../../release/menu/ly-menu-item.component';
+
+import { ButtonComponent } from '../../docs/button/button.component';
+import { RadioComponent } from '../../docs/radio/radio.component';
+import { CheckboxComponent } from '../../docs/checkbox/checkbox.component';
+import { DatepickerComponent } from '../../docs/datepicker/datepicker.component';
+import { InputComponent } from '../../docs/input/input.component';
+import { LayoutComponent } from '../../docs/layout/layout.component';
+import { ProgressComponent } from '../../docs/progress/progress.component';
+import { UploadComponent } from '../../docs/upload/upload.component';
+import { ToastComponent } from '../../docs/toast/toast.component';
+import { AlertComponent } from '../../docs/alert/alert.component';
+import { SelectComponent } from '../../docs/select/select.component';
+import { SwitchComponent } from '../../docs/switch/switch.component';
+import { TableComponent } from '../../docs/table/table.component';
+import { MenuComponent } from '../../docs/menu/menu.component';
 
 import { ToastService } from '../../release/toast/toast.service';
 import { DynamicService } from '../../release/tools/dynamic.service';
@@ -97,6 +101,9 @@ const routes: Routes = [
     },{
       path: 'alert',
       component: AlertComponent
+    },{
+      path: 'menu',
+      component: MenuComponent
     }]
   }
 ];
@@ -148,7 +155,11 @@ const routes: Routes = [
     LySwitchComponent,
     TableComponent,
     LyTableComponent,
-    LyTableRowComponent
+    LyTableRowComponent,
+    LyMenuComponent,
+    LyMenuItemComponent,
+    LySubMenuComponent,
+    MenuComponent,
   ],
   entryComponents: [
     LyToastComponent

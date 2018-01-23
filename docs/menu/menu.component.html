@@ -1,0 +1,95 @@
+<style>
+  .demo{
+    padding-left:20px;
+  }
+</style>
+<h2>Menu 导航菜单</h2>
+<h3>基础的用法</h3>
+<ly-menu [(model)]="model" (modelChange)="handleChange($event)">
+  <ly-menu-item index="0">首页</ly-menu-item>
+  <ly-menu-item index="1">政策法规</ly-menu-item>
+  <ly-menu-item index="2">继续教育</ly-menu-item>
+</ly-menu>
+<p>{{model}}</p>
+<markdown path="assets/md/menu/menu1.md"></markdown>
+
+<h3>覆盖样式</h3>
+<ly-menu [(model)]="model1" class="demo" backgroundColor="#545C64" activeColor="#FFD04B" textColor="#fff">
+  <ly-menu-item index="0">首页</ly-menu-item>
+  <ly-menu-item index="1">政策法规</ly-menu-item>
+  <ly-menu-item index="2">继续教育</ly-menu-item>
+</ly-menu>
+<p>{{model1}}</p>
+<markdown path="assets/md/menu/menu2.md"></markdown>
+
+<h3>多级菜单</h3>
+<ly-menu [(model)]="model" (modelChange)="handleChange($event)">
+  <ly-menu-item index="0">首页</ly-menu-item>
+  <sub-menu index="1" title="政策法规">
+    <ly-menu-item index="1-1">政策</ly-menu-item>
+    <ly-menu-item index="1-2">法规</ly-menu-item>
+    <ly-menu-item index="1-3">政策法规3</ly-menu-item>
+  </sub-menu>
+  <ly-menu-item index="2">继续教育</ly-menu-item>
+  <sub-menu index="3" title="联系方式">
+    <ly-menu-item index="3-1">联系方式1</ly-menu-item>
+    <ly-menu-item index="3-2">联系方式2</ly-menu-item>
+    <ly-menu-item index="3-3">联系方式3</ly-menu-item>
+  </sub-menu>
+</ly-menu>
+<p>{{model}}</p>
+
+<ly-menu [(model)]="model" (modelChange)="handleChange($event)" backgroundColor="#545C64" activeColor="#FFD04B" textColor="#fff">
+  <ly-menu-item index="0">首页</ly-menu-item>
+  <sub-menu index="1" title="政策法规">
+    <ly-menu-item index="1-1">政策</ly-menu-item>
+    <ly-menu-item index="1-2">法规</ly-menu-item>
+    <ly-menu-item index="1-3">政策法规3</ly-menu-item>
+  </sub-menu>
+  <ly-menu-item index="2">继续教育</ly-menu-item>
+  <sub-menu index="3" title="联系方式">
+    <ly-menu-item index="3-1">联系方式1</ly-menu-item>
+    <ly-menu-item index="3-2">联系方式2</ly-menu-item>
+    <ly-menu-item index="3-3">联系方式3</ly-menu-item>
+  </sub-menu>
+</ly-menu>
+<markdown path="assets/md/menu/menu3.md"></markdown>
+
+<h3>垂直菜单</h3>
+<p class="tips">默认是水平菜单<i>mode="horizontal"</i>，垂直菜单设置<i>mode="vertical"</i></p>
+<div style="display:inline-block;width:200px;">
+  <ly-menu [(model)]="model" mode="vertical">
+    <ly-menu-item index="0">首页</ly-menu-item>
+    <sub-menu index="1" title="政策法规">
+      <ly-menu-item index="1-1">政策</ly-menu-item>
+      <ly-menu-item index="1-2">法规</ly-menu-item>
+      <ly-menu-item index="1-3">政策法规3</ly-menu-item>
+    </sub-menu>
+    <ly-menu-item index="2">继续教育</ly-menu-item>
+    <sub-menu index="3" title="联系方式">
+      <ly-menu-item index="3-1">联系方式1</ly-menu-item>
+      <ly-menu-item index="3-2">联系方式2</ly-menu-item>
+      <ly-menu-item index="3-3">联系方式3</ly-menu-item>
+    </sub-menu>
+  </ly-menu>
+</div>
+
+<div style="display:inline-block;width:200px;">
+  <ly-menu [(model)]="model" mode="vertical" backgroundColor="#545C64" activeColor="#FFD04B" textColor="#fff">
+    <ly-menu-item index="0">首页</ly-menu-item>
+    <sub-menu index="1" title="政策法规">
+      <ly-menu-item index="1-1">政策</ly-menu-item>
+      <ly-menu-item index="1-2">法规</ly-menu-item>
+      <ly-menu-item index="1-3">政策法规3</ly-menu-item>
+    </sub-menu>
+    <ly-menu-item index="2">继续教育</ly-menu-item>
+    <sub-menu index="3" title="联系方式">
+      <ly-menu-item index="3-1">联系方式1</ly-menu-item>
+      <ly-menu-item index="3-2">联系方式2</ly-menu-item>
+      <ly-menu-item index="3-3">联系方式3</ly-menu-item>
+    </sub-menu>
+  </ly-menu>
+</div>
+<markdown path="assets/md/menu/menu4.md"></markdown>
+
+

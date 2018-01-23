@@ -1,0 +1,87 @@
+.ly-menu{
+  border-bottom:1px solid #E6E6E6;
+  font-size:0;
+  box-sizing:border-box;
+  padding-left:0;
+  &.vertical{
+    border-bottom:0;
+    /deep/ .ly-menu-item{
+      display:block;
+      border:0;
+      height:auto;
+      &.active{
+        color:#4A8BFC;
+        border:0;
+      }
+      /deep/ .sub-menu{
+        position: relative;
+        top:0;
+        box-shadow:none;
+        width:100%;
+        display:none;
+        &.show{
+          display:block;
+        }
+      }
+    }
+  }
+  /deep/ .ly-menu-item{
+    display:inline-block;
+    vertical-align:middle;
+    height:50px;
+    line-height:50px;
+    font-size:14px;
+    padding:0 20px;
+    cursor: pointer;
+    transition:0.3s;
+    border-bottom:2px solid transparent;
+    position: relative;
+    box-sizing:border-box;
+    &.active{
+      color:#4A8BFC;
+      border-bottom-color:#4A8BFC;
+    }
+    /deep/ .sub-menu-tit{
+      position: relative;
+      z-index:2;
+      .iconfont{
+        display:inline-block;
+        transition:0.3s;
+        transform-origin:center center;
+        &.active{
+          transform:rotateZ(-180deg);
+        }
+      }
+    }
+    /deep/ .sub-menu{
+      position: absolute;
+      left:0;
+      width:120%;
+      top:calc(100% + 12px);
+      box-shadow:0 2px 4px #ccc;
+      padding:10px 0;
+      background:#fff;
+      z-index:5;
+      transition:0.3s;
+      transform:scaleY(0);
+      transform-origin: top center;
+      &.show{
+        transform:scaleY(1);
+      }
+      /deep/ .ly-menu-item{
+        display:block;
+        height:40px;
+        line-height:40px;
+        &:hover{
+          opacity:0.8;
+        }
+        &.active{
+          color:#4A8BFC;
+          border-bottom-color:transparent!important;
+        }
+      }
+    }
+  }
+}
+
+

@@ -16,6 +16,5 @@ export class LyTableComponent implements OnInit{
   @Input() center;
   @Input() border;
 
-  ngOnInit(){
-  }
+  ngOnInit(){}
 }
