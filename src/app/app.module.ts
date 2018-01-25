@@ -34,6 +34,13 @@ import { LyTableRowComponent } from '../../release/table/ly-table-row.component'
 import { LyMenuComponent } from '../../release/menu/ly-menu.component';
 import { LySubMenuComponent } from '../../release/menu/sub-menu.component';
 import { LyMenuItemComponent } from '../../release/menu/ly-menu-item.component';
+import { LyTooltipComponent } from '../../release/tooltip/ly-tooltip.component';
+import { LyCollapseComponent } from '../../release/collapse/ly-collapse.component';
+import { LyCollapseItemComponent } from '../../release/collapse/ly-collapse-item.component';
+import { LySwiperComponent } from '../../release/swiper/ly-swiper.component';
+import { LySwiperItemComponent } from '../../release/swiper/ly-swiper-item.component';
+import { LyStepsComponent } from '../../release/step/ly-steps.component';
+import { LyStepComponent } from '../../release/step/ly-step.component';
 
 import { ButtonComponent } from '../../docs/button/button.component';
 import { RadioComponent } from '../../docs/radio/radio.component';
@@ -49,6 +56,10 @@ import { SelectComponent } from '../../docs/select/select.component';
 import { SwitchComponent } from '../../docs/switch/switch.component';
 import { TableComponent } from '../../docs/table/table.component';
 import { MenuComponent } from '../../docs/menu/menu.component';
+import { TooltipComponent } from '../../docs/tooltip/tooltip.component';
+import { CollapseComponent } from '../../docs/collapse/collapse.component';
+import { SwiperComponent } from '../../docs/swiper/swiper.component';
+import { StepComponent } from '../../docs/step/step.component';
 
 import { ToastService } from '../../release/toast/toast.service';
 import { DynamicService } from '../../release/tools/dynamic.service';
@@ -104,6 +115,18 @@ const routes: Routes = [
     },{
       path: 'menu',
       component: MenuComponent
+    },{
+      path: 'tooltip',
+      component: TooltipComponent
+    },{
+      path: 'collapse',
+      component: CollapseComponent
+    },{
+      path: 'swiper',
+      component: SwiperComponent
+    },{
+      path: 'step',
+      component: StepComponent
     }]
   }
 ];
@@ -160,6 +183,17 @@ const routes: Routes = [
     LyMenuItemComponent,
     LySubMenuComponent,
     MenuComponent,
+    TooltipComponent,
+    LyTooltipComponent,
+    CollapseComponent,
+    LyCollapseComponent,
+    LyCollapseItemComponent,
+    SwiperComponent,
+    LySwiperComponent,
+    LySwiperItemComponent,
+    StepComponent,
+    LyStepComponent,
+    LyStepsComponent
   ],
   entryComponents: [
     LyToastComponent

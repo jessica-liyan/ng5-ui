@@ -30,6 +30,8 @@ export class ComponentsComponent{
   },{
     name: 'upload'
   },{
+    name: 'menu'
+  },{
     name: 'table'
   },{
     name: 'layout'
@@ -40,7 +42,13 @@ export class ComponentsComponent{
   },{
     name: 'alert'
   },{
-    name: 'menu'
+    name: 'tooltip'
+  },{
+    name: 'collapse'
+  },{
+    name: 'swiper'
+  },{
+    name: 'step'
   }]
 
   constructor(){}

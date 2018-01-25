@@ -3,6 +3,7 @@ body{margin:0;font-family:'PingFang SC', tahoma, arial, 'helvetica neue', 'hirag
 a{text-decoration:none;cursor:pointer;}
 html,body{height:100%;}
 ul,li{list-style:none;padding:0;margin:0;}
+dl,dt,dd{padding:0;margin:0;}
 button:focus,input:focus{outline:none;}
 table{border-spacing:0;border-collapse:collapse;}
 i,em{font-style:normal;}b{font-weight:normal;}
@@ -18,7 +19,7 @@ i,em{font-style:normal;}b{font-weight:normal;}
 .nav-item.active:before{content:"";display:inline-block;width:100%;height:4px;background:rgba(255,255,255,0.5);position:absolute;left:0;bottom:0;}
 .nav-item:hover{text-decoration:none;color:#C8DBFF;}
 
-.aside{background:#F9FAFB;width:270px;position:fixed;left:0;top:60px;bottom:0;padding:10px 0;}
+.aside{background:#F9FAFB;width:270px;position:fixed;left:0;top:60px;bottom:0;padding:10px 0;overflow:auto;}
 .aside-item{display:block;padding:10px 20px;font-size:14px;color:#4C555A;text-transform:capitalize;position:relative;}
 .aside-item:before{content:"";display:inline-block;width:2px;height:30px;position:absolute;right:2px;top:50%;margin-top:-15px;background:#4a8bfc;transform:scaleY(0);transition:0.3s ease-in-out;transform-origin:center center;}
 .aside-item.active{color:#4a8bfc;}

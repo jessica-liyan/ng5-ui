@@ -1,0 +1,32 @@
+.ly-collapse{
+  /deep/ .ly-collapse-item{
+    border-bottom:1px solid #E6EBF5;
+    dt{
+      font-size:14px;
+      color:#333;
+      cursor: pointer;
+      padding:10px 0;
+      position: relative;
+      .arrow{
+        display:inline-block;
+        position: absolute;
+        right:10px;
+        top:50%;
+        transform:translateY(-50%);
+        transform-origin:center center;
+        transition:0.3s;
+        &.active{
+          transform:translateY(-50%) rotateZ(90deg);
+        }
+      }
+    }
+    dd{
+      .ly-collapse-content{
+        font-size:14px;
+        color:#666;
+        padding:10px;
+        line-height:2;
+      }
+    }
+  }
+}

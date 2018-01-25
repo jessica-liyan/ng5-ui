@@ -1,0 +1,69 @@
+.ly-swiper{
+  position: relative;
+  .ly-swiper-list{
+    font-size:0;
+    overflow:hidden;
+    white-space:nowrap;
+    /deep/ .ly-swiper-item{
+      display:inline-block;
+      width: 100%;
+      vertical-align:top;
+      transition:0.3s ease-in-out;
+      cursor:pointer;
+    }
+  }
+  .ly-swiper-lr{
+    position:absolute;
+    left:10px;
+    right:10px;
+    top:50%;
+    transform:translateY(-50%);
+    box-sizing:border-box;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    &.hide{
+      left: 0;
+      right: 0;
+      transition:0.3s;
+      opacity:0;
+      &.active,&.hide:hover{
+        left: 10px;
+        right: 10px;
+        opacity: 1;
+      }
+    }
+    .iconfont{
+      display:inline-block;
+      width:30px;
+      height:30px;
+      border-radius:50%;
+      text-align:center;
+      line-height:30px;
+      background:rgba(255,255,255,0.8);
+      font-size:18px;
+      color:#333;
+      cursor: pointer;
+    }
+  }
+  .ly-swiper-pages{
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:10px;
+    text-align:center;
+    font-size:0;
+    li{
+      display:inline-block;
+      width:8px;
+      height:8px;
+      margin:0 5px;
+      background:rgba(255,255,255,0.8);
+      border-radius:50%;
+      cursor:pointer;
+      &.active{
+        background:#333;
+      }
+    }
+  }
+}

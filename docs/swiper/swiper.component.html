@@ -1,0 +1,47 @@
+<h2>Swiper 轮播图</h2>
+<h3>基础用法</h3>
+<div style="width:800px;">
+  <ly-swiper height="120px" arrow="always">
+    <ly-swiper-item *ngFor="let item of data; let i = index" [index]="i">
+      <img [src]="item.src" alt="" class="w v-m">
+    </ly-swiper-item>
+  </ly-swiper>
+</div>
+<markdown path="assets/md/swiper/swiper1.md"></markdown>
+
+<h3>切换箭头</h3>
+<p class="tips">设置切换箭头的显示<i>arrow= "always" | "hover" | "never"</i>，默认是“always”</p>
+<div style="width:800px;">
+  <ly-swiper height="120px" arrow="hover">
+    <ly-swiper-item *ngFor="let item of data; let i = index" [index]="i">
+      <img [src]="item.src" alt="" class="w v-m">
+    </ly-swiper-item>
+  </ly-swiper>
+</div>
+
+<div style="width:270px;margin-top:20px;">
+  <ly-swiper height="170px" arrow="hover">
+    <ly-swiper-item *ngFor="let item of data1; let i = index" [index]="i">
+      <img [src]="item.src" alt="" class="w v-m">
+    </ly-swiper-item>
+  </ly-swiper>
+</div>
+<markdown path="assets/md/swiper/swiper2.md"></markdown>
+
+<h3>设置速度</h3>
+<p class="tips">autoplay设置是否自动切换，interval确定切换的时间间隔，默认3000</p>
+<div style="width:800px;">
+  <ly-swiper height="120px" arrow="hover" interval="4000">
+    <ly-swiper-item *ngFor="let item of data; let i = index" [index]="i">
+      <img [src]="item.src" alt="" class="w v-m">
+    </ly-swiper-item>
+  </ly-swiper>
+</div>
+<div style="width:800px;margin-top:20px;">
+  <ly-swiper height="120px" arrow="hover" [autoplay]="false">
+    <ly-swiper-item *ngFor="let item of data; let i = index" [index]="i">
+      <img [src]="item.src" alt="" class="w v-m">
+    </ly-swiper-item>
+  </ly-swiper>
+</div>
+<markdown path="assets/md/swiper/swiper3.md"></markdown>

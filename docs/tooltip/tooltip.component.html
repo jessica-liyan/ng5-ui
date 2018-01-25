@@ -1,0 +1,116 @@
+<h2>Tooltip 文字提示</h2>
+<h3>基础用法</h3>
+<p class="tips">设置文字提示的位置<i>bottom-start | bottom | bottom-end | top-start | top | top-end | left-start | left | left-end | right-start | right | right-end</i></p>
+<div style="margin-bottom:50px">
+  <ly-tooltip place="bottom-start">
+    <ly-button>下左</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+  
+  <ly-tooltip place="bottom">
+    <ly-button>下中</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+  
+  <ly-tooltip place="bottom-end">
+    <ly-button>下右</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+</div>
+<div style="margin-bottom:50px">
+  <ly-tooltip place="top-start">
+    <ly-button>上左</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+  
+  <ly-tooltip place="top">
+    <ly-button>上中</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+  
+  <ly-tooltip place="top-end">
+    <ly-button>上右</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+</div>
+<div style="margin-bottom:10px;">
+  <ly-tooltip place="left-start">
+    <ly-button>左上</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+  <ly-tooltip place="right-start">
+    <ly-button>右上</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+</div>
+<div style="margin-bottom:10px;">
+  <ly-tooltip place="left">
+    <ly-button>左中</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+  <ly-tooltip place="right">
+    <ly-button>右中</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+</div>
+<div style="margin-bottom:10px;">
+  <ly-tooltip place="left-end">
+    <ly-button>左下</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+  <ly-tooltip place="right-end">
+    <ly-button>右下</ly-button>
+    <ng-template #tip>
+      这是需要提示的文字
+    </ng-template>
+  </ly-tooltip>
+</div>
+<markdown path="assets/md/tooltip/tooltip1.md"></markdown>
+
+<h3>主题</h3>
+<p class="tips">dark是深色主题，light是边框线条式主题</p>
+<ly-tooltip place="bottom-start" theme="light">
+  <ly-button>下中</ly-button>
+  <ng-template #tip>
+    这是需要提示的文字
+  </ng-template>
+</ly-tooltip>
+<ly-tooltip place="bottom" theme="light">
+  <ly-button>下方</ly-button>
+  <ng-template #tip>
+    这是需要提示的文字
+  </ng-template>
+</ly-tooltip>
+<ly-tooltip place="bottom-end" theme="light">
+  <ly-button>下右</ly-button>
+  <ng-template #tip>
+    这是需要提示的文字
+  </ng-template>
+</ly-tooltip>
+<markdown path="assets/md/tooltip/tooltip2.md"></markdown>
+
+
+
+
