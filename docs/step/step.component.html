@@ -1,12 +1,54 @@
 <h2>Step 步骤条</h2>
 <h3>基础用法</h3>
-<ly-steps [(model)]="model">
+<ly-steps [model]="model">
   <ly-step title="步骤1"></ly-step>
   <ly-step title="步骤2"></ly-step>
   <ly-step title="步骤3"></ly-step>
   <ly-step title="步骤4"></ly-step>
 </ly-steps>
-<button (click)="change()">下一步</button>
-<p>{{model}}</p>
+<ly-button (click)="next()">下一步</ly-button>
+<p>{{model}}完成，{{model+1}}进行中</p>
 
-<!-- <markdown path="assets/md/alert/alert2.md"></markdown> -->
+<ly-steps [model]="model1">
+  <ly-step title="步骤1"></ly-step>
+  <ly-step title="步骤2"></ly-step>
+  <ly-step title="步骤3"></ly-step>
+</ly-steps>
+<ly-button (click)="next1()">下一步</ly-button>
+<ly-button (click)="back()">返回</ly-button>
+<p>{{model1}}完成，{{model1+1}}进行中</p>
+<markdown path="assets/md/step/step1.md"></markdown>
+
+<h3>带图标</h3>
+<p class="tips">通过<i>icon</i>添加iconfont字体图标</p>
+<ly-steps [model]="model2">
+  <ly-step title="步骤1" icon="icon-image"></ly-step>
+  <ly-step title="步骤2" icon="icon-excel"></ly-step>
+  <ly-step title="步骤3" icon="icon-word"></ly-step>
+</ly-steps>
+<ly-button (click)="next2()">下一步</ly-button>
+<markdown path="assets/md/step/step2.md"></markdown>
+
+<h3>竖步骤条</h3>
+<p class="tips"><i>mode="vertical"</i>形成竖形步骤条</p>
+<ly-steps [model]="model3" mode="vertical">
+  <ly-step title="步骤1"></ly-step>
+  <ly-step title="步骤2"></ly-step>
+  <ly-step title="步骤3"></ly-step>
+  <ly-step title="步骤4"></ly-step>
+</ly-steps>
+<ly-button (click)="next3()">下一步</ly-button>
+<markdown path="assets/md/step/step3.md"></markdown>
+
+<h3>自定义步骤条样式</h3>
+<ly-steps [model]="model4" class="demo">
+  <ly-step title="步骤1"></ly-step>
+  <ly-step title="步骤2"></ly-step>
+  <ly-step title="步骤3"></ly-step>
+  <ly-step title="步骤4"></ly-step>
+</ly-steps>
+<div style="margin:10px 0;">
+  <ly-button (click)="next4()" >下一步</ly-button>
+</div>
+<markdown path="assets/md/step/step4.md"></markdown>
+

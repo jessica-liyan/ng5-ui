@@ -1,8 +1,111 @@
 .ly-steps{
-  display:table;
-  width:100%;
-  /deep/ .ly-step{
-    display:table-cell;
-    vertical-align:top;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  align-items:flex-start;
+  &.vertical{
+    flex-direction:column;
+    /deep/ .flex{
+      height:100px;
+      &:last-child{
+        height:auto;
+      }
+      dl{
+        height:100%;
+        &:before{
+          left:12px;
+          top:0;
+          bottom:0;
+          width:2px;
+          height:100%;
+        }
+        dd{
+          display:inline-block;
+          vertical-align:middle;
+          padding:0;
+          padding-left:10px;
+        }
+      }
+    }
+  }
+  /deep/ .flex{
+    display:inline-block;
+    flex:1;
+    -webkit-flex:1;
+    &:last-child{
+      max-width:100px;
+      dl{
+        &:before{
+          content:none;
+        }
+      }
+    }
+    dl{
+      position: relative;
+      font-size:0;
+      &:before{
+        content:"";
+        display:inline-block;
+        width:100%;
+        width: 100%;
+        height: 2px;
+        background:#ccc;
+        position: absolute;
+        left:0;
+        top:12px;
+        z-index:-1;
+        transition:0.3s;
+      }
+      &.progress{
+        &:before{
+          background:#409EFF;
+        }
+        dt{
+          border-color:#409EFF;
+          color:#409EFF;
+        }
+        dd{
+          color:#409EFF;
+        }
+      }
+      &.success{
+        &:before{
+          background:#67C23A;
+        }
+        dt{
+          border-color:#67C23A;
+          color:#67C23A;
+        }
+        dd{color:#67C23A;}
+      }
+      dt{
+        display:inline-block;
+        vertical-align:middle;
+        width:24px;
+        height:24px;
+        border-radius:50%;
+        border:2px solid #ccc;
+        line-height:24px;
+        text-align:center;
+        font-size:12px;
+        color:#666;
+        background:#fff;
+        transition:0.3s;
+        &.icon{
+          border:0;
+          .iconfont{
+            font-size:20px;
+          }
+        }
+      }
+      dd{
+        display:block;
+        font-size:14px;
+        color:#333;
+        padding:5px 0;
+        white-space:nowrap;
+        transition:0.3s;
+      }
+    }
   }
 }

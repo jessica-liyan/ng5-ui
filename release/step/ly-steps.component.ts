@@ -5,15 +5,18 @@ import { LyStepComponent } from './ly-step.component';
   selector: 'ly-steps',
   styleUrls: ['./step.scss'],
   template: `
-  <ul class="ly-steps">
+  <div [class]="'ly-steps ' + class" [class.vertical]="mode == 'vertical'">
     <ng-content></ng-content>
-  </ul>
+  </div>
   `
 })
 
 export class LyStepsComponent implements OnInit{
   @Input() model = 0;
-  
+  @Input() mode = 'horizontal';
+  @Input() class = '';
+  count; // 步骤总数
+
   constructor(
     private el: ElementRef,
     private render: Renderer2
@@ -21,7 +24,7 @@ export class LyStepsComponent implements OnInit{
 
   ngOnInit(){
     let children = this.el.nativeElement.querySelectorAll('ly-step');
-    console.log(children)
+    this.count = children.length
     if (!children || !children.length) {
       return console.warn('steps components required children');
     }
