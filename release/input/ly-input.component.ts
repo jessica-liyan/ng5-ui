@@ -11,6 +11,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
       [(ngModel)]="model" 
       (ngModelChange)="changeHandle($event)"
       (focus)="focusHandle()"
+      (keyup.enter)="enterHandle()"
     >
     <img src="{{icon}}" alt="">
   </div>
@@ -24,7 +25,8 @@ export class LyInputComponent implements OnInit{
   @Input() style;
   @Input() class;
   @Output() modelChange: EventEmitter<string> = new EventEmitter();
-  @Output() focusChange: EventEmitter<string> = new EventEmitter();
+  @Output() onFocus: EventEmitter<string> = new EventEmitter();
+  @Output() onEnter: EventEmitter<string> = new EventEmitter();
 
   ngOnInit(){}
 
@@ -32,6 +34,9 @@ export class LyInputComponent implements OnInit{
     this.modelChange.emit(this.model)
   }
   focusHandle(){
-    this.focusChange.emit('子组件事件')
+    this.onFocus.emit('子组件事件')
+  }
+  enterHandle(){
+    this.onEnter.emit(this.model)
   }
 }

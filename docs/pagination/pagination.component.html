@@ -1,0 +1,58 @@
+<h2>Pagination 分页</h2>
+<h3>基础用法</h3>
+<p class="tips">当前页码（双向绑定）<i>model</i>，总条目数<i>total</i>，每页条目数<i>pageSize</i></p>
+<ly-pagination
+  [(model)]="page"
+  total="52"
+  pageSize="10"
+>
+</ly-pagination>
+<p>{{page}}</p>
+
+<ly-pagination
+  [(model)]="big"
+  total="200"
+  pageSize="10"
+>
+</ly-pagination>
+<p>{{big}}</p>
+<markdown path="assets/md/pagination/pagination1.md"></markdown>
+
+<h3>添加总页数</h3>
+<p class="tips">在layout中添加total<i>[layout]="['total']"</i></p>
+<ly-pagination
+  [(model)]="page"
+  total="52"
+  pageSize="10"
+  [layout]="['total']"
+>
+</ly-pagination>
+<markdown path="assets/md/pagination/pagination2.md"></markdown>
+
+<h3>添加分页选项</h3>
+<p class="tips">在layout中添加size<i>[layout]="['size']"</i>，可以用<i>pageSizes</i>指定具体分页选项</p>
+<ly-pagination
+  [(model)]="page1"
+  total="52"
+  pageSize="10"
+  [layout]="['size', 'total']"
+  [pageSizes]="[10, 20, 30, 40, 50]"
+>
+</ly-pagination>
+<p>{{page1}}</p>
+<markdown path="assets/md/pagination/pagination3.md"></markdown>
+
+<h3>添加页面跳转</h3>
+<p class="tips">在layout中添加jumper<i>[layout]="['jumper']"</i></p>
+<ly-pagination
+  [(model)]="page2"
+  total="520"
+  pageSize="10"
+  [layout]="['size', 'total', 'jumper']"
+  [pageSizes]="[10, 20, 30, 40, 50]"
+>
+</ly-pagination>
+<p>{{page2}}</p>
+<markdown path="assets/md/pagination/pagination4.md"></markdown>
+
+

@@ -1,0 +1,55 @@
+.ly-pagination{
+  font-size:0;
+  .txt{
+    display:inline-block;
+    font-size:14px;
+    color:#666;
+    vertical-align:middle;
+    margin:0 10px;
+  }
+  .btn{
+    display:inline-block;
+      height:24px;
+      line-height:24px;
+      border:1px solid #ddd;
+      vertical-align:middle;
+      padding:0 8px;
+      font-size:14px;
+      color:#333;
+      margin:0 3px;
+      cursor:pointer;
+      transition:0.3s;
+    &:hover{
+      color:#409EFF;
+    }
+    &.active{
+      background:#409EFF;
+      border-color:#409EFF;
+      color:#fff;
+    }
+  }
+  .ly-pagination-list{
+    display:inline-block;
+    vertical-align:middle;
+    font-size:0;
+  }
+  /deep/ .ly-input{
+    input{
+      width:50px;
+      height:26px!important;
+      padding:6px 5px!important;
+      border-radius:0!important;
+      text-align:center;
+    }
+  }
+  /deep/ .ly-select{
+    margin:0 10px;
+    input{
+      width:100px;
+      height:26px!important;
+      padding:6px 10px!important;
+      border-radius:0!important;
+      text-align:left;
+    }
+  }
+}

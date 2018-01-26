@@ -49,6 +49,8 @@ export class ComponentsComponent{
     name: 'swiper'
   },{
     name: 'step'
+  },{
+    name: 'pagination'
   }]
 
   constructor(){}

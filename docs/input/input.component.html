@@ -16,6 +16,8 @@
 <h3>监听事件</h3>
 <p class="tips">使用<i>modelChange</i>监听值改变事件</p>
 <ly-input placeholder="请输入用户名" [(model)]="name" (modelChange)="change($event)"></ly-input>
-<p class="tips">使用<i>focusChange</i>监听聚焦事件</p>
-<ly-input placeholder="请输入用户名" [(model)]="name1" (focusChange)="focus($event)"></ly-input>
+<p class="tips">使用<i>onFocus</i>监听聚焦事件</p>
+<ly-input placeholder="请输入用户名" [(model)]="name1" (onFocus)="focus($event)"></ly-input>
+<p class="tips">使用<i>onEnter</i>监听敲回车键enter事件</p>
+<ly-input placeholder="请输入用户名" [(model)]="name2" (onEnter)="enter($event)"></ly-input>
 <markdown path="assets/md/input/input4.md"></markdown>
