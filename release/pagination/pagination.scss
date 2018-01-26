@@ -20,6 +20,7 @@
       cursor:pointer;
       transition:0.3s;
     &:hover{
+      border-color:#409EFF;
       color:#409EFF;
     }
     &.active{

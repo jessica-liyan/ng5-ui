@@ -106,8 +106,8 @@ export class LyPaginationComponent implements OnInit{
     if(this.model > this.n){
       this.model = this.n
     }
-    if(this.model < 0){
-      this.model = 0
+    if(this.model <= 0){
+      this.model = 1
     }
     this.renderPage()
     this.modelChange.emit(this.model)
