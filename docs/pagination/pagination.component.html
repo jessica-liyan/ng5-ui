@@ -55,4 +55,24 @@
 <p>{{page2}}</p>
 <markdown path="assets/md/pagination/pagination4.md"></markdown>
 
+<h3>应用实例（豆瓣图书）</h3>
+<ul class="list">
+  <li *ngFor="let item of bookList">
+    <span class="img"><img [src]="item.image"></span>
+    <p class="tit">{{item.title}}</p>
+  </li>
+</ul>
+<div style="padding:20px 0 200px 0;">
+  <ly-pagination
+    [(model)]="current"
+    [total]="bookTotal"
+    [(pageSize)]="size"
+    [layout]="['size', 'total', 'jumper']"
+    [pageSizes]="[12, 16, 20, 28]"
+    (modelChange)="handleChange($event)"
+    (pageSizeChange)="handleSize($event)"
+  >
+  </ly-pagination>
+</div>
+
 

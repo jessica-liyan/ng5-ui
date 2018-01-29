@@ -42,14 +42,16 @@ import { Component, Input, OnInit, EventEmitter, Output, Inject, Injectable, Ele
   `
 })
 
-export class LyPaginationComponent implements OnInit{
+export class LyPaginationComponent implements OnInit, OnChanges{
   @Input() model = 1; // 当前页码
   @Input() total; // 总条目
   @Input() pageSize = 10; // 每页条目
   @Input() pageSizes = [10, 20, 30, 40]; // 每页条目选择数组
   @Input() layout = [];
+  @Output() pageSizeChange : EventEmitter<number> = new EventEmitter();
   @Output() modelChange : EventEmitter<number> = new EventEmitter();
   n; // 总页数
+
   pages = []; // 存放页数数组
   size = 0; // 每页条目下拉的选中索引
   input;
@@ -58,6 +60,16 @@ export class LyPaginationComponent implements OnInit{
 
   ngOnInit(){
     this.renderPage()
+    if(this.pageSizes){
+      this.size = this.pageSizes.indexOf(this.pageSize)
+    }
+  }
+
+  ngOnChanges(){
+    this.renderPage()
+    if(this.pageSizes){
+      this.size = this.pageSizes.indexOf(this.pageSize)
+    }
   }
 
   renderPage(){
@@ -116,6 +128,7 @@ export class LyPaginationComponent implements OnInit{
   // 改变每条显示的页数
   handlePage(){
     this.pageSize = this.pageSizes[this.size]
+    this.pageSizeChange.emit(this.pageSize)
     this.renderPage()
   }
 
