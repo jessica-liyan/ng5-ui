@@ -44,6 +44,8 @@ export class ComponentsComponent{
   },{
     name: 'tooltip'
   },{
+    name: 'dialog'
+  },{
     name: 'collapse'
   },{
     name: 'swiper'

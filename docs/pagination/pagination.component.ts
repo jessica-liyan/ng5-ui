@@ -22,7 +22,7 @@ export class PaginationComponent implements OnInit{
   bookTotal = 0;
   current = 1;
   q = 'angular';
-  size = 12; // 默认一页20条
+  size = 12; // 默认一页12条
 
   constructor(
     private http: HttpClient,
@@ -33,7 +33,6 @@ export class PaginationComponent implements OnInit{
   ngOnInit(){
     // 通过activatedRoute的queryParams获取传递的page参数
     this.activatedRoute.queryParams.subscribe(res => {
-      console.log(res)
       this.current = +res.page || 1
       this.size = +res.size || 12
       this.searchBook(this.q, (this.current - 1)*this.size, this.size)

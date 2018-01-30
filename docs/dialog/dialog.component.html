@@ -1,0 +1,23 @@
+<h2>Dialog 对话框</h2>
+<h3>基础用法</h3>
+<ly-button (click)="change()">显示弹窗</ly-button>
+<ly-dialog title="扬州" [(visible)]="show">
+  <p>故人西辞黄鹤楼，烟花三月下扬州</p>
+</ly-dialog>
+
+<h3>自定义标题，自定义内容，自定义尾部</h3>
+<ly-button (click)="change1()">自定义弹窗</ly-button>
+<ly-dialog title="自定义标题名称" [(visible)]="show1">
+  <ng-template #title>
+    <i>自定义标题名称</i>
+  </ng-template>
+  <ng-template #content>
+    <p>你可以通过ng-template 插入 html 片段甚至是组件来构建自定义的对话框。</p>
+  </ng-template>
+  <ng-template #footer>
+    <ly-button (click)="change1()" type="primary">确定</ly-button>
+    <ly-button (click)="change1()" plain="true">取消</ly-button>
+  </ng-template>
+</ly-dialog>
+
+<!-- <markdown path="assets/md/alert/alert2.md"></markdown> -->

@@ -42,6 +42,7 @@ import { LySwiperItemComponent } from '../../release/swiper/ly-swiper-item.compo
 import { LyStepsComponent } from '../../release/step/ly-steps.component';
 import { LyStepComponent } from '../../release/step/ly-step.component';
 import { LyPaginationComponent } from '../../release/pagination/ly-pagination.component';
+import { LyDialogComponent } from '../../release/dialog/ly-dialog.component';
 
 import { ButtonComponent } from '../../docs/button/button.component';
 import { RadioComponent } from '../../docs/radio/radio.component';
@@ -62,6 +63,7 @@ import { CollapseComponent } from '../../docs/collapse/collapse.component';
 import { SwiperComponent } from '../../docs/swiper/swiper.component';
 import { StepComponent } from '../../docs/step/step.component';
 import { PaginationComponent } from '../../docs/pagination/pagination.component';
+import { DialogComponent } from '../../docs/dialog/dialog.component';
 
 import { ToastService } from '../../release/toast/toast.service';
 import { DynamicService } from '../../release/tools/dynamic.service';
@@ -132,6 +134,9 @@ const routes: Routes = [
     },{
       path: 'pagination',
       component: PaginationComponent
+    },{
+      path: 'dialog',
+      component: DialogComponent
     }]
   }
 ];
@@ -200,7 +205,9 @@ const routes: Routes = [
     LyStepComponent,
     LyStepsComponent,
     PaginationComponent,
-    LyPaginationComponent
+    LyPaginationComponent,
+    DialogComponent,
+    LyDialogComponent
   ],
   entryComponents: [
     LyToastComponent
