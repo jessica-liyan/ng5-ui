@@ -6,7 +6,7 @@ import { HtmlParser } from '@angular/compiler';
   styleUrls: ['./button.scss'],
   template: `
     <button 
-      [class]="'ly-button ' + (type ? type + ' ' : '') + (size ? size : '') + nativeClass"
+      [class]="'ly-button ' + type + ' ' + size + ' ' + nativeClass"
       [class.plain]="plain"
       [class.round]="round"
     >
@@ -16,11 +16,11 @@ import { HtmlParser } from '@angular/compiler';
 })
 
 export class LyButtonComponent implements OnInit{
-  @Input() type: string;
-  @Input() size: string;
+  @Input() type: string = '';
+  @Input() size: string = '';
   @Input() plain: string;
   @Input() round: string;
-  @Input('class') nativeClass: string;
+  @Input('class') nativeClass: string = '';
 
   constructor(){
   }

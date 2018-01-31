@@ -5,19 +5,19 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./datepicker.scss'],
   template: `
   <div class="date">
-    <ly-input icon="assets/img/date.png" [(model)]="model" [placeholder]="'选择日期'" (focusChange)="showPanel($event)" style="position:relative;z-index:2;"></ly-input>
+    <ly-input icon="assets/img/date.png" [(model)]="model" [placeholder]="'选择日期'" (onFocus)="showPanel($event)" style="position:relative;z-index:2;"></ly-input>
     <div class="date-picker" [class.show]="show">
       <div class="date-picker-header row w">
         <div class="col v-m t-l">
           <div *ngIf="showDate && !hiddenDay">
-            <a class="iconfont icon-home v-m" (click)="yearMinus()"><img src="assets/img/home.png" alt=""></a>
-            <a class="iconfont icon-left v-m" (click)="monthMinus()"><img src="assets/img/left.png" alt=""></a>
+            <a class="iconfont icon-home v-m" (click)="yearMinus()"></a>
+            <a class="iconfont icon-left v-m" (click)="monthMinus()"></a>
           </div>
           <div *ngIf="showYear">
-            <a class="iconfont icon-home v-m" (click)="minyearMinus()"><img src="assets/img/home.png" alt=""></a>
+            <a class="iconfont icon-home v-m" (click)="minyearMinus()"></a>
           </div>
           <div *ngIf="showMonth">
-            <a class="iconfont icon-home v-m" (click)="onlyYearMinus()"><img src="assets/img/home.png" alt=""></a>
+            <a class="iconfont icon-home v-m" (click)="onlyYearMinus()"></a>
           </div> 
         </div>
         <div class="col v-m t-c title">
@@ -34,14 +34,14 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
         </div>
         <div class="col v-m t-r">
           <div *ngIf="showDate && !hiddenDay">
-            <a class="iconfont icon-right v-m" (click)="monthPlus()"><img src="assets/img/right.png" alt=""></a>
-            <a class="iconfont icon-end v-m" (click)="yearPlus()"><img src="assets/img/end.png" alt=""></a>
+            <a class="iconfont icon-right v-m" (click)="monthPlus()"></a>
+            <a class="iconfont icon-end v-m" (click)="yearPlus()"></a>
           </div>
           <div *ngIf="showYear">
-            <a class="iconfont icon-end v-m" (click)="minyearPlus()"><img src="assets/img/end.png" alt=""></a>
+            <a class="iconfont icon-end v-m" (click)="minyearPlus()"></a>
           </div>
           <div *ngIf="showMonth">
-            <a class="iconfont icon-end v-m" (click)="onlyYearPlus()"><img src="assets/img/end.png" alt=""></a>
+            <a class="iconfont icon-end v-m" (click)="onlyYearPlus()"></a>
           </div> 
         </div>
       </div>
@@ -166,7 +166,9 @@ export class LyDatepickerComponent implements OnInit{
     this.minYear = Math.floor(this.chosenYear/10)*10
     this.chosen = this.hiddenDay ? this.chosenYear + '-' + this.chosenMonth : this.chosenYear + '-' + this.chosenMonth + '-' + this.chosenDate;
 
-    this.model = this.formatDate(this.chosen, this.format)
+    if(this.format){
+      this.model = this.formatDate(this.chosen, this.format)
+    }
     
     if(this.hiddenDay){
       this.renderMonth()

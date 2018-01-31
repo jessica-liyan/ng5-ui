@@ -57,7 +57,7 @@
 
 <h3>应用实例（豆瓣图书）</h3>
 <ul class="list">
-  <li *ngFor="let item of bookList">
+  <li *ngFor="let item of bookList" (click)="showDetail(item)">
     <span class="img"><img [src]="item.image"></span>
     <p class="tit">{{item.title}}</p>
   </li>
@@ -74,5 +74,34 @@
   >
   </ly-pagination>
 </div>
+<div class="pop">
+  <ly-dialog [title]="data.title" [(visible)]="showMask">
+    <ng-template #content>
+      <table class="table">
+        <tr>
+          <th>作者</th>
+          <td>{{data.author}}</td>
+        </tr>
+        <tr>
+          <th>出版社</th>
+          <td>{{data.publisher ? data.publisher : '暂无'}}</td>
+        </tr>
+        <tr>
+          <th>出版日期</th>
+          <td>{{data.pubdate ? data.pubdate : '暂无'}}</td>
+        </tr>
+        <tr>
+          <th>内容简介</th>
+          <td>{{data.summary ? data.summary : '暂无'}}</td>
+        </tr>
+      </table>
+    </ng-template>
+    <ng-template #footer>
+      <ly-button (click)="showMask = false" type="primary">确定</ly-button>
+      <ly-button (click)="showMask = false" plain="true">取消</ly-button>
+    </ng-template>
+  </ly-dialog>
+</div>
+
 
 

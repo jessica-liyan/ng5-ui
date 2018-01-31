@@ -1,5 +1,4 @@
 import { Component, Input, OnInit, OnDestroy, EventEmitter, Output, trigger, state, style, transition, animate, ContentChild, ViewChild, Renderer2} from '@angular/core';
-import { inherits } from 'util';
  
 @Component({
   selector: 'ly-dialog',
@@ -48,7 +47,7 @@ import { inherits } from 'util';
   template: `
   <div class="ly-dialog-info" [@dropAnimation]="visible" [@maximum]="isMax" #dialog>
     <h2 class="ly-dialog-header" (mousedown)="start($event)" (mouseup)="end($event)">
-      <span *ngIf="!customTitle">{{title}}</span>
+      <span *ngIf="!customTitle" class="title">{{title}}</span>
       <ng-template [ngTemplateOutlet]="customTitle"></ng-template>
       <div class="icon">
         <i class="iconfont icon-min" (click)="handleMin()"></i>
@@ -65,18 +64,25 @@ import { inherits } from 'util';
     </div>
   </div>
   <div class="ly-dialog-mask" *ngIf="visible"></div>
+  <ul class="min-list" *ngIf="isMin">
+    <li>
+      {{title}}
+      <div class="icon">
+        <i class="iconfont icon-max" (click)="restore($event)"></i>
+        <i class="iconfont icon-delete" (click)="remove()"></i>
+      </div>
+    </li>
+  </ul>
   `
 })
 
 export class LyDialogComponent implements OnInit, OnDestroy{
-  @Input() class = '';
   @Input() title = '';
   @Input() visible = false;
   @Output() visibleChange = new EventEmitter();
 
   isMax = false;
   isMin = false;
-  minList = []
 
   @ContentChild('content') content;
   @ContentChild('title') customTitle;
@@ -102,8 +108,8 @@ export class LyDialogComponent implements OnInit, OnDestroy{
     this.maxX = pageW - dialogW;
     this.maxY = pageH - dialogH;
     
-    this.dialog.nativeElement.style.left = (pageW - dialogW)/2 + 'px';
-    this.dialog.nativeElement.style.top =  (pageH - dialogH)/2 + 'px';
+    //this.dialog.nativeElement.style.left = (pageW - dialogW)/2 + 'px';
+    //this.dialog.nativeElement.style.top =  (pageH - dialogH)/2 + 'px';
     
     this.globalListener = this.renderer.listen(document, 'mousemove', (e)=>{
       this.move(e)
@@ -127,21 +133,25 @@ export class LyDialogComponent implements OnInit, OnDestroy{
       this.dx = this.dialog.nativeElement.offsetLeft
       this.dy = this.dialog.nativeElement.offsetTop
     },500)
-  } 
+  }
 
   // 最小化
   handleMin(){
     this.visible = false
     this.visibleChange.emit(this.visible)
     this.isMin = true
-    this.minList.push({title: this.title})
-    console.log(this.minList)
-    let list = document.createElement('ul')
-    list.className = 'min-list'
-    let child = ''
-    child += `<li>${this.title}<div class="icon"><i class="iconfont icon-max" (click)="handleMax($event)"></i><i class="iconfont icon-delete" (click)="hide()"></i></div></li>`
-    list.innerHTML = child
-    document.body.appendChild(list)
+  }
+
+  // 从最小化还原
+  restore(){
+    this.visible = true
+    this.visibleChange.emit(this.visible)
+    this.isMin = false
+  }
+
+  // 从最小化删除
+  remove(){
+    this.isMin = false
   }
 
   // 拖拽开始
@@ -153,6 +163,7 @@ export class LyDialogComponent implements OnInit, OnDestroy{
     this.my = e.pageY
     this.isDraging = true;
   }
+
   // 拖拽
   move(e){
     e.stopPropagation();
@@ -173,6 +184,7 @@ export class LyDialogComponent implements OnInit, OnDestroy{
       this.dialog.nativeElement.style.top =  moveY +'px';     //重新设置对话框的top
     } 
   }
+
   // 拖拽结束
   end(e){
     e.stopPropagation();

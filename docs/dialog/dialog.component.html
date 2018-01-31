@@ -1,12 +1,14 @@
 <h2>Dialog 对话框</h2>
 <h3>基础用法</h3>
-<ly-button (click)="change()">显示弹窗</ly-button>
+<ly-button (click)="show = true">显示弹窗</ly-button>
 <ly-dialog title="扬州" [(visible)]="show">
   <p>故人西辞黄鹤楼，烟花三月下扬州</p>
 </ly-dialog>
+<markdown path="assets/md/dialog/dialog1.md"></markdown>
 
 <h3>自定义标题，自定义内容，自定义尾部</h3>
-<ly-button (click)="change1()">自定义弹窗</ly-button>
+<p class="tips">可以使用<i>ng-template</i>自定义标题、内容和尾部</p>
+<ly-button (click)="show1 = true">自定义弹窗</ly-button>
 <ly-dialog title="自定义标题名称" [(visible)]="show1">
   <ng-template #title>
     <i>自定义标题名称</i>
@@ -15,9 +17,65 @@
     <p>你可以通过ng-template 插入 html 片段甚至是组件来构建自定义的对话框。</p>
   </ng-template>
   <ng-template #footer>
-    <ly-button (click)="change1()" type="primary">确定</ly-button>
-    <ly-button (click)="change1()" plain="true">取消</ly-button>
+    <ly-button type="primary">确定</ly-button>
+    <ly-button plain="true">取消</ly-button>
   </ng-template>
 </ly-dialog>
+<markdown path="assets/md/dialog/dialog2.md"></markdown>
 
-<!-- <markdown path="assets/md/alert/alert2.md"></markdown> -->
+<h3>对话框实例（增删改）</h3>
+<ly-button (click)="add()">新增用户</ly-button>
+<ly-dialog title="新增用户" [(visible)]="pop">
+  <ng-template #content>
+    <table class="table">
+      <tr>
+        <th>用户姓名</th>
+        <td>
+          <ly-input [(model)]="user.name"></ly-input>
+        </td>
+      </tr>
+      <tr>
+        <th>用户性别</th>
+        <td>
+          <ly-radio-group [labelGroup]="['男', '女']" [(model)]="user.sex"></ly-radio-group>
+        </td>
+      </tr>
+      <tr>
+        <th>用户生日</th>
+        <td>
+          <ly-datepicker [(model)]="user.birthday"></ly-datepicker>
+        </td>
+      </tr>
+    </table>
+  </ng-template>
+  <ng-template #footer>
+    <ly-button type="primary" (click)="submit()">确定</ly-button>
+    <ly-button plain="true" (click)="cancel()">取消</ly-button>
+  </ng-template>
+</ly-dialog>
+<table class="list">
+  <colgroup>
+    <col width="10%">
+    <col width="20%">
+    <col width="20%">
+    <col width="20%">
+    <col width="30%">
+  </colgroup>
+  <tr>
+    <th>序号</th>
+    <th>姓名</th>
+    <th>性别</th>
+    <th>生日</th>
+    <th>操作</th>
+  </tr>
+  <tr *ngFor="let item of users;let i = index">
+    <td>{{i+1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.sex}}</td>
+    <td>{{item.birthday}}</td>
+    <td>
+      <ly-button type="primary" size="mini" (click)="modify(item.name)">修改</ly-button>
+      <ly-button type="success" size="mini" (click)="delete(item.name)">删除</ly-button>
+    </td>
+  </tr>
+</table>

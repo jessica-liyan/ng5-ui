@@ -16,3 +16,26 @@
     }
   }
 }
+.table{
+  th,td{
+    font-size:14px;
+    vertical-align:top;
+    text-align:left;
+    padding:10px;
+    box-sizing:border-box;
+  }
+  th{
+    color:#666;
+    white-space:nowrap;
+    font-weight:normal;
+  }
+  td{
+    color:#333;
+  }
+}
+.pop{
+  /deep/ .ly-dialog-body{
+    height:400px;
+    overflow:auto;
+  }
+}

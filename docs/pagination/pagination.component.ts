@@ -58,4 +58,11 @@ export class PaginationComponent implements OnInit{
     this.router.navigate(['/components/pagination'],{queryParams: {page: this.current, size: this.size}})
     this.searchBook(this.q, (this.current - 1)*this.size, this.size)
   }
+
+  showMask = false; // 显示弹窗
+  data = {} // 选中的图书对象
+  showDetail(item){
+    this.showMask = true
+    this.data = item
+  }
 }
