@@ -5,7 +5,7 @@ import { Component, Input, OnInit, EventEmitter, Output, HostBinding, animate, A
   styleUrls: ['./select.scss'],
   template: `
   <div class="ly-select">
-    <ly-input class="pointer" (click)="handleClick()" [model]="chosenLabel" [placeholder]="placeholder"></ly-input>
+    <ly-input class="pointer" (click)="handleClick($event)" [model]="chosenLabel" [placeholder]="placeholder"></ly-input>
     <ul class="ly-select-options" [class.show]="show">
       <ng-content></ng-content>
     </ul>
@@ -26,13 +26,22 @@ export class LySelectComponent implements OnInit, OnChanges{
   show = false;
   chosenLabel;
   triggerUpdate = [];
+  globalListener;
 
   constructor(
     private el: ElementRef,
     private renderer: Renderer2
   ){}
 
-  ngOnInit(){}
+  ngOnInit(){
+    this.globalListener = this.renderer.listen('document', 'click', ()=>{
+      this.show && this.handleClick()
+    })
+  }
+
+  ngOnDestroy(){
+    this.globalListener && this.globalListener()
+  }
 
   clear(){
     this.model = ''
@@ -40,7 +49,8 @@ export class LySelectComponent implements OnInit, OnChanges{
     this.modelChange.emit(this.model)
   }
 
-  handleClick(){
+  handleClick(event = null){
+    event && event.stopPropagation();
     this.show = !this.show
   }
 

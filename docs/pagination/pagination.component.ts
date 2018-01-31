@@ -49,10 +49,10 @@ export class PaginationComponent implements OnInit{
   }
 
   // input搜索图书
-  // search(){
-  //   console.log('search')
-  //   this.searchBook(this.q, (this.current - 1)*this.size, this.size)
-  // }
+  search(){
+    console.log('search')
+    this.searchBook(this.q, (this.current - 1)*this.size, this.size)
+  }
 
   // 页码改变
   handleChange(){
