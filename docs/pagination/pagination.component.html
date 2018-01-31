@@ -56,6 +56,7 @@
 <markdown path="assets/md/pagination/pagination4.md"></markdown>
 
 <h3>应用实例（豆瓣图书）</h3>
+<ly-input placeholder="请输入图书名称" [(model)]="q" (onEnter)="search($event)"></ly-input>
 <ul class="list">
   <li *ngFor="let item of bookList" (click)="showDetail(item)">
     <span class="img"><img [src]="item.image"></span>
@@ -89,6 +90,13 @@
         <tr>
           <th>出版日期</th>
           <td>{{data.pubdate ? data.pubdate : '暂无'}}</td>
+        </tr>
+        <tr>
+          <th>豆瓣评分</th>
+          <td>
+            <ly-rate [model]="(data.rating.average)/2" [disabled]="true" [hasHalf]="true"></ly-rate>
+            {{data.rating.average}}
+          </td>
         </tr>
         <tr>
           <th>内容简介</th>

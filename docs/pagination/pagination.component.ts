@@ -42,10 +42,17 @@ export class PaginationComponent implements OnInit{
   searchBook(q, start, count) {
     let url = `${this.base_Url}book/search?q=${q}&start=${start}&count=${count}`
     this.http.jsonp(url,'callback').subscribe(res => {
+      console.log(res)
       this.bookList = res['books']
       this.bookTotal = res['total']
     })
   }
+
+  // input搜索图书
+  // search(){
+  //   console.log('search')
+  //   this.searchBook(this.q, (this.current - 1)*this.size, this.size)
+  // }
 
   // 页码改变
   handleChange(){
@@ -60,7 +67,11 @@ export class PaginationComponent implements OnInit{
   }
 
   showMask = false; // 显示弹窗
-  data = {} // 选中的图书对象
+  data = {// 选中的图书对象
+    rating: {
+      average: null
+    }
+  } 
   showDetail(item){
     this.showMask = true
     this.data = item

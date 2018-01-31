@@ -53,6 +53,8 @@ export class ComponentsComponent{
     name: 'step'
   },{
     name: 'pagination'
+  },{
+    name: 'rate'
   }]
 
   constructor(){}

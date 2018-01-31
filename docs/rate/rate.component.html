@@ -1,0 +1,30 @@
+<h2>Rate 评分</h2>
+<h3>基础用法</h3>
+<ly-rate [(model)]="rate"></ly-rate>
+<span>{{rate}}</span>
+<markdown path="assets/md/rate/rate1.md"></markdown>
+
+<h3>只读状态</h3>
+<p class="tips">只读状态只能查看评分，不能改变评分</p>
+<ly-rate [model]="4" [disabled]="true"></ly-rate>
+<markdown path="assets/md/rate/rate2.md"></markdown>
+
+<h3>只读状态，包含半颗星</h3>
+<ly-rate [model]="2.2" [disabled]="true" [hasHalf]="true"></ly-rate>
+<markdown path="assets/md/rate/rate3.md"></markdown>
+
+<h3>辅助文字</h3>
+<p class="tips">通过text数组传入五个级别对应的评价</p>
+<ly-rate [model]="2" [text]="['很差','较差','还行','推荐','力荐']"></ly-rate>
+<markdown path="assets/md/rate/rate4.md"></markdown>
+
+<h3>自定义图标</h3>
+<p class="tips">通过<i>inactiveIcon</i>和<i>activeIcon</i>传入自定义图标，通过<i>inactiveColor</i>和<i>activeColor</i>改变未选中和选中的颜色</p>
+<ly-rate [model]="2" 
+  [text]="['很差','较差','还行','推荐','力荐']"
+  inactiveIcon="icon-max"
+  activeIcon="icon-max"
+  inactiveColor="red"
+  activeColor="#409EFF"
+></ly-rate>
+<markdown path="assets/md/rate/rate5.md"></markdown>
