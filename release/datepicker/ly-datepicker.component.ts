@@ -1,11 +1,11 @@
-import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output, Renderer2} from '@angular/core';
  
 @Component({
   selector: 'ly-datepicker',
   styleUrls: ['./datepicker.scss'],
   template: `
   <div class="date">
-    <ly-input icon="assets/img/date.png" [(model)]="model" [placeholder]="'选择日期'" (onFocus)="showPanel($event)" style="position:relative;z-index:2;"></ly-input>
+    <ly-input icon="assets/img/date.png" [(model)]="model" [placeholder]="'选择日期'" (click)="showPanel($event)" style="position:relative;z-index:2;"></ly-input>
     <div class="date-picker" [class.show]="show">
       <div class="date-picker-header row w">
         <div class="col v-m t-l">
@@ -106,7 +106,8 @@ export class LyDatepickerComponent implements OnInit{
     [{name: '九月', key: 9},{name: '十月', key: 10},{name: '十一月', key: 11},{name: '十二月', key: 12}]
   ]
 
-  showPanel(){
+  showPanel(event){
+    event & event.stopPropagation();
     this.show = true;
   }
   renderYear(){
@@ -158,6 +159,11 @@ export class LyDatepickerComponent implements OnInit{
     }
   }
 
+  constructor(
+    private renderer: Renderer2
+  ){}
+  globalListener;
+
   ngOnInit(){
     this.date = this.model && this.model.length ? new Date(this.model) : new Date();
     this.chosenYear = this.date.getFullYear();
@@ -175,6 +181,14 @@ export class LyDatepickerComponent implements OnInit{
     }else{
       this.renderDate()
     }
+
+    this.globalListener = this.renderer.listen('document', 'click', ()=>{
+      if(this.show){this.show = false}
+    })
+  }
+
+  ngOnDestroy(){
+    this.globalListener && this.globalListener()
   }
 
   // 格式化日期
