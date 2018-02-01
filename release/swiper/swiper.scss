@@ -1,15 +1,18 @@
 .ly-swiper{
   position: relative;
+  overflow:hidden;
   .ly-swiper-list{
     font-size:0;
-    overflow:hidden;
     white-space:nowrap;
+    transition:0.3s ease-in-out;
     /deep/ .ly-swiper-item{
       display:inline-block;
       width: 100%;
       vertical-align:top;
-      transition:0.3s ease-in-out;
       cursor:pointer;
+      position: absolute;
+      left:0;top:0;
+      transition:0.3s ease-in-out;
     }
   }
   .ly-swiper-lr{

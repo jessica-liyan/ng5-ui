@@ -5,7 +5,7 @@ import { Component, Input, ElementRef, OnInit, EventEmitter, Output, ViewChild, 
   styleUrls: ['./swiper.scss'],
   template: `
   <div class="ly-swiper">
-    <ul class="ly-swiper-list" #swiper [ngStyle]="{height: height}">
+    <ul class="ly-swiper-list" #swiper [ngStyle]="style">
       <ng-content></ng-content>
     </ul>
     <div 
@@ -21,8 +21,8 @@ import { Component, Input, ElementRef, OnInit, EventEmitter, Output, ViewChild, 
       <li 
         *ngFor="let item of items; let i = index" 
         [class.active]="i === model"
-        (mouseenter)="stop(i)"
-        (mouseleave)="move(i)"
+        (mouseenter)="handleEnter(i)"
+        (mouseleave)="handleLeave()"
       >
       </li>
     </ul>
@@ -44,10 +44,17 @@ export class LySwiperComponent implements OnInit{
   model = 0; // 当前激活的子组件
   wid; // 容器的宽度
   timer; // 计时器
-  trigger = []; // 触发子组件滚动
   items = [];
+  style = {
+    height: 0,
+    transform: 'translateX(0)'
+  };
+  left;
+  trigger = []
  
-  ngOnInit(){}
+  ngOnInit(){
+    this.style.height = this.height
+  }
 
   constructor(
     private el: ElementRef
@@ -72,29 +79,34 @@ export class LySwiperComponent implements OnInit{
     }, this.interval)
   }
 
+  // updateMove(){
+  //   this.left = - this.model * this.wid
+  //   this.style.transform = `translateX(${this.left}px)`
+  // }
+
   // 分页移入，停止定时器
-  stop(i){
-    this.model = i
+  handleEnter(i){
     clearInterval(this.timer)
+    this.model = i
     this.trigger.forEach(el => el())
   }
 
   // 分页移出，继续定时器
-  move(){
+  handleLeave(){
     this.autoplay && this.step()
   }
 
   // 前进按钮
   next(){
     this.model = this.model < this.count - 1 ? this.model + 1 : 0
-    clearInterval(this.timer)
     this.trigger.forEach(el => el())
+    clearInterval(this.timer)
   }
 
   // 后退按钮
   prev(){
     this.model = this.model > 0 ? this.model - 1 : this.count - 1 
-    clearInterval(this.timer)
     this.trigger.forEach(el => el())
+    clearInterval(this.timer)
   }
 }
