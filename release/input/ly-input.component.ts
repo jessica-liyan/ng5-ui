@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, EventEmitter, Output } from '@angular/core';
  
 @Component({
   selector: 'ly-input',
@@ -34,7 +34,7 @@ export class LyInputComponent implements OnInit{
     this.modelChange.emit(this.model)
   }
   focusHandle(){
-    this.onFocus.emit('子组件事件')
+    this.onFocus.emit(this.model)
   }
   enterHandle(){
     this.onEnter.emit(this.model)

@@ -33,6 +33,7 @@ export class PaginationComponent implements OnInit{
   ngOnInit(){
     // 通过activatedRoute的queryParams获取传递的page参数
     this.activatedRoute.queryParams.subscribe(res => {
+      this.q = res.q || 'angular'
       this.current = +res.page || 1
       this.size = +res.size || 12
       this.searchBook(this.q, (this.current - 1)*this.size, this.size)
@@ -50,19 +51,21 @@ export class PaginationComponent implements OnInit{
 
   // input搜索图书
   search(){
-    console.log('search')
-    this.searchBook(this.q, (this.current - 1)*this.size, this.size)
+    this.update()
   }
 
   // 页码改变
-  handleChange(){
-    this.router.navigate(['/components/pagination'],{queryParams: {page: this.current, size: this.size}})
-    this.searchBook(this.q, (this.current - 1)*this.size, this.size)
+  handlePage(){
+    this.update()
   }
 
   // 每页条目数改变
   handleSize(){
-    this.router.navigate(['/components/pagination'],{queryParams: {page: this.current, size: this.size}})
+    this.update()
+  }
+
+  update(){
+    this.router.navigate(['/components/pagination'],{queryParams: {q: this.q, page: this.current, size: this.size}})
     this.searchBook(this.q, (this.current - 1)*this.size, this.size)
   }
 

@@ -5,7 +5,12 @@ import { Component, Input, OnInit, EventEmitter, Output, HostBinding, animate, A
   styleUrls: ['./select.scss'],
   template: `
   <div class="ly-select">
-    <ly-input class="pointer" (click)="handleClick($event)" [model]="chosenLabel" [placeholder]="placeholder"></ly-input>
+    <ly-input class="pointer" 
+      [(model)]="chosenLabel" 
+      (modelChange)="searchItem($event)" 
+      [placeholder]="placeholder"
+      (click)="handleClick($event)" 
+    ></ly-input>
     <ul class="ly-select-options" [class.show]="show">
       <ng-content></ng-content>
     </ul>
@@ -18,13 +23,13 @@ import { Component, Input, OnInit, EventEmitter, Output, HostBinding, animate, A
 })
 
 export class LySelectComponent implements OnInit, OnChanges{
-  @Input() model;
+  @Input() model; //选中的value
   @Input() placeholder;
   @Input() clearable;
   @Output() modelChange: EventEmitter<string> = new EventEmitter();
 
   show = false;
-  chosenLabel;
+  chosenLabel; //选中的label
   triggerUpdate = [];
   globalListener;
 
@@ -43,6 +48,7 @@ export class LySelectComponent implements OnInit, OnChanges{
     this.globalListener && this.globalListener()
   }
 
+  // 清空input
   clear(){
     this.model = ''
     this.chosenLabel = ''
@@ -59,9 +65,28 @@ export class LySelectComponent implements OnInit, OnChanges{
     this.chosenLabel = label
     this.modelChange.emit(this.model)
     this.show = false
+    console.log('改变了',this.chosenLabel)
   }
 
-  ngOnChanges(x){
+  ngOnChanges(){
     this.triggerUpdate.forEach(sub => sub())
+  }
+
+  matching = []; //列表中匹配的搜索项
+  triggerMatch = [];
+  searchItem(label){
+    let childrenList = this.el.nativeElement.querySelectorAll('li')
+    this.matching = []
+
+    label && childrenList.forEach(x => {
+      if(x.innerHTML.indexOf(label) > -1){
+        this.matching.push(x.innerHTML)
+      }
+    })
+    // 有label值时，调用子集匹配。
+    // 匹配有值，显示匹配，匹配为空，显示为空。
+    // label清空时，显示全部，不调用匹配
+
+    this.triggerMatch.forEach(sub => sub())
   }
 }

@@ -6,6 +6,8 @@ import { HtmlParser } from '@angular/compiler';
 })
 
 export class SelectComponent{
+  food1 = '';
+  
   food = 'fish';
   foods = [{
     label: '红烧武昌鱼',

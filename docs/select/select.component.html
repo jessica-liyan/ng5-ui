@@ -1,7 +1,7 @@
 <h2>Select 下拉框</h2>
 <h3>基础用法</h3>
 <p class="tips">使用<i>(modelChange)</i>监听绑定值的改变</p>
-<ly-select placeholder="请选择" (modelChange)="handleChange($event)">
+<ly-select placeholder="请选择" [(model)]="food1" (modelChange)="handleChange($event)">
   <ly-option *ngFor="let item of foods" [value]="item.value" [label]="item.label"></ly-option>
 </ly-select>
 <markdown path="assets/md/select/select1.md"></markdown>

@@ -9,6 +9,7 @@ import {LySelectComponent} from './ly-select.component';
       [class.active]="isactive"
       (click)="handleClick($event)" 
       [value]="value"
+      *ngIf="matching"
     >{{label}}</li>
   `
 })
@@ -18,6 +19,7 @@ export class LyOptionComponent implements OnInit{
   @Input() label;
   @Input() value;
   isactive = false;
+  matching = true;
 
   constructor(// 注入即可获取父级的对象
     private root: LySelectComponent
@@ -32,6 +34,16 @@ export class LyOptionComponent implements OnInit{
     }
     update()
     this.root.triggerUpdate.push(update)
+
+    // 根据父级input搜索功能
+    const match = () => {
+      if(this.root.chosenLabel){
+        this.matching = this.root.matching && this.root.matching.length ? this.root.matching.findIndex(x => x== this.label) > -1 : false
+      }else{
+        this.matching = true
+      }
+    }
+    this.root.triggerMatch.push(match)
   }
 
   handleClick(e){
