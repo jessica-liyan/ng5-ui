@@ -21,7 +21,7 @@ export class LySwiperItemComponent implements OnInit{
   style = {};
 
   constructor(
-    @Inject(forwardRef(() => LySwiperComponent)) private root: LySwiperComponent
+    private root: LySwiperComponent
   ){}
 
   ngOnInit(){

@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, EventEmitter, Output, ViewChild, ContentChildren, ContentChild, forwardRef, QueryList} from '@angular/core';
-import { LySwiperItemComponent } from './ly-swiper-item.component'
+import { Component, Input, ElementRef, OnInit, EventEmitter, Output, ViewChild, ContentChildren, ContentChild, forwardRef, QueryList} from '@angular/core';
 
 @Component({
   selector: 'ly-swiper',
@@ -41,9 +40,6 @@ export class LySwiperComponent implements OnInit{
   @ViewChild('swiper') swiper;
   hover = false;
 
-  @ContentChildren(forwardRef(() => LySwiperItemComponent))
-  children: QueryList<LySwiperItemComponent>;
-
   count = 0; // 子组件的个数
   model = 0; // 当前激活的子组件
   wid; // 容器的宽度
@@ -53,8 +49,13 @@ export class LySwiperComponent implements OnInit{
  
   ngOnInit(){}
 
+  constructor(
+    private el: ElementRef
+  ){}
+
   ngAfterContentInit(){
-    this.count = this.children.length
+    let children = this.el.nativeElement.querySelectorAll('li')
+    this.count = children.length
     for(let i = 0; i< this.count; i++){
       this.items.push(i)
     }
