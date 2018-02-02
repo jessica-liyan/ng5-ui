@@ -11,40 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ComponentsComponent } from './components.component';
 
-import { LyButtonComponent } from '../../release/button/ly-button.component';
-import { LyRadioComponent } from '../../release/radio/ly-radio.component';
-import { LyRadioGroupComponent } from '../../release/radio/ly-radio-group.component';
-import { LyRadioButtonComponent } from '../../release/radio/ly-radio-button.component';
-import { LyCheckboxComponent } from '../../release/checkbox/ly-checkbox.component';
-import { LyCheckboxGroupComponent } from '../../release/checkbox/ly-checkbox-group.component';
-import { LyCheckboxButtonComponent } from '../../release/checkbox/ly-checkbox-button.component';
-import { LyDatepickerComponent } from '../../release/datepicker/ly-datepicker.component';
-import { LyInputComponent } from '../../release/input/ly-input.component';
-import { LyRowDirective } from '../../release/layout/ly-row.directive';
-import { LyColDirective } from '../../release/layout/ly-col.directive';
-import { LyProgressComponent } from '../../release/progress/ly-progress.component';
-import { LyUploadComponent } from '../../release/upload/ly-upload.component';
-import { LyToastComponent } from '../../release/toast/ly-toast.component';
-import { LyAlertComponent } from '../../release/alert/ly-alert.component';
-import { LySelectComponent } from '../../release/select/ly-select.component';
-import { LyOptionComponent } from '../../release/select/ly-option.component';
-import { LySwitchComponent } from '../../release/switch/ly-switch.component';
-import { LyTableComponent } from '../../release/table/ly-table.component';
-import { LyTableRowComponent } from '../../release/table/ly-table-row.component';
-import { LyMenuComponent } from '../../release/menu/ly-menu.component';
-import { LySubMenuComponent } from '../../release/menu/sub-menu.component';
-import { LyMenuItemComponent } from '../../release/menu/ly-menu-item.component';
-import { LyTooltipComponent } from '../../release/tooltip/ly-tooltip.component';
-import { LyCollapseComponent } from '../../release/collapse/ly-collapse.component';
-import { LyCollapseItemComponent } from '../../release/collapse/ly-collapse-item.component';
-import { LySwiperComponent } from '../../release/swiper/ly-swiper.component';
-import { LySwiperItemComponent } from '../../release/swiper/ly-swiper-item.component';
-import { LyStepsComponent } from '../../release/step/ly-steps.component';
-import { LyStepComponent } from '../../release/step/ly-step.component';
-import { LyPaginationComponent } from '../../release/pagination/ly-pagination.component';
-import { LyDialogComponent } from '../../release/dialog/ly-dialog.component';
-import { LyRateComponent } from '../../release/rate/ly-rate.component';
-
 import { ButtonComponent } from '../../docs/button/button.component';
 import { RadioComponent } from '../../docs/radio/radio.component';
 import { CheckboxComponent } from '../../docs/checkbox/checkbox.component';
@@ -67,8 +33,7 @@ import { PaginationComponent } from '../../docs/pagination/pagination.component'
 import { DialogComponent } from '../../docs/dialog/dialog.component';
 import { RateComponent } from '../../docs/rate/rate.component';
 
-import { ToastService } from '../../release/toast/toast.service';
-import { DynamicService } from '../../release/tools/dynamic.service';
+import {LyModule} from '../../release/ng5-ui.module'
 
 const routes: Routes = [
   {
@@ -157,6 +122,7 @@ const routes: Routes = [
     HttpClientJsonpModule,
     RouterModule.forRoot(routes),
     MarkdownModule.forRoot(),
+    LyModule
   ],
   declarations: [
     AppComponent,
@@ -164,62 +130,26 @@ const routes: Routes = [
     ButtonComponent,
     RadioComponent,
     CheckboxComponent,
-    LyButtonComponent,
-    LyRadioComponent,
-    LyRadioGroupComponent,
-    LyRadioButtonComponent,
-    LyCheckboxComponent,
-    LyCheckboxGroupComponent,
-    LyCheckboxButtonComponent,
     DatepickerComponent,
-    LyInputComponent,
-    LyDatepickerComponent,
     LayoutComponent,
     InputComponent, 
-    LyRowDirective,
-    LyColDirective,
     ProgressComponent,
-    LyProgressComponent,
     UploadComponent,
-    LyUploadComponent,
     ToastComponent,
-    LyToastComponent,
     AlertComponent,
-    LyAlertComponent,
     SelectComponent,
-    LySelectComponent,
-    LyOptionComponent,
     SwitchComponent,
-    LySwitchComponent,
     TableComponent,
-    LyTableComponent,
-    LyTableRowComponent,
-    LyMenuComponent,
-    LyMenuItemComponent,
-    LySubMenuComponent,
     MenuComponent,
     TooltipComponent,
-    LyTooltipComponent,
     CollapseComponent,
-    LyCollapseComponent,
-    LyCollapseItemComponent,
     SwiperComponent,
-    LySwiperComponent,
-    LySwiperItemComponent,
     StepComponent,
-    LyStepComponent,
-    LyStepsComponent,
     PaginationComponent,
-    LyPaginationComponent,
     DialogComponent,
-    LyDialogComponent,
     RateComponent,
-    LyRateComponent
   ],
-  entryComponents: [
-    LyToastComponent
-  ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, ToastService, DynamicService],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
