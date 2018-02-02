@@ -1,0 +1,9 @@
+```html
+<ly-pagination
+  [(model)]="page"
+  total="52"
+  pageSize="10"
+  [layout]="['total']"
+>
+</ly-pagination>
+```
