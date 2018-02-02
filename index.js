@@ -1,3 +1,1 @@
-export function ly(){
-  console.log('this is my first module')
-}
+export * from './release/ng5-ui.module';
