@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, EventEmitter, Output, Inject, Injectable, forwardRef, AfterViewInit} from '@angular/core';
+import { Component, Input, OnInit, EventEmitter, Output} from '@angular/core';
 import { LySwiperComponent } from './ly-swiper.component';
 
 @Component({
@@ -9,13 +9,15 @@ import { LySwiperComponent } from './ly-swiper.component';
     [ngStyle]="style"
     (mouseenter)="handleEnter()"
     (mouseleave)="handleLeave()"
+    [class.active]="root.model === index"
   >
     <ng-content></ng-content>
   </li>
   `
 })
 
-@Injectable()
+// 关键点：所有li绝对定位在左上角，通过transform确定每个li的位置
+// 为避免从前往后移动的li跟从后向前移动的li重影，设置激活态的z-index:2(层级高)
 export class LySwiperItemComponent implements OnInit{
   @Input() index;
   style = {};
@@ -27,17 +29,17 @@ export class LySwiperItemComponent implements OnInit{
   ngOnInit(){
     const update = () => {
       setTimeout(()=>{
-        let arr = []
-        for(let i = 0; i < this.root.count; i++){
-          arr[i] = i
-        } 
-        arr[this.root.count - 1] = -1
-        console.log(arr)
-
         let dist = this.index - this.root.model
-        if(dist == -2){dist = 2}
-        if(dist == 3){dist = -1}
-        if(dist == -3){dist = 1}
+        if(dist == this.root.count - 1){
+          dist = -1
+        }else if(dist == -this.root.count + 1){
+          dist = 1
+        }else if(this.root.count >= 4 && dist >= -this.root.count + 2 && dist <= -2){
+          dist = dist + this.root.count
+        }else{
+          dist = dist
+        }
+
         let left = dist * this.root.wid
         this.style = {transform: `translateX(${left}px)`}
       }, 100) 
@@ -58,21 +60,30 @@ export class LySwiperItemComponent implements OnInit{
 }
 
 /*
-0  left  0  -1  1
-1       1   0  -1
-2       -1  1  0 
 
-数组是  [0 1 2 -1]
+横轴是index，纵轴是model
+     0   1   2
+0    0  -1   1   -2 => 1
+1    1   0  -1   
+2   -1   1   0    2 => -1
+
+
     0   1  2  3
-
-0    0  -1  2  1   index= 0  model= 0  arr0  arr1 arr2 arr3
-1    1  0  -1  2  index= 1  model= 1  arr3  arr0  arr1 arr2
-2    2  1  0  -1  index= 2  model= 2  arr2  arr3  arr0  arr1
-3    -1  2  1  0  index= 3  model= 3  arr1  arr2 arr3  arr0
-
-model改变
-index/model   arr[model]
+0    0  -1  2  1  index= 0  model= 0   -3 =>1  -2 => 2 
+1    1  0  -1  2  index= 1  model= 1  
+2    2  1  0  -1  index= 2  model= 2  
+3    -1  2  1  0  index= 3  model= 3   3 =>1
 
 
-5  0 -1  3  2 1
+     0  1  2  3  4
+0    0  -1  3  2  1   -2 => 3   -3=> 2  -4=>1
+1    1  0  -1  3  2   -3 => 2
+2    2  1  0  -1  3   -2 => 3
+3    3  2  1   0 -1
+4   -1  3  2   1  0    4 => -1
+
+4个  -2 => 2
+5个  -2 => 3  -3 => 2
+6个  -2 => 4  -3 => 3  -4 => 4
+
 */

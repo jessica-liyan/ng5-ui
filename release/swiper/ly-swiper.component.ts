@@ -5,7 +5,7 @@ import { Component, Input, ElementRef, OnInit, EventEmitter, Output, ViewChild, 
   styleUrls: ['./swiper.scss'],
   template: `
   <div class="ly-swiper">
-    <ul class="ly-swiper-list" #swiper [ngStyle]="style">
+    <ul class="ly-swiper-list" #swiper [ngStyle]="{height: height}">
       <ng-content></ng-content>
     </ul>
     <div 
@@ -45,16 +45,9 @@ export class LySwiperComponent implements OnInit{
   wid; // 容器的宽度
   timer; // 计时器
   items = [];
-  style = {
-    height: 0,
-    transform: 'translateX(0)'
-  };
-  left;
   trigger = []
  
-  ngOnInit(){
-    this.style.height = this.height
-  }
+  ngOnInit(){}
 
   constructor(
     private el: ElementRef
