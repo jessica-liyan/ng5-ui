@@ -4,7 +4,7 @@
 
 
 #### Quick links
-[Documentation, demos, and guides][aio]
+[Documentation, demos, and guides](https://jessica-liyan.github.io/ng5-ui/)
 
 ### Getting started
 
@@ -12,24 +12,46 @@
 
 | Feature          | Notes                                                  | Docs         |
 |------------------|--------------------------------------------------------|--------------|
-| button           |                                                        |   [Docs][24] |
-| radio            |                                                        |   [Docs][1]  |
-| checkbox         |                                                        |   [Docs][15] |
-| switch           |                                                        |   [Docs][2]  |
-| input            |                                                        |   [Docs][3]  |
-| select           |                                                        |   [Docs][26] |
-| datepicker       |                           More features coming in 2018 |   [Docs][28] |
-| upload           |                                                        |   [Docs][25] |
-| menu             |                                                        |   [Docs][22] |
-| table            |                                                        |   [Docs][35] |
-| layout           |                                                        |   [Docs][32] |
-| progress         |                                                        |   [Docs][9]  |
-| toast            |                                                        |   [Docs][10] |
-| alert            |                                                        |   [Docs][5]  |
-| tooltip          |                                                        |   [Docs][8]  |
-| dialog           |                                                        |   [Docs][17] |
-| collapse         |                                                        |   [Docs][29] |
-| swiper           |                                                        |   [Docs][12] |
-| step             |                                                        |   [Docs][11] |
-| pagination       |                                                        |   [Docs][4]  |
-| rate             |                                                        |   [Docs][4]  |
+| button           |                                                        |   [Docs][1]  |
+| radio            |                                                        |   [Docs][2]  |
+| checkbox         |                                                        |   [Docs][3]  |
+| switch           |                                                        |   [Docs][4]  |
+| input            |                                                        |   [Docs][5]  |
+| select           |                                                        |   [Docs][6]  |
+| datepicker       |                           More features coming in 2018 |   [Docs][7]  |
+| upload           |                                                        |   [Docs][8]  |
+| menu             |                                                        |   [Docs][9]  |
+| table            |                                                        |   [Docs][10] |
+| layout           |                                                        |   [Docs][11] |
+| progress         |                                                        |   [Docs][12] |
+| toast            |                                                        |   [Docs][13] |
+| alert            |                                                        |   [Docs][14] |
+| tooltip          |                                                        |   [Docs][15] |
+| dialog           |                                                        |   [Docs][16] |
+| collapse         |                                                        |   [Docs][17] |
+| swiper           |                                                        |   [Docs][18] |
+| step             |                                                        |   [Docs][19] |
+| pagination       |                                                        |   [Docs][20] |
+| rate             |                                                        |   [Docs][21] |
+
+[1]: https://jessica-liyan.github.io/ng5-ui/#/components/button
+[2]: https://jessica-liyan.github.io/ng5-ui/#/components/radio
+[3]: https://jessica-liyan.github.io/ng5-ui/#/components/checkbox
+[4]: https://jessica-liyan.github.io/ng5-ui/#/components/switch
+[5]: https://jessica-liyan.github.io/ng5-ui/#/components/input
+[6]: https://jessica-liyan.github.io/ng5-ui/#/components/select
+[7]: https://jessica-liyan.github.io/ng5-ui/#/components/datepicker
+[8]: https://jessica-liyan.github.io/ng5-ui/#/components/upload
+[9]: https://jessica-liyan.github.io/ng5-ui/#/components/menu
+[10]: https://jessica-liyan.github.io/ng5-ui/#/components/table
+[11]: https://jessica-liyan.github.io/ng5-ui/#/components/layout
+[12]: https://jessica-liyan.github.io/ng5-ui/#/components/progress
+[13]: https://jessica-liyan.github.io/ng5-ui/#/components/toast
+[14]: https://jessica-liyan.github.io/ng5-ui/#/components/alert
+[15]: https://jessica-liyan.github.io/ng5-ui/#/components/tooltip
+[16]: https://jessica-liyan.github.io/ng5-ui/#/components/dialog
+[17]: https://jessica-liyan.github.io/ng5-ui/#/components/collapse
+[18]: https://jessica-liyan.github.io/ng5-ui/#/components/swiper
+[19]: https://jessica-liyan.github.io/ng5-ui/#/components/step
+[20]: https://jessica-liyan.github.io/ng5-ui/#/components/pagination
+[21]: https://jessica-liyan.github.io/ng5-ui/#/components/rate
