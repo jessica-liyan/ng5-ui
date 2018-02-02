@@ -1,6 +1,6 @@
 # ng5-ui for Angular5
 
-[![npm version](https://badge.fury.io/js/%40angular%2Fmaterial.svg)](https://www.npmjs.com/package/%40angular%2Fmaterial)
+[![npm version](https://badge.fury.io/js/ng5-ui.svg)](https://www.npmjs.com/package/ng5-ui)
 
 
 #### Quick links
