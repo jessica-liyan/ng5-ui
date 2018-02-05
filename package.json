@@ -10,8 +10,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "main": "./index.ts",
-  "typings": "./index.ts",
+  "main": "./release/ng5-ui.module",
+  "typings": "./release/ng5-ui.module",
   "files": [
     "release",
     "index.ts"
