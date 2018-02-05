@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {HashLocationStrategy , LocationStrategy} from '@angular/common';
 
-import { LyButtonModule } from './button/module';
-
 import { LyButtonComponent } from './button/ly-button.component';
 import { LyRadioComponent } from './radio/ly-radio.component';
 import { LyRadioGroupComponent } from './radio/ly-radio-group.component';
