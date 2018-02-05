@@ -33,7 +33,8 @@ import { PaginationComponent } from '../../docs/pagination/pagination.component'
 import { DialogComponent } from '../../docs/dialog/dialog.component';
 import { RateComponent } from '../../docs/rate/rate.component';
 
-import {LyModule} from '../../release/ng5-ui.module'
+import {LyModule} from '../../index'
+
 
 const routes: Routes = [
   {
