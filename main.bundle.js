@@ -1196,6 +1196,17 @@ var UploadComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../index.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__release_ng5_ui_module__ = __webpack_require__("../../../../../release/ng5-ui.module.ts");
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__release_ng5_ui_module__["a"]; });
+
+
+
+/***/ }),
+
 /***/ "../../../../../release/alert/alert.scss":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2683,6 +2694,182 @@ var LySubMenuComponent = (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__ly_menu_component__["a" /* LyMenuComponent */]])
     ], LySubMenuComponent);
     return LySubMenuComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../release/ng5-ui.module.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LyModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__button_ly_button_component__ = __webpack_require__("../../../../../release/button/ly-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__radio_ly_radio_component__ = __webpack_require__("../../../../../release/radio/ly-radio.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__radio_ly_radio_group_component__ = __webpack_require__("../../../../../release/radio/ly-radio-group.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__radio_ly_radio_button_component__ = __webpack_require__("../../../../../release/radio/ly-radio-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__checkbox_ly_checkbox_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__checkbox_ly_checkbox_group_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox-group.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__checkbox_ly_checkbox_button_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__datepicker_ly_datepicker_component__ = __webpack_require__("../../../../../release/datepicker/ly-datepicker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__input_ly_input_component__ = __webpack_require__("../../../../../release/input/ly-input.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__layout_ly_row_directive__ = __webpack_require__("../../../../../release/layout/ly-row.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__layout_ly_col_directive__ = __webpack_require__("../../../../../release/layout/ly-col.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__progress_ly_progress_component__ = __webpack_require__("../../../../../release/progress/ly-progress.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__upload_ly_upload_component__ = __webpack_require__("../../../../../release/upload/ly-upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__toast_ly_toast_component__ = __webpack_require__("../../../../../release/toast/ly-toast.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__alert_ly_alert_component__ = __webpack_require__("../../../../../release/alert/ly-alert.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__select_ly_select_component__ = __webpack_require__("../../../../../release/select/ly-select.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__select_ly_option_component__ = __webpack_require__("../../../../../release/select/ly-option.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__switch_ly_switch_component__ = __webpack_require__("../../../../../release/switch/ly-switch.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__table_ly_table_component__ = __webpack_require__("../../../../../release/table/ly-table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__table_ly_table_row_component__ = __webpack_require__("../../../../../release/table/ly-table-row.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__menu_ly_menu_component__ = __webpack_require__("../../../../../release/menu/ly-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__menu_sub_menu_component__ = __webpack_require__("../../../../../release/menu/sub-menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__menu_ly_menu_item_component__ = __webpack_require__("../../../../../release/menu/ly-menu-item.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__tooltip_ly_tooltip_component__ = __webpack_require__("../../../../../release/tooltip/ly-tooltip.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__collapse_ly_collapse_component__ = __webpack_require__("../../../../../release/collapse/ly-collapse.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__collapse_ly_collapse_item_component__ = __webpack_require__("../../../../../release/collapse/ly-collapse-item.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__swiper_ly_swiper_component__ = __webpack_require__("../../../../../release/swiper/ly-swiper.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__swiper_ly_swiper_item_component__ = __webpack_require__("../../../../../release/swiper/ly-swiper-item.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__step_ly_steps_component__ = __webpack_require__("../../../../../release/step/ly-steps.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__step_ly_step_component__ = __webpack_require__("../../../../../release/step/ly-step.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pagination_ly_pagination_component__ = __webpack_require__("../../../../../release/pagination/ly-pagination.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__dialog_ly_dialog_component__ = __webpack_require__("../../../../../release/dialog/ly-dialog.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__rate_ly_rate_component__ = __webpack_require__("../../../../../release/rate/ly-rate.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__toast_toast_service__ = __webpack_require__("../../../../../release/toast/toast.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__tools_dynamic_service__ = __webpack_require__("../../../../../release/tools/dynamic.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var LyModule = (function () {
+    function LyModule() {
+    }
+    LyModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* NgModule */])({
+            imports: [__WEBPACK_IMPORTED_MODULE_0__angular_common__["b" /* CommonModule */], __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */]],
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_3__button_ly_button_component__["a" /* LyButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_4__radio_ly_radio_component__["a" /* LyRadioComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__radio_ly_radio_group_component__["a" /* LyRadioGroupComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__radio_ly_radio_button_component__["a" /* LyRadioButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__checkbox_ly_checkbox_component__["a" /* LyCheckboxComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__checkbox_ly_checkbox_group_component__["a" /* LyCheckboxGroupComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__checkbox_ly_checkbox_button_component__["a" /* LyCheckboxButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__datepicker_ly_datepicker_component__["a" /* LyDatepickerComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__input_ly_input_component__["a" /* LyInputComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__layout_ly_row_directive__["a" /* LyRowDirective */],
+                __WEBPACK_IMPORTED_MODULE_13__layout_ly_col_directive__["a" /* LyColDirective */],
+                __WEBPACK_IMPORTED_MODULE_14__progress_ly_progress_component__["a" /* LyProgressComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__upload_ly_upload_component__["a" /* LyUploadComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__alert_ly_alert_component__["a" /* LyAlertComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__select_ly_select_component__["a" /* LySelectComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__select_ly_option_component__["a" /* LyOptionComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__switch_ly_switch_component__["a" /* LySwitchComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__table_ly_table_component__["a" /* LyTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__table_ly_table_row_component__["a" /* LyTableRowComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__menu_ly_menu_component__["a" /* LyMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__menu_sub_menu_component__["a" /* LySubMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__menu_ly_menu_item_component__["a" /* LyMenuItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__tooltip_ly_tooltip_component__["a" /* LyTooltipComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__collapse_ly_collapse_component__["a" /* LyCollapseComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__collapse_ly_collapse_item_component__["a" /* LyCollapseItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__swiper_ly_swiper_component__["a" /* LySwiperComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__swiper_ly_swiper_item_component__["a" /* LySwiperItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__step_ly_steps_component__["a" /* LyStepsComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__step_ly_step_component__["a" /* LyStepComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__pagination_ly_pagination_component__["a" /* LyPaginationComponent */],
+                __WEBPACK_IMPORTED_MODULE_34__dialog_ly_dialog_component__["a" /* LyDialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__rate_ly_rate_component__["a" /* LyRateComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__toast_ly_toast_component__["a" /* LyToastComponent */]
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_3__button_ly_button_component__["a" /* LyButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_4__radio_ly_radio_component__["a" /* LyRadioComponent */],
+                __WEBPACK_IMPORTED_MODULE_5__radio_ly_radio_group_component__["a" /* LyRadioGroupComponent */],
+                __WEBPACK_IMPORTED_MODULE_6__radio_ly_radio_button_component__["a" /* LyRadioButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__checkbox_ly_checkbox_component__["a" /* LyCheckboxComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__checkbox_ly_checkbox_group_component__["a" /* LyCheckboxGroupComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__checkbox_ly_checkbox_button_component__["a" /* LyCheckboxButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__datepicker_ly_datepicker_component__["a" /* LyDatepickerComponent */],
+                __WEBPACK_IMPORTED_MODULE_11__input_ly_input_component__["a" /* LyInputComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__layout_ly_row_directive__["a" /* LyRowDirective */],
+                __WEBPACK_IMPORTED_MODULE_13__layout_ly_col_directive__["a" /* LyColDirective */],
+                __WEBPACK_IMPORTED_MODULE_14__progress_ly_progress_component__["a" /* LyProgressComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__upload_ly_upload_component__["a" /* LyUploadComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__alert_ly_alert_component__["a" /* LyAlertComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__select_ly_select_component__["a" /* LySelectComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__select_ly_option_component__["a" /* LyOptionComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__switch_ly_switch_component__["a" /* LySwitchComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__table_ly_table_component__["a" /* LyTableComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__table_ly_table_row_component__["a" /* LyTableRowComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__menu_ly_menu_component__["a" /* LyMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__menu_sub_menu_component__["a" /* LySubMenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__menu_ly_menu_item_component__["a" /* LyMenuItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__tooltip_ly_tooltip_component__["a" /* LyTooltipComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__collapse_ly_collapse_component__["a" /* LyCollapseComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__collapse_ly_collapse_item_component__["a" /* LyCollapseItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__swiper_ly_swiper_component__["a" /* LySwiperComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__swiper_ly_swiper_item_component__["a" /* LySwiperItemComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__step_ly_steps_component__["a" /* LyStepsComponent */],
+                __WEBPACK_IMPORTED_MODULE_32__step_ly_step_component__["a" /* LyStepComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__pagination_ly_pagination_component__["a" /* LyPaginationComponent */],
+                __WEBPACK_IMPORTED_MODULE_34__dialog_ly_dialog_component__["a" /* LyDialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_35__rate_ly_rate_component__["a" /* LyRateComponent */]
+            ],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_16__toast_ly_toast_component__["a" /* LyToastComponent */]
+            ],
+            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_0__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_0__angular_common__["d" /* HashLocationStrategy */] }, __WEBPACK_IMPORTED_MODULE_36__toast_toast_service__["a" /* ToastService */], __WEBPACK_IMPORTED_MODULE_37__tools_dynamic_service__["a" /* DynamicService */]],
+        })
+    ], LyModule);
+    return LyModule;
 }());
 
 
@@ -4699,102 +4886,34 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__angular_platform_browser_animations__ = __webpack_require__("../../../platform-browser/esm5/animations.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_component__ = __webpack_require__("../../../../../src/app/components.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__release_button_ly_button_component__ = __webpack_require__("../../../../../release/button/ly-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__release_radio_ly_radio_component__ = __webpack_require__("../../../../../release/radio/ly-radio.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__release_radio_ly_radio_group_component__ = __webpack_require__("../../../../../release/radio/ly-radio-group.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__release_radio_ly_radio_button_component__ = __webpack_require__("../../../../../release/radio/ly-radio-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__release_checkbox_ly_checkbox_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__release_checkbox_ly_checkbox_group_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox-group.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__release_checkbox_ly_checkbox_button_component__ = __webpack_require__("../../../../../release/checkbox/ly-checkbox-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__release_datepicker_ly_datepicker_component__ = __webpack_require__("../../../../../release/datepicker/ly-datepicker.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__release_input_ly_input_component__ = __webpack_require__("../../../../../release/input/ly-input.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__release_layout_ly_row_directive__ = __webpack_require__("../../../../../release/layout/ly-row.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__release_layout_ly_col_directive__ = __webpack_require__("../../../../../release/layout/ly-col.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__release_progress_ly_progress_component__ = __webpack_require__("../../../../../release/progress/ly-progress.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__release_upload_ly_upload_component__ = __webpack_require__("../../../../../release/upload/ly-upload.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__release_toast_ly_toast_component__ = __webpack_require__("../../../../../release/toast/ly-toast.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__release_alert_ly_alert_component__ = __webpack_require__("../../../../../release/alert/ly-alert.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__release_select_ly_select_component__ = __webpack_require__("../../../../../release/select/ly-select.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__release_select_ly_option_component__ = __webpack_require__("../../../../../release/select/ly-option.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__release_switch_ly_switch_component__ = __webpack_require__("../../../../../release/switch/ly-switch.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__release_table_ly_table_component__ = __webpack_require__("../../../../../release/table/ly-table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__release_table_ly_table_row_component__ = __webpack_require__("../../../../../release/table/ly-table-row.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__release_menu_ly_menu_component__ = __webpack_require__("../../../../../release/menu/ly-menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__release_menu_sub_menu_component__ = __webpack_require__("../../../../../release/menu/sub-menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__release_menu_ly_menu_item_component__ = __webpack_require__("../../../../../release/menu/ly-menu-item.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__release_tooltip_ly_tooltip_component__ = __webpack_require__("../../../../../release/tooltip/ly-tooltip.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__release_collapse_ly_collapse_component__ = __webpack_require__("../../../../../release/collapse/ly-collapse.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__release_collapse_ly_collapse_item_component__ = __webpack_require__("../../../../../release/collapse/ly-collapse-item.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__release_swiper_ly_swiper_component__ = __webpack_require__("../../../../../release/swiper/ly-swiper.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__release_swiper_ly_swiper_item_component__ = __webpack_require__("../../../../../release/swiper/ly-swiper-item.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__release_step_ly_steps_component__ = __webpack_require__("../../../../../release/step/ly-steps.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__release_step_ly_step_component__ = __webpack_require__("../../../../../release/step/ly-step.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__release_pagination_ly_pagination_component__ = __webpack_require__("../../../../../release/pagination/ly-pagination.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__release_dialog_ly_dialog_component__ = __webpack_require__("../../../../../release/dialog/ly-dialog.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__release_rate_ly_rate_component__ = __webpack_require__("../../../../../release/rate/ly-rate.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__docs_button_button_component__ = __webpack_require__("../../../../../docs/button/button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__docs_radio_radio_component__ = __webpack_require__("../../../../../docs/radio/radio.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__docs_checkbox_checkbox_component__ = __webpack_require__("../../../../../docs/checkbox/checkbox.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__docs_datepicker_datepicker_component__ = __webpack_require__("../../../../../docs/datepicker/datepicker.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__docs_input_input_component__ = __webpack_require__("../../../../../docs/input/input.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__docs_layout_layout_component__ = __webpack_require__("../../../../../docs/layout/layout.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__docs_progress_progress_component__ = __webpack_require__("../../../../../docs/progress/progress.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__docs_upload_upload_component__ = __webpack_require__("../../../../../docs/upload/upload.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__docs_toast_toast_component__ = __webpack_require__("../../../../../docs/toast/toast.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__docs_alert_alert_component__ = __webpack_require__("../../../../../docs/alert/alert.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__docs_select_select_component__ = __webpack_require__("../../../../../docs/select/select.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__docs_switch_switch_component__ = __webpack_require__("../../../../../docs/switch/switch.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__docs_table_table_component__ = __webpack_require__("../../../../../docs/table/table.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__docs_menu_menu_component__ = __webpack_require__("../../../../../docs/menu/menu.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__docs_tooltip_tooltip_component__ = __webpack_require__("../../../../../docs/tooltip/tooltip.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__docs_collapse_collapse_component__ = __webpack_require__("../../../../../docs/collapse/collapse.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__docs_swiper_swiper_component__ = __webpack_require__("../../../../../docs/swiper/swiper.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__docs_step_step_component__ = __webpack_require__("../../../../../docs/step/step.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__docs_pagination_pagination_component__ = __webpack_require__("../../../../../docs/pagination/pagination.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__docs_dialog_dialog_component__ = __webpack_require__("../../../../../docs/dialog/dialog.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__docs_rate_rate_component__ = __webpack_require__("../../../../../docs/rate/rate.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__release_toast_toast_service__ = __webpack_require__("../../../../../release/toast/toast.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__release_tools_dynamic_service__ = __webpack_require__("../../../../../release/tools/dynamic.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__docs_button_button_component__ = __webpack_require__("../../../../../docs/button/button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__docs_radio_radio_component__ = __webpack_require__("../../../../../docs/radio/radio.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__docs_checkbox_checkbox_component__ = __webpack_require__("../../../../../docs/checkbox/checkbox.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__docs_datepicker_datepicker_component__ = __webpack_require__("../../../../../docs/datepicker/datepicker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__docs_input_input_component__ = __webpack_require__("../../../../../docs/input/input.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__docs_layout_layout_component__ = __webpack_require__("../../../../../docs/layout/layout.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__docs_progress_progress_component__ = __webpack_require__("../../../../../docs/progress/progress.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__docs_upload_upload_component__ = __webpack_require__("../../../../../docs/upload/upload.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__docs_toast_toast_component__ = __webpack_require__("../../../../../docs/toast/toast.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__docs_alert_alert_component__ = __webpack_require__("../../../../../docs/alert/alert.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__docs_select_select_component__ = __webpack_require__("../../../../../docs/select/select.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__docs_switch_switch_component__ = __webpack_require__("../../../../../docs/switch/switch.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__docs_table_table_component__ = __webpack_require__("../../../../../docs/table/table.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__docs_menu_menu_component__ = __webpack_require__("../../../../../docs/menu/menu.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__docs_tooltip_tooltip_component__ = __webpack_require__("../../../../../docs/tooltip/tooltip.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__docs_collapse_collapse_component__ = __webpack_require__("../../../../../docs/collapse/collapse.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__docs_swiper_swiper_component__ = __webpack_require__("../../../../../docs/swiper/swiper.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__docs_step_step_component__ = __webpack_require__("../../../../../docs/step/step.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__docs_pagination_pagination_component__ = __webpack_require__("../../../../../docs/pagination/pagination.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__docs_dialog_dialog_component__ = __webpack_require__("../../../../../docs/dialog/dialog.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__docs_rate_rate_component__ = __webpack_require__("../../../../../docs/rate/rate.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__index__ = __webpack_require__("../../../../../index.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -4839,67 +4958,67 @@ var routes = [
         component: __WEBPACK_IMPORTED_MODULE_10__components_component__["a" /* ComponentsComponent */],
         children: [{
                 path: 'button',
-                component: __WEBPACK_IMPORTED_MODULE_44__docs_button_button_component__["a" /* ButtonComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_11__docs_button_button_component__["a" /* ButtonComponent */]
             }, {
                 path: 'radio',
-                component: __WEBPACK_IMPORTED_MODULE_45__docs_radio_radio_component__["a" /* RadioComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_12__docs_radio_radio_component__["a" /* RadioComponent */]
             }, {
                 path: 'checkbox',
-                component: __WEBPACK_IMPORTED_MODULE_46__docs_checkbox_checkbox_component__["a" /* CheckboxComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_13__docs_checkbox_checkbox_component__["a" /* CheckboxComponent */]
             }, {
                 path: 'switch',
-                component: __WEBPACK_IMPORTED_MODULE_55__docs_switch_switch_component__["a" /* SwitchComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_22__docs_switch_switch_component__["a" /* SwitchComponent */]
             }, {
                 path: 'input',
-                component: __WEBPACK_IMPORTED_MODULE_48__docs_input_input_component__["a" /* InputComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_15__docs_input_input_component__["a" /* InputComponent */]
             }, {
                 path: 'select',
-                component: __WEBPACK_IMPORTED_MODULE_54__docs_select_select_component__["a" /* SelectComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_21__docs_select_select_component__["a" /* SelectComponent */]
             }, {
                 path: 'datepicker',
-                component: __WEBPACK_IMPORTED_MODULE_47__docs_datepicker_datepicker_component__["a" /* DatepickerComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_14__docs_datepicker_datepicker_component__["a" /* DatepickerComponent */]
             }, {
                 path: 'table',
-                component: __WEBPACK_IMPORTED_MODULE_56__docs_table_table_component__["a" /* TableComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_23__docs_table_table_component__["a" /* TableComponent */]
             }, {
                 path: 'layout',
-                component: __WEBPACK_IMPORTED_MODULE_49__docs_layout_layout_component__["a" /* LayoutComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_16__docs_layout_layout_component__["a" /* LayoutComponent */]
             }, {
                 path: 'progress',
-                component: __WEBPACK_IMPORTED_MODULE_50__docs_progress_progress_component__["a" /* ProgressComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_17__docs_progress_progress_component__["a" /* ProgressComponent */]
             }, {
                 path: 'upload',
-                component: __WEBPACK_IMPORTED_MODULE_51__docs_upload_upload_component__["a" /* UploadComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_18__docs_upload_upload_component__["a" /* UploadComponent */]
             }, {
                 path: 'toast',
-                component: __WEBPACK_IMPORTED_MODULE_52__docs_toast_toast_component__["a" /* ToastComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_19__docs_toast_toast_component__["a" /* ToastComponent */]
             }, {
                 path: 'alert',
-                component: __WEBPACK_IMPORTED_MODULE_53__docs_alert_alert_component__["a" /* AlertComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_20__docs_alert_alert_component__["a" /* AlertComponent */]
             }, {
                 path: 'menu',
-                component: __WEBPACK_IMPORTED_MODULE_57__docs_menu_menu_component__["a" /* MenuComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_24__docs_menu_menu_component__["a" /* MenuComponent */]
             }, {
                 path: 'tooltip',
-                component: __WEBPACK_IMPORTED_MODULE_58__docs_tooltip_tooltip_component__["a" /* TooltipComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_25__docs_tooltip_tooltip_component__["a" /* TooltipComponent */]
             }, {
                 path: 'collapse',
-                component: __WEBPACK_IMPORTED_MODULE_59__docs_collapse_collapse_component__["a" /* CollapseComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_26__docs_collapse_collapse_component__["a" /* CollapseComponent */]
             }, {
                 path: 'swiper',
-                component: __WEBPACK_IMPORTED_MODULE_60__docs_swiper_swiper_component__["a" /* SwiperComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_27__docs_swiper_swiper_component__["a" /* SwiperComponent */]
             }, {
                 path: 'step',
-                component: __WEBPACK_IMPORTED_MODULE_61__docs_step_step_component__["a" /* StepComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_28__docs_step_step_component__["a" /* StepComponent */]
             }, {
                 path: 'pagination',
-                component: __WEBPACK_IMPORTED_MODULE_62__docs_pagination_pagination_component__["a" /* PaginationComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_29__docs_pagination_pagination_component__["a" /* PaginationComponent */]
             }, {
                 path: 'dialog',
-                component: __WEBPACK_IMPORTED_MODULE_63__docs_dialog_dialog_component__["a" /* DialogComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_30__docs_dialog_dialog_component__["a" /* DialogComponent */]
             }, {
                 path: 'rate',
-                component: __WEBPACK_IMPORTED_MODULE_64__docs_rate_rate_component__["a" /* RateComponent */]
+                component: __WEBPACK_IMPORTED_MODULE_31__docs_rate_rate_component__["a" /* RateComponent */]
             }]
     }
 ];
@@ -4918,69 +5037,34 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_6__angular_common_http__["b" /* HttpClientJsonpModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_router__["c" /* RouterModule */].forRoot(routes),
                 __WEBPACK_IMPORTED_MODULE_7_ngx_md__["a" /* MarkdownModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_32__index__["a" /* LyModule */]
             ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_10__components_component__["a" /* ComponentsComponent */],
-                __WEBPACK_IMPORTED_MODULE_44__docs_button_button_component__["a" /* ButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_45__docs_radio_radio_component__["a" /* RadioComponent */],
-                __WEBPACK_IMPORTED_MODULE_46__docs_checkbox_checkbox_component__["a" /* CheckboxComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__release_button_ly_button_component__["a" /* LyButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__release_radio_ly_radio_component__["a" /* LyRadioComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__release_radio_ly_radio_group_component__["a" /* LyRadioGroupComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__release_radio_ly_radio_button_component__["a" /* LyRadioButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__release_checkbox_ly_checkbox_component__["a" /* LyCheckboxComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__release_checkbox_ly_checkbox_group_component__["a" /* LyCheckboxGroupComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__release_checkbox_ly_checkbox_button_component__["a" /* LyCheckboxButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_47__docs_datepicker_datepicker_component__["a" /* DatepickerComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__release_input_ly_input_component__["a" /* LyInputComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__release_datepicker_ly_datepicker_component__["a" /* LyDatepickerComponent */],
-                __WEBPACK_IMPORTED_MODULE_49__docs_layout_layout_component__["a" /* LayoutComponent */],
-                __WEBPACK_IMPORTED_MODULE_48__docs_input_input_component__["a" /* InputComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__release_layout_ly_row_directive__["a" /* LyRowDirective */],
-                __WEBPACK_IMPORTED_MODULE_21__release_layout_ly_col_directive__["a" /* LyColDirective */],
-                __WEBPACK_IMPORTED_MODULE_50__docs_progress_progress_component__["a" /* ProgressComponent */],
-                __WEBPACK_IMPORTED_MODULE_22__release_progress_ly_progress_component__["a" /* LyProgressComponent */],
-                __WEBPACK_IMPORTED_MODULE_51__docs_upload_upload_component__["a" /* UploadComponent */],
-                __WEBPACK_IMPORTED_MODULE_23__release_upload_ly_upload_component__["a" /* LyUploadComponent */],
-                __WEBPACK_IMPORTED_MODULE_52__docs_toast_toast_component__["a" /* ToastComponent */],
-                __WEBPACK_IMPORTED_MODULE_24__release_toast_ly_toast_component__["a" /* LyToastComponent */],
-                __WEBPACK_IMPORTED_MODULE_53__docs_alert_alert_component__["a" /* AlertComponent */],
-                __WEBPACK_IMPORTED_MODULE_25__release_alert_ly_alert_component__["a" /* LyAlertComponent */],
-                __WEBPACK_IMPORTED_MODULE_54__docs_select_select_component__["a" /* SelectComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__release_select_ly_select_component__["a" /* LySelectComponent */],
-                __WEBPACK_IMPORTED_MODULE_27__release_select_ly_option_component__["a" /* LyOptionComponent */],
-                __WEBPACK_IMPORTED_MODULE_55__docs_switch_switch_component__["a" /* SwitchComponent */],
-                __WEBPACK_IMPORTED_MODULE_28__release_switch_ly_switch_component__["a" /* LySwitchComponent */],
-                __WEBPACK_IMPORTED_MODULE_56__docs_table_table_component__["a" /* TableComponent */],
-                __WEBPACK_IMPORTED_MODULE_29__release_table_ly_table_component__["a" /* LyTableComponent */],
-                __WEBPACK_IMPORTED_MODULE_30__release_table_ly_table_row_component__["a" /* LyTableRowComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__release_menu_ly_menu_component__["a" /* LyMenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__release_menu_ly_menu_item_component__["a" /* LyMenuItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__release_menu_sub_menu_component__["a" /* LySubMenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_57__docs_menu_menu_component__["a" /* MenuComponent */],
-                __WEBPACK_IMPORTED_MODULE_58__docs_tooltip_tooltip_component__["a" /* TooltipComponent */],
-                __WEBPACK_IMPORTED_MODULE_34__release_tooltip_ly_tooltip_component__["a" /* LyTooltipComponent */],
-                __WEBPACK_IMPORTED_MODULE_59__docs_collapse_collapse_component__["a" /* CollapseComponent */],
-                __WEBPACK_IMPORTED_MODULE_35__release_collapse_ly_collapse_component__["a" /* LyCollapseComponent */],
-                __WEBPACK_IMPORTED_MODULE_36__release_collapse_ly_collapse_item_component__["a" /* LyCollapseItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_60__docs_swiper_swiper_component__["a" /* SwiperComponent */],
-                __WEBPACK_IMPORTED_MODULE_37__release_swiper_ly_swiper_component__["a" /* LySwiperComponent */],
-                __WEBPACK_IMPORTED_MODULE_38__release_swiper_ly_swiper_item_component__["a" /* LySwiperItemComponent */],
-                __WEBPACK_IMPORTED_MODULE_61__docs_step_step_component__["a" /* StepComponent */],
-                __WEBPACK_IMPORTED_MODULE_40__release_step_ly_step_component__["a" /* LyStepComponent */],
-                __WEBPACK_IMPORTED_MODULE_39__release_step_ly_steps_component__["a" /* LyStepsComponent */],
-                __WEBPACK_IMPORTED_MODULE_62__docs_pagination_pagination_component__["a" /* PaginationComponent */],
-                __WEBPACK_IMPORTED_MODULE_41__release_pagination_ly_pagination_component__["a" /* LyPaginationComponent */],
-                __WEBPACK_IMPORTED_MODULE_63__docs_dialog_dialog_component__["a" /* DialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_42__release_dialog_ly_dialog_component__["a" /* LyDialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_64__docs_rate_rate_component__["a" /* RateComponent */],
-                __WEBPACK_IMPORTED_MODULE_43__release_rate_ly_rate_component__["a" /* LyRateComponent */]
+                __WEBPACK_IMPORTED_MODULE_11__docs_button_button_component__["a" /* ButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__docs_radio_radio_component__["a" /* RadioComponent */],
+                __WEBPACK_IMPORTED_MODULE_13__docs_checkbox_checkbox_component__["a" /* CheckboxComponent */],
+                __WEBPACK_IMPORTED_MODULE_14__docs_datepicker_datepicker_component__["a" /* DatepickerComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__docs_layout_layout_component__["a" /* LayoutComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__docs_input_input_component__["a" /* InputComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__docs_progress_progress_component__["a" /* ProgressComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__docs_upload_upload_component__["a" /* UploadComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__docs_toast_toast_component__["a" /* ToastComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__docs_alert_alert_component__["a" /* AlertComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__docs_select_select_component__["a" /* SelectComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__docs_switch_switch_component__["a" /* SwitchComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__docs_table_table_component__["a" /* TableComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__docs_menu_menu_component__["a" /* MenuComponent */],
+                __WEBPACK_IMPORTED_MODULE_25__docs_tooltip_tooltip_component__["a" /* TooltipComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__docs_collapse_collapse_component__["a" /* CollapseComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__docs_swiper_swiper_component__["a" /* SwiperComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__docs_step_step_component__["a" /* StepComponent */],
+                __WEBPACK_IMPORTED_MODULE_29__docs_pagination_pagination_component__["a" /* PaginationComponent */],
+                __WEBPACK_IMPORTED_MODULE_30__docs_dialog_dialog_component__["a" /* DialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_31__docs_rate_rate_component__["a" /* RateComponent */],
             ],
-            entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_24__release_toast_ly_toast_component__["a" /* LyToastComponent */]
-            ],
-            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_4__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* HashLocationStrategy */] }, __WEBPACK_IMPORTED_MODULE_65__release_toast_toast_service__["a" /* ToastService */], __WEBPACK_IMPORTED_MODULE_66__release_tools_dynamic_service__["a" /* DynamicService */]],
+            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_4__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* HashLocationStrategy */] }],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
