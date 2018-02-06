@@ -15,5 +15,49 @@
       "es2017",
       "dom"
     ]
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "files": [
+    "index.ts",
+    "./release/ng5-ui.module.ts",
+    "./release/button/ly-button.component.ts",
+    "./release/radio/ly-radio.component.ts",
+    "./release/radio/ly-radio-group.component.ts",
+    "./release/radio/ly-radio-button.component.ts",
+    "./release/checkbox/ly-checkbox.component.ts",
+    "./release/checkbox/ly-checkbox-group.component.ts",
+    "./release/checkbox/ly-checkbox-button.component.ts",
+    "./release/datepicker/ly-datepicker.component.ts",
+    "./release/input/ly-input.component.ts",
+    "./release/layout/ly-row.directive.ts",
+    "./release/layout/ly-col.directive.ts",
+    "./release/progress/ly-progress.component.ts",
+    "./release/upload/ly-upload.component.ts",
+    "./release/toast/ly-toast.component.ts",
+    "./release/alert/ly-alert.component.ts",
+    "./release/select/ly-select.component.ts",
+    "./release/select/ly-option.component.ts",
+    "./release/switch/ly-switch.component.ts",
+    "./release/table/ly-table.component.ts",
+    "./release/table/ly-table-row.component.ts",
+    "./release/menu/ly-menu.component.ts",
+    "./release/menu/sub-menu.component.ts",
+    "./release/menu/ly-menu-item.component.ts",
+    "./release/tooltip/ly-tooltip.component.ts",
+    "./release/collapse/ly-collapse.component.ts",
+    "./release/collapse/ly-collapse-item.component.ts",
+    "./release/swiper/ly-swiper.component.ts",
+    "./release/swiper/ly-swiper-item.component.ts",
+    "./release/step/ly-steps.component.ts",
+    "./release/step/ly-step.component.ts",
+    "./release/pagination/ly-pagination.component.ts",
+    "./release/dialog/ly-dialog.component.ts",
+    "./release/rate/ly-rate.component.ts"
+  ],
+  "include": [
+    "src/**/*"
+  ]
 }

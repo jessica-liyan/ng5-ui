@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {HashLocationStrategy , LocationStrategy} from '@angular/common';
 
