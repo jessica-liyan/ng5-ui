@@ -8,6 +8,12 @@
 
 ### Getting started
 
+```js
+npm install ng5-ui --save
+or
+yarn add ng5-ui
+```
+
 #### Available features
 
 | Feature          | Notes                                                  | Docs         |
@@ -55,3 +61,6 @@
 [19]: https://jessica-liyan.github.io/ng5-ui/#/components/step
 [20]: https://jessica-liyan.github.io/ng5-ui/#/components/pagination
 [21]: https://jessica-liyan.github.io/ng5-ui/#/components/rate
+
+### Notice
+Angular webpack plugin has some issues due to the Angular cli team. The problem will be fixed in 2018.
