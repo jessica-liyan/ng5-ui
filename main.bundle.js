@@ -4950,7 +4950,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var routes = [
     {
         path: '',
-        redirectTo: '/components',
+        redirectTo: '/components/button',
         pathMatch: 'full'
     },
     {
