@@ -39,7 +39,7 @@ import {LyModule} from '../../index'
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/components',
+    redirectTo: '/components/button',
     pathMatch: 'full'
   },
   {
