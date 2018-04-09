@@ -35,7 +35,6 @@ import { RateComponent } from '../../docs/rate/rate.component';
 
 import {LyModule} from '../../index'
 
-
 const routes: Routes = [
   {
     path: '',
@@ -123,7 +122,7 @@ const routes: Routes = [
     HttpClientJsonpModule,
     RouterModule.forRoot(routes),
     MarkdownModule.forRoot(),
-    LyModule
+    LyModule.forRoot()
   ],
   declarations: [
     AppComponent,

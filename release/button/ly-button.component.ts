@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { HtmlParser } from '@angular/compiler';
  
 @Component({
@@ -15,16 +15,10 @@ import { HtmlParser } from '@angular/compiler';
   `
 })
 
-export class LyButtonComponent implements OnInit{
+export class LyButtonComponent{
   @Input() type: string = '';
   @Input() size: string = '';
   @Input() plain: string;
   @Input() round: string;
   @Input('class') nativeClass: string = '';
-
-  constructor(){
-  }
-
-  ngOnInit(){
-  }
 }

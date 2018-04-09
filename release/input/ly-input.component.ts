@@ -7,7 +7,7 @@ import { Component, Input, OnInit, OnChanges, EventEmitter, Output } from '@angu
   <div class="ly-input" style="{{style}}">
     <input type="text" 
       class="{{class}}"
-      placeholder="{{placeholder}}" 
+      [placeholder]="placeholder" 
       [(ngModel)]="model" 
       (ngModelChange)="changeHandle($event)"
       (focus)="focusHandle()"
@@ -18,7 +18,7 @@ import { Component, Input, OnInit, OnChanges, EventEmitter, Output } from '@angu
   `
 })
 
-export class LyInputComponent implements OnInit{
+export class LyInputComponent{
   @Input() icon;
   @Input() placeholder;
   @Input() model;
@@ -27,8 +27,6 @@ export class LyInputComponent implements OnInit{
   @Output() modelChange: EventEmitter<string> = new EventEmitter();
   @Output() onFocus: EventEmitter<string> = new EventEmitter();
   @Output() onEnter: EventEmitter<string> = new EventEmitter();
-
-  ngOnInit(){}
 
   changeHandle(){
     this.modelChange.emit(this.model)

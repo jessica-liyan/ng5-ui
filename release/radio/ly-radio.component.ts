@@ -6,8 +6,8 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
   outputs: ['change'],
   template: `
     <label class="ly-radio">
-      <span class="ly-radio-input" [class.active]="model == label">
-        <input type="radio" name="radio" [(ngModel)]="input" (click)="modelChange($event)">
+      <span class="ly-radio-input" [class.active]="model === label">
+        <input type="radio" name="radio" [(ngModel)]="model" (ngModelChange)="modelChange($event)">
         <span class="ly-radio-inner"></span>
       </span>
       <span class="ly-radio-label">
@@ -20,7 +20,7 @@ import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 // 子组件触发事件传递给父组件，用事件监听EventEmitter
 // 子组件点击的label，传递给父组件
 
-export class LyRadioComponent implements OnInit{
+export class LyRadioComponent{
   @Input() label;
   @Input() model;
 
@@ -30,13 +30,8 @@ export class LyRadioComponent implements OnInit{
     this.change = new EventEmitter<string>();
   }
 
-  ngOnInit(){
-    console.log(this.model,this.label)
-  }
-
   modelChange(){
     this.model = this.label
-    console.log('触发', this.model, this.label)
     this.change.emit(this.label)
   }
 }

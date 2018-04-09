@@ -19,7 +19,6 @@ import { Component, Input, OnInit, OnChanges, EventEmitter, Output} from '@angul
     </svg>
     <div class="ly-progress-label" [ngStyle]="{'color':backgroundColor}">{{percent}}%</div>
   </div>
-  
   `
 })
 

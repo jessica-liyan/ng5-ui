@@ -33,5 +33,4 @@ export class LyToastComponent implements OnInit{
       this.state = 'out'
     },3000)
   }
-
 }
