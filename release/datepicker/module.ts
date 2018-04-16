@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms'
 import { LyDatepickerComponent } from './ly-datepicker.component'
 import { LyInputModule } from '../input/module'
+import { LyIconModule } from '../icon/module'
 
 @NgModule({
   declarations: [LyDatepickerComponent],
   exports: [LyDatepickerComponent],
-  imports: [CommonModule, FormsModule, LyInputModule],
+  imports: [CommonModule, FormsModule, LyInputModule, LyIconModule],
   entryComponents: [LyDatepickerComponent],
 })
 export class LyDatepickerModule {

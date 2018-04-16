@@ -14,8 +14,7 @@
   "typings": "./release/ng5-ui.module",
   "files": [
     "release",
-    "index.ts",
-    "tsconfig.json"
+    "index.ts"
   ],
   "dependencies": {
     "@angular/animations": "^5.0.0",

@@ -14,6 +14,8 @@ import { Component } from '@angular/core';
 
 export class ComponentsComponent{
   components = [{
+    name: 'icon'
+  },{
     name: 'button'
   },{
     name: 'radio'

@@ -13,7 +13,7 @@ import { Component, Input, OnInit, OnChanges, EventEmitter, Output } from '@angu
       (focus)="focusHandle()"
       (keyup.enter)="enterHandle()"
     >
-    <img src="{{icon}}" alt="">
+    <img src="{{icon}}" alt="" *ngIf="icon">
   </div>
   `
 })

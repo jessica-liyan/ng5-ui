@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { ComponentsComponent } from './components.component';
 
+import { IconComponent } from '../../docs/icon/icon.component';
 import { ButtonComponent } from '../../docs/button/button.component';
 import { RadioComponent } from '../../docs/radio/radio.component';
 import { CheckboxComponent } from '../../docs/checkbox/checkbox.component';
@@ -45,6 +46,9 @@ const routes: Routes = [
     path: 'components',
     component: ComponentsComponent,
     children: [{
+      path: 'icon',
+      component: IconComponent
+    },{
       path: 'button',
       component: ButtonComponent
     },{
@@ -127,6 +131,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     ComponentsComponent,
+    IconComponent,
     ButtonComponent,
     RadioComponent,
     CheckboxComponent,

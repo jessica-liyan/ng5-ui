@@ -12,14 +12,14 @@
     text-align:center;
     pointer-events: none;
     .iconfont{
-      display:inline-block;
       font-size:16px;
       color:#999;
-      vertical-align:middle;
       cursor: pointer; 
     }
     .clear{display:none;}
     .down{
+      display:inline-block;
+      vertical-align:middle;
       transition:0.3s;
       transform-origin: center center;
       &.active{

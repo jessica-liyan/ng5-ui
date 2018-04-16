@@ -15,8 +15,8 @@ import { Component, Input, OnInit, EventEmitter, Output, HostBinding, animate, A
       <ng-content></ng-content>
     </ul>
     <div class="icon" [class.hasClear]="clearable">
-      <i class="iconfont icon-down down" [class.active]="show"></i>
-      <i class="iconfont icon-delete clear" *ngIf="!show && clearable" (click)="clear()"></i>
+      <icon name="down" class="down" [class.active]="show"></icon>
+      <icon name="delete" class="clear" *ngIf="!show && clearable" (click)="clear()"></icon>
     </div>
   </div>
   `

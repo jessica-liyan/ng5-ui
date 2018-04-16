@@ -1,5 +1,6 @@
 import { NgModule, ModuleWithProviders} from '@angular/core';
 
+import { LyIconModule } from './icon/module';
 import { LyButtonModule } from './button/module';
 import { LyRadioModule } from './radio/module';
 import { LyCheckboxModule } from './checkbox/module';
@@ -27,6 +28,7 @@ import { DynamicService } from './tools/dynamic.service';
 
 @NgModule({
   imports: [
+    LyIconModule.forRoot(),
     LyButtonModule.forRoot(),
     LyRadioModule.forRoot(),
     LyCheckboxModule.forRoot(),
@@ -50,6 +52,7 @@ import { DynamicService } from './tools/dynamic.service';
     LyToastModule.forRoot()
   ],
   exports: [
+    LyIconModule,
     LyButtonModule,
     LyRadioModule,
     LyCheckboxModule,

@@ -10,14 +10,14 @@ import { Component, Input, OnInit, EventEmitter, Output, Renderer2} from '@angul
       <div class="date-picker-header row w">
         <div class="col v-m t-l">
           <div *ngIf="showDate && !hiddenDay">
-            <a class="iconfont icon-home v-m" (click)="yearMinus()"></a>
-            <a class="iconfont icon-left v-m" (click)="monthMinus()"></a>
+            <icon name="home" (click)="yearMinus()"></icon>
+            <icon name="left" (click)="monthMinus()"></icon>
           </div>
           <div *ngIf="showYear">
-            <a class="iconfont icon-home v-m" (click)="minyearMinus()"></a>
+            <icon name="home" (click)="minyearMinus()"></icon>
           </div>
           <div *ngIf="showMonth">
-            <a class="iconfont icon-home v-m" (click)="onlyYearMinus()"></a>
+            <icon name="home" (click)="onlyYearMinus()"></icon>
           </div> 
         </div>
         <div class="col v-m t-c title">
@@ -34,14 +34,14 @@ import { Component, Input, OnInit, EventEmitter, Output, Renderer2} from '@angul
         </div>
         <div class="col v-m t-r">
           <div *ngIf="showDate && !hiddenDay">
-            <a class="iconfont icon-right v-m" (click)="monthPlus()"></a>
-            <a class="iconfont icon-end v-m" (click)="yearPlus()"></a>
+            <icon name="right" (click)="monthPlus()"></icon>
+            <icon name="end" (click)="yearPlus()"></icon>
           </div>
           <div *ngIf="showYear">
-            <a class="iconfont icon-end v-m" (click)="minyearPlus()"></a>
+            <icon name="end" (click)="minyearPlus()"></icon>
           </div>
           <div *ngIf="showMonth">
-            <a class="iconfont icon-end v-m" (click)="onlyYearPlus()"></a>
+            <icon name="end" (click)="onlyYearPlus()"></icon>
           </div> 
         </div>
       </div>
