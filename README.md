@@ -3,10 +3,10 @@
 [![npm version](https://badge.fury.io/js/ng5-ui.svg)](https://www.npmjs.com/package/ng5-ui)
 
 
-#### Quick links
-[Documentation, demos, and guides](https://jessica-liyan.github.io/ng5-ui/)
+### 文档链接
+[文档，示例](https://jessica-liyan.github.io/ng5-ui/)
 
-### Getting started
+### 安装
 
 ```js
 npm install ng5-ui --save
@@ -14,7 +14,33 @@ or
 yarn add ng5-ui
 ```
 
-#### Available features
+### 使用全局组件
+```js
+import {LyModule} from 'ng5-ui';
+@NgModule({
+  imports: [
+    ...
+    LyModule.forRoot(),
+    ...
+  ],
+  ...
+})
+```
+
+### 使用单独某一组件
+```js
+import {LyRadioModule} from 'ng5-ui';
+@NgModule({
+  imports: [
+    ...
+    LyRadioModule.forRoot(),
+    ...
+  ],
+  ...
+})
+```
+
+### 组件列表
 
 | Feature          | Notes                                                  | Docs         |
 |------------------|--------------------------------------------------------|--------------|
@@ -24,7 +50,7 @@ yarn add ng5-ui
 | switch           |                                                        |   [Docs][4]  |
 | input            |                                                        |   [Docs][5]  |
 | select           |                                                        |   [Docs][6]  |
-| datepicker       |                           More features coming in 2018 |   [Docs][7]  |
+| datepicker       |                                                        |   [Docs][7]  |
 | upload           |                                                        |   [Docs][8]  |
 | menu             |                                                        |   [Docs][9]  |
 | table            |                                                        |   [Docs][10] |
@@ -61,6 +87,3 @@ yarn add ng5-ui
 [19]: https://jessica-liyan.github.io/ng5-ui/#/components/step
 [20]: https://jessica-liyan.github.io/ng5-ui/#/components/pagination
 [21]: https://jessica-liyan.github.io/ng5-ui/#/components/rate
-
-### Notice
-Angular webpack plugin has some issues due to the Angular cli team. The problem will be fixed in 2018.
