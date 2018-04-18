@@ -85,3 +85,27 @@ export class LyModule {
     }
   }
 }
+
+export {
+  LyButtonModule,
+  LyRadioModule,
+  LyCheckboxModule,
+  LyInputModule,
+  LyDatepickerModule,
+  LyProgressModule,
+  LyUploadModule,
+  LyAlertModule,
+  LySelectModule,
+  LySwitchModule,
+  LyTableModule,
+  LyMenuModule,
+  LyTooltipModule,
+  LyCollapseModule,
+  LySwiperModule,
+  LyStepModule,
+  LyRateModule,
+  LyDialogModule,
+  LyPaginationModule,
+  LyLayoutModule,
+  LyToastModule
+}
